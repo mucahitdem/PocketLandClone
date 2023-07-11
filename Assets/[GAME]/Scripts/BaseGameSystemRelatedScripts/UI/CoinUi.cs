@@ -13,13 +13,13 @@ namespace Scripts.BaseGameSystemRelatedScripts.UI
 
         public Image coinIcon;
 
-        public override void SubscribeEvent()
+        protected override void SubscribeEvent()
         {
             base.SubscribeEvent();
             CoinManager.onCoinCountChanged += UpdateCoinCount;
         }
 
-        public override void UnsubscribeEvent()
+        protected override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             CoinManager.onCoinCountChanged -= UpdateCoinCount;

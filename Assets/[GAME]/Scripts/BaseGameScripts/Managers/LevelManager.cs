@@ -20,15 +20,13 @@ namespace Scripts.BaseGameScripts.Managers
         private void Awake()
         {
             Application.targetFrameRate = 30;
-            Load();
+            //Load();
         }
 
         public void Save()
         {
             SaveGame.Save(Defs.SAVE_KEY_LEVEL, _levelNum); // replace
             SaveGame.Save(Defs.SAVE_KEY_FAKE_LEVEL, _fakeLevelNum); // replace
-            
-            
         }
 
         public void Load()

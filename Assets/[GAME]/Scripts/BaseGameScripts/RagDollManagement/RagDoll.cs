@@ -1,6 +1,7 @@
 ﻿using Scripts.BaseGameScripts.Component;
 using Scripts.BaseGameScripts.Helper;
 using Scripts.BaseGameSystemRelatedScripts;
+using Scripts.GameScripts;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -43,16 +44,18 @@ namespace Scripts.BaseGameScripts.RagDollManagement
         }
 
         [Button]
-        public void WholeBodyRagDoll(bool ragDollState)
+        public void WholeBodyRagDoll(bool ragDollState, bool isKinematic = false)
         {
+            if(ragDollState)
+                ChangeAllColliderLayer();
+
             foreach (var col in _subCollider)
             {
                 col.enabled = ragDollState;
-
             } 
 
             foreach (var npcRb in _subRigidBody) 
-                npcRb.isKinematic = !ragDollState;
+                npcRb.isKinematic = isKinematic ? true : !ragDollState;
 
             rigidBodyOfTransform.isKinematic = ragDollState; // main rigidbody on player
             mainColliderOfTransform.enabled = !ragDollState; // main collider on player
@@ -61,6 +64,10 @@ namespace Scripts.BaseGameScripts.RagDollManagement
 
         public void AddForceToRagDoll(Vector3 dir)
         {
+            ChangeAllColliderLayer();
+
+            WholeBodyRagDoll(true);
+            
             foreach (var npcRb in _subRigidBody) 
                 npcRb.AddForce(dir * 50, ForceMode.Impulse);
         }
@@ -76,17 +83,26 @@ namespace Scripts.BaseGameScripts.RagDollManagement
         }
 
         [Button]
-        public void HeadShot()
+        public void HeadShot(float forceMultiplier, bool isKinematic = false)
         {
+            ChangeAllColliderLayer();
             WholeBodyRagDoll(true);
             var position = head.position;
             var forcePosition = position + TransformOfObj.forward * 2;
             var dir = (position - forcePosition).normalized  + Vector3.up * 2f + Vector3.forward * .2f;
             
             foreach (var npcRb in _subRigidBody) 
-                npcRb.AddForce(dir * minMaxHeadShotForceToAllBody.RandomFloat(), ForceMode.Impulse);
+                npcRb.AddForce(dir * (minMaxHeadShotForceToAllBody.RandomFloat() * forceMultiplier * Time.fixedDeltaTime), ForceMode.Impulse);
             
-            head.AddForce(dir * minMaxHeadShotForceToHead.RandomFloat(), ForceMode.Impulse);
+            head.AddForce(dir * (minMaxHeadShotForceToHead.RandomFloat() * forceMultiplier * Time.fixedDeltaTime), ForceMode.Impulse);
+        }
+
+        private void ChangeAllColliderLayer()
+        {
+            foreach (var col in _subCollider)
+            {
+                col.gameObject.layer = LayerMask.NameToLayer(Defs.LAYER_DEAD);
+            } 
         }
         
         // [Button]

@@ -10,13 +10,13 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade.Buttons
             upgradableData = UpgradeDataSo.UpgradesData.upgradeData.addData;
         }
 
-        public override void SubscribeEvent()
+        protected override void SubscribeEvent()
         {
             base.SubscribeEvent();
             //CellManager.cellsFilled += OnGridsFilled;
         }
 
-        public override void UnsubscribeEvent()
+        protected override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             //CellManager.cellsFilled -= OnGridsFilled;

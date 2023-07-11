@@ -27,15 +27,15 @@ namespace Scripts.BaseGameScripts.Editor
         [MenuItem("Developer Tools/Screen Shoot _s")]
         private static void ScreenShot()
         {
-            PathCalculator();
-
-            var iScrShotNo = PlayerPrefs.GetInt("iScrShotNo", 0);
-
-            ScreenCapture.CaptureScreenshot(s_path + "\\s_" + iScrShotNo + ".png");
-
-            iScrShotNo++;
-
-            PlayerPrefs.SetInt("iScrShotNo", iScrShotNo);
+            // PathCalculator();
+            //
+            // var iScrShotNo = PlayerPrefs.GetInt("iScrShotNo", 0);
+            //
+            // ScreenCapture.CaptureScreenshot(s_path + "\\s_" + iScrShotNo + ".png");
+            //
+            // iScrShotNo++;
+            //
+            // PlayerPrefs.SetInt("iScrShotNo", iScrShotNo);
         }
 
         private static void PathCalculator()

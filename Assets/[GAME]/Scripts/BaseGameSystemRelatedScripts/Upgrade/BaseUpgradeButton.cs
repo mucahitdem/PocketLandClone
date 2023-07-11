@@ -38,13 +38,13 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
 
         #region Subs
 
-        public override void SubscribeEvent()
+        protected override void SubscribeEvent()
         {
             base.SubscribeEvent();
             CoinManager.onCoinCountChanged += OnCoinCountChanged;
         }
 
-        public override void UnsubscribeEvent()
+        protected override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             CoinManager.onCoinCountChanged -= OnCoinCountChanged;

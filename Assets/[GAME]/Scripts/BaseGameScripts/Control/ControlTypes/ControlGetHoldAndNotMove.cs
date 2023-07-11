@@ -71,13 +71,13 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
         }
 
 
-        public override void SubscribeEvent()
+        protected override void SubscribeEvent()
         {
             base.SubscribeEvent();
             timer.onTimerEnded += OnTimerEnded;
         }
 
-        public override void UnsubscribeEvent()
+        protected override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             timer.onTimerEnded -= OnTimerEnded;

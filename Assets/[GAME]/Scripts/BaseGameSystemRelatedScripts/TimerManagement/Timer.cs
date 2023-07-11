@@ -1,16 +1,14 @@
 ﻿using System;
+using Scripts.BaseGameScripts.Helper;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Scripts.BaseGameSystemRelatedScripts.TimerManagement
 {
-    [Serializable]
     public class Timer : MonoBehaviour
     {
         public Action onTimerEnded;
-        public float PassedDurationRate => (InitialTimerValue - TimerValue) / InitialTimerValue; // returns between 0 - 1
-        public float CurrentTimerValue { get; private set; }
-        public float InitialTimerValue { get; private set; }
+        
         public float TimerValue
         {
             get => _timerValue; 
@@ -24,47 +22,40 @@ namespace Scripts.BaseGameSystemRelatedScripts.TimerManagement
                     {
                         onTimerEnded?.Invoke();
                         
-                        if (timerVariables.isRepeating)
+                        if (timerData.isRepeating)
                         {
                             ResetTimer();
                             return;
                         }
                         
-                        RemoveTimerFromManager();
+                        StopTimer();
                     }
                 }
             }
         }
-        public bool IsPaused
-        {
-            get => _isPaused;
-            private set => _isPaused = value;
-        }
-
-        public bool IsRunning
-        {
-            get => _isRunning;
-            set => _isRunning = value;
-
-        }
+        public bool IsPaused { get; private set; }
+        public bool IsRunning { get; private set; }
+        public float PassedDurationRate => (DataTimerValue - TimerValue) / DataTimerValue; // returns between 0 - 1
+        
+        
+        private float CurrentTimerValue { get; set; }
+        private float DataTimerValue => timerData.timerValue;
         
         [SerializeField]
-        private TimerVariables timerVariables;
+        private TimerData timerData;
         
         [Title("Private Variables")]
         private float _timerValue;
 
-        private bool _isPaused;
-        private bool _isRunning;
-
-        public void Start()
+        private void Start()
         {
             SetTimerVariables();
-            OnStartTimerAuto();
         }
 
         #region Public Methods
-
+        /// <summary>
+        /// Reset and start timer
+        /// </summary>
         public void RestartTimer()
         {
             if(IsPaused)
@@ -74,6 +65,10 @@ namespace Scripts.BaseGameSystemRelatedScripts.TimerManagement
             StartTimer();
         }
         
+        /// <summary>
+        /// play and pause timer
+        /// </summary>
+        /// <param name="pause"></param>
         public void PausePlayTimer(bool pause)
         {
             IsPaused = pause;
@@ -85,15 +80,26 @@ namespace Scripts.BaseGameSystemRelatedScripts.TimerManagement
                 StartTimer();
         }
         
+        /// <summary>
+        /// Stop timer
+        /// </summary>
         public void StopTimer()
         {
             IsRunning = false;
             TimerManager.Instance.RemoveTimer(this);
         }
         
-        public void ResetToInitialValue()
+        
+        
+        public void UpdateInitialValue(float newTimerValue)
         {
-            CurrentTimerValue = InitialTimerValue;
+            timerData.timerValue = newTimerValue;
+            ResetToInitialValue();
+        }
+
+        private void ResetToInitialValue()
+        {
+            CurrentTimerValue = DataTimerValue;
         }
 
         public void UpdateTimerValue(float newTimer = 0f, float percentage = 0f)
@@ -101,19 +107,27 @@ namespace Scripts.BaseGameSystemRelatedScripts.TimerManagement
             if(newTimer > 0)
                 CurrentTimerValue = newTimer;
             else if (percentage > 0)
-                CurrentTimerValue = InitialTimerValue * percentage / 100f;
-            
-            //RestartTimer(); //todo fix
+                CurrentTimerValue = DataTimerValue * percentage / 100f;
         }
-
-        public void UpdateInitialValue(float newTimer)
-        {
-            timerVariables.timerValue = newTimer;
-        }
+        
 
         #endregion
 
         #region Private Variables
+        
+        private void SetTimerVariables()
+        {
+            CurrentTimerValue = DataTimerValue;
+            
+            IsRunning = false;
+            IsPaused = false;
+            
+            if (!timerData.restartManually)
+            {
+                RestartTimer();
+            }
+        }
+        
         
         private void StartTimer()
         {
@@ -128,43 +142,7 @@ namespace Scripts.BaseGameSystemRelatedScripts.TimerManagement
         {
             TimerValue = CurrentTimerValue;
         }
-        
-        private void AddTimerToManager()
-        {
-            TimerManager.Instance.AddNewTimer(this);
-        }
-        private void RemoveTimerFromManager()
-        {
-            TimerManager.Instance.RemoveTimer(this);
-        }
-        private void SetTimerVariables()
-        {
-            InitialTimerValue = timerVariables.timerValue;
-            CurrentTimerValue = InitialTimerValue;
-            IsRunning = false;
-            IsPaused = false;
-        }
-        private void OnStartTimerAuto()
-        {
-            if (!timerVariables.restartManually)
-            {
-                RestartTimer();
-            }
-        }
 
         #endregion
-    }
-
-    [Serializable]
-    public class TimerVariables
-    {
-        [Title("Timer")]
-        public float timerValue;
-        
-        [Title("Repeat")]
-        public bool isRepeating;
-
-        [Title("Starting Timer")]
-        public bool restartManually;
     }
 }

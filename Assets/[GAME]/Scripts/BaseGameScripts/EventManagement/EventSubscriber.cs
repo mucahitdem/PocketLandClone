@@ -3,10 +3,11 @@ using UnityEngine;
 
 namespace Scripts.BaseGameScripts.EventManagement
 {
-    public abstract class EventSubscriber : MonoBehaviour, IEventSubscriber
+    public abstract class EventSubscriber : MonoBehaviour
     {
-        public abstract void SubscribeEvent();
-        public abstract void UnsubscribeEvent();
+        protected abstract void SubscribeEvent();
+
+        protected abstract void UnsubscribeEvent();
 
         public virtual void OnEnable()
         {

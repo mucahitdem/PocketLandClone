@@ -4,17 +4,9 @@ using UnityEngine;
 namespace Scripts.BaseGameScripts.Component
 {
     public class BaseComponent : EventSubscriber
-    {
-        private Collider _col;
-        private GameObject _go;
-        private LineRenderer _lineRenderer;
-        private Rigidbody _rb;
-        private RectTransform _rect;
+    { 
         private Transform _transformOfObj;
-        private Animator _anim;
-        private Renderer _rendOfObj;
-
-        public Transform TransformOfObj
+        public virtual Transform TransformOfObj
         {
             get
             {
@@ -24,7 +16,10 @@ namespace Scripts.BaseGameScripts.Component
             }
             set => _transformOfObj = value;
         }
-        public GameObject Go
+        
+        
+        private GameObject _go;
+        public virtual GameObject Go
         {
             get
             {
@@ -34,7 +29,10 @@ namespace Scripts.BaseGameScripts.Component
             }
             set => _go = value;
         }
-        public Rigidbody Rb
+        
+        
+        private Rigidbody _rb;
+        public virtual Rigidbody Rb
         {
             get
             {
@@ -44,7 +42,10 @@ namespace Scripts.BaseGameScripts.Component
             }
             set => _rb = value;
         }
-        public Collider Col
+        
+        
+        private Collider _col;
+        public virtual Collider Col
         {
             get
             {
@@ -54,16 +55,9 @@ namespace Scripts.BaseGameScripts.Component
             }
             set => _col = value;
         }
-        protected RectTransform Rect
-        {
-            get
-            {
-                if (!_rect)
-                    _rect = GetComponent<RectTransform>();
-                return _rect;
-            }
-            set => _rect = value;
-        }
+        
+        
+        private Animator _anim;
         public virtual Animator AnimOfObj
         {
             get
@@ -76,45 +70,14 @@ namespace Scripts.BaseGameScripts.Component
             private set => _anim = value;
         }
 
-        protected LineRenderer LineRend
-        {
-            get
-            {
-                if (!_lineRenderer) _lineRenderer = GetComponent<LineRenderer>();
-                return _lineRenderer;
-            }
-            set => _lineRenderer = value;
-        }
-
-        protected Renderer RendOfObj
-        {
-            get
-            {
-                if (!_rendOfObj)
-                {
-                    _rendOfObj = GetComponent<Renderer>();
-
-                    if (!_rendOfObj)
-                        _rendOfObj = GetComponentInChildren<Renderer>();
-                }
-                   
-
-                return _rendOfObj;
-            }
-            set => _rendOfObj = value;
-        }
         
-        
-        
-        public override void SubscribeEvent()
+        /// <summary>
+        /// This function helps us to send data from manager class to composite classes
+        /// </summary>
+        /// <param name="baseComponent"></param>
+        public virtual void Insert(BaseComponent baseComponent)
         {
         }
-
-        public override void UnsubscribeEvent()
-        {
-        }
-
-        
         
         public virtual void OnGetFromPool()
         {
@@ -128,6 +91,16 @@ namespace Scripts.BaseGameScripts.Component
             TransformOfObj.parent = null;
             Go.hideFlags = HideFlags.HideInHierarchy;
             Go.SetActive(false);
+        }
+        
+        
+        
+        protected override void SubscribeEvent()
+        {
+        }
+
+        protected override void UnsubscribeEvent()
+        {
         }
     }
 }

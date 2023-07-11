@@ -24,11 +24,11 @@ namespace Scripts.BaseGameScripts.CoinControl
         
         public void MoveToCounter(Vector2 targetPos, float duration = 1f)
         {
-            Rect.DOMove(targetPos, duration)
-                .OnComplete(() =>
-                {
-                    PoolManager.Instance.coinPool.pool.Push(this);
-                });
+            // Rect.DOMove(targetPos, duration)
+            //     .OnComplete(() =>
+            //     {
+            //         PoolManager.Instance.coinPool.pool.Push(this);
+            //     });
         }
     }
 }

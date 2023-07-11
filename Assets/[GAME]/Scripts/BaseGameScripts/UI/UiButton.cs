@@ -18,7 +18,7 @@ namespace Scripts.BaseGameScripts.UI
             set => _button = value;
         }
 
-        public override void SubscribeEvent()
+        protected override void SubscribeEvent()
         {
             base.SubscribeEvent();
             if(Button)
@@ -27,7 +27,7 @@ namespace Scripts.BaseGameScripts.UI
                 DebugHelper.LogRed("NO BUTTON FOUND !!!! ");
         }
 
-        public override void UnsubscribeEvent()
+        protected override void UnsubscribeEvent()
         {
             base.SubscribeEvent();
             if(Button)

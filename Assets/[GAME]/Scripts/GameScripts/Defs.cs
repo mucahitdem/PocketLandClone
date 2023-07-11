@@ -35,5 +35,17 @@ namespace Scripts.GameScripts
 
         #endregion
 
+        #region TAGS
+
+        public static readonly string TAG_XP_SPHERE = "Xp";
+
+        #endregion
+
+        #region Layers
+
+        public static readonly string LAYER_DEAD = "Dead";
+
+        #endregion
+
     }
 }

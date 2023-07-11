@@ -45,13 +45,13 @@ namespace Scripts.BaseGameSystemRelatedScripts.Grid
 
         #region Subs
 
-        public override void SubscribeEvent()
+        protected override void SubscribeEvent()
         {
             getGridElementWithIndex += GetWithIndex;
             updateGridIndex += UpdateGridIndex;
         }
 
-        public override void UnsubscribeEvent()
+        protected override void UnsubscribeEvent()
         {
             getGridElementWithIndex -= GetWithIndex;
             updateGridIndex -= UpdateGridIndex;
