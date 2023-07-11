@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="270566bc-23a4-48ff-b1c9-a96e4917fe80" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/ShortCutManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/EventSubscriber.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/UiItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/UiManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/IPoolObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Managers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Component/ComponentBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Diamond.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Input/BaseInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SaveAndLoad/SaveAndLoadManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/ContextClass.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Input/SwipeMechanic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Component/IUiObj.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Ragdoll/RagDoll.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SaveAndLoad/ISaveAndLoad.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/PoolingPattern.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/SafeArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/AssemblyManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/SingletonMono.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Ui/StartButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CA42919D-F2B7-4E53-B110-02749C8755AF/7d/e143854e/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/State/GameStates/GameState01_0Start.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/CoinController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BayatGames/SaveGameFree/Scripts/SaveGame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/State/GameStateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/State/GameStates/GameState03_0Lose.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/UiButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/GlobalReferences.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7105BE43-2FB6-4891-B070-85914E6CD5C1/2e/79364b19/MenuCommand.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/State/GameStates/GameState02_0Playing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Input/IMechanic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Others/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/State/GameStates/GameState03_1Win.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Component/IPhysicObj.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/State/BaseGameState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CA42919D-F2B7-4E53-B110-02749C8755AF/1c/da705d2b/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Input/BaseMechanic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Others/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/TimeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BOXOPHOBIC/Polyverse Skies/Generator/Scripts/PolyverseSkiesGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/SaveAndLoad/SaveAndLoadManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/Ragdoll/Ragdoll.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/Ragdoll/RagDoll.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/UI/CoinController.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CA42919D-F2B7-4E53-B110-02749C8755AF/7d/e143854e/Component.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/Extension.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/ExtensionClass.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/_SO/UiItemSo.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/Component/IPhysicObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/Component/IUiObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/UI/UiItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/Managers/UiManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/ContextClass.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/UI/UiManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/State/GameStates/GameState01_0Start.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/State/GameStates/GameState02_0Playing.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/State/GameStates/GameState03_0Lose.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/State/GameStates/GameState03_1Win.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/ShortCutManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/State/GameStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/Helper/TimeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/Component/ComponentBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/UI/UiButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/Helper/ContextClass.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/State/BaseGameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Ui/StartButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/SoapCuttingDataSo.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveLoad/Scripts/IUnit.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveLoad/Scripts/ISaveAndLoad.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveLoad/Scripts/GameHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveLoad/Scripts/SaveAndLoadManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveLoad/Scripts/SaveSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/SaveLoad/Scripts/SaveAndLoadSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SaveLoad/IUnit.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SaveLoad/SaveAndLoadSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/SaveAndLoad/SaveAndLoadManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/SaveAndLoad/IUnit.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SaveLoad/ISaveAndLoad.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/SaveAndLoad/GameDataSaveLoad.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SaveLoad/SaveAndLoadManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/AssemblyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/BayatGames/SaveGameFree/Scripts/SaveGame.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/State/GameStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SaveAndLoad/SaveAndLoadManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/GlobalReferences.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/CoinController.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/PoolingPattern.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/PoolManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/IPoolObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Diamond.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2JHQDmX0bwgEpzlZWOm3xdKg2eW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="794" y="256" key="RiderGenerateDialog" timestamp="1671872581669">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="794" y="256" key="RiderGenerateDialog/0.0.1920.1080/1920.0.1280.960@0.0.1920.1080" timestamp="1671872581669" />
+    <state x="461" y="185" key="SettingsEditor" timestamp="1671864974129">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="185" key="SettingsEditor/0.0.1920.1080/1920.0.1280.960@0.0.1920.1080" timestamp="1671864974129" />
+    <state x="567" y="275" width="786" height="530" key="find.popup" timestamp="1671739297863">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="567" y="275" width="786" height="530" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1671739297863" />
+  </component>
+</project>

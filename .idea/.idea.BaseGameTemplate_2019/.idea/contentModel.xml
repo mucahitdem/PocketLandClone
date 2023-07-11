@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Sefir i Mevt\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Sefir i Mevt\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_BaseGameTemplate_2019.493570796.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Sefir i Mevt\Documents\GitHub\BaseGameTemplate_2019" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="[GAME]" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="BaseGameScripts" t="Include">
+              <e p="Camera" t="Include">
+                <e p="FollowCamera.cs" t="Include" />
+              </e>
+              <e p="Component" t="Include">
+                <e p="ComponentBase.cs" t="Include" />
+                <e p="IPhysicObj.cs" t="Include" />
+                <e p="IUiObj.cs" t="Include" />
+              </e>
+              <e p="Editor" t="Include">
+                <e p="MenuItems.cs" t="Include" />
+              </e>
+              <e p="GlobalReferences.cs" t="Include" />
+              <e p="Helper" t="Include">
+                <e p="AssemblyManager.cs" t="Include" />
+                <e p="ContextClass.cs" t="Include" />
+                <e p="EventSubscriber.cs" t="Include" />
+                <e p="IEventSubscriber.cs" t="Include" />
+                <e p="ShortCutManager.cs" t="Include" />
+                <e p="SingletonMono.cs" t="Include" />
+                <e p="TimeManager.cs" t="Include" />
+              </e>
+              <e p="Input" t="Include">
+                <e p="BaseInput.cs" t="Include" />
+                <e p="BaseMechanic.cs" t="Include" />
+                <e p="IMechanic.cs" t="Include" />
+                <e p="SwipeMechanic.cs" t="Include" />
+              </e>
+              <e p="Managers" t="Include">
+                <e p="EnvironmentManager.cs" t="Include" />
+                <e p="GameManager.cs" t="Include" />
+              </e>
+              <e p="Mediator" t="Include">
+                <e p="EventHelper.cs" t="Include" />
+                <e p="Mediator.cs" t="Include" />
+              </e>
+              <e p="Player" t="Include">
+                <e p="PlayerManager.cs" t="Include" />
+              </e>
+              <e p="Pool" t="Include">
+                <e p="IPoolObject.cs" t="Include" />
+                <e p="PoolingPattern.cs" t="Include" />
+                <e p="PoolManager.cs" t="Include" />
+              </e>
+              <e p="Ragdoll" t="Include">
+                <e p="Ragdoll.cs" t="Include" />
+              </e>
+              <e p="SaveAndLoad" t="Include">
+                <e p="ISaveAndLoad.cs" t="Include" />
+                <e p="SaveAndLoadManager.cs" t="Include" />
+              </e>
+              <e p="State" t="Include">
+                <e p="_Interface" t="Include">
+                  <e p="IGameState.cs" t="Include" />
+                </e>
+                <e p="BaseGameState.cs" t="Include" />
+                <e p="GameStateManager.cs" t="Include" />
+                <e p="GameStates" t="Include">
+                  <e p="GameState01_0Start.cs" t="Include" />
+                  <e p="GameState02_0Playing.cs" t="Include" />
+                  <e p="GameState03_0Lose.cs" t="Include" />
+                  <e p="GameState03_1Win.cs" t="Include" />
+                </e>
+              </e>
+              <e p="UI" t="Include">
+                <e p="CoinController.cs" t="Include" />
+                <e p="SafeArea.cs" t="Include" />
+                <e p="UiButton.cs" t="Include" />
+                <e p="UiItem.cs" t="Include" />
+                <e p="UIManager.cs" t="Include" />
+              </e>
+            </e>
+            <e p="GameScripts" t="Include">
+              <e p="Diamond.cs" t="Include" />
+              <e p="UI" t="Include">
+                <e p="StartButton.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Adjust" t="Include">
+          <e p="3rd Party" t="Include">
+            <e p="SimpleJSON.cs" t="Include" />
+          </e>
+          <e p="Android" t="Include">
+            <e p="AdjustAndroid.cs" t="Include" />
+            <e p="AdjustAndroidManifest.xml" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="AdjustEditor.cs" t="Include" />
+            <e p="AdjustSettings.cs" t="Include" />
+          </e>
+          <e p="ExampleGUI" t="Include">
+            <e p="ExampleGUI.cs" t="Include" />
+          </e>
+          <e p="iOS" t="Include">
+            <e p="AdjustiOS.cs" t="Include" />
+          </e>
+          <e p="Unity" t="Include">
+            <e p="Adjust.cs" t="Include" />
+            <e p="AdjustAppStoreSubscription.cs" t="Include" />
+            <e p="AdjustAttribution.cs" t="Include" />
+            <e p="AdjustConfig.cs" t="Include" />
+            <e p="AdjustEnvironment.cs" t="Include" />
+            <e p="AdjustEvent.cs" t="Include" />
+            <e p="AdjustEventFailure.cs" t="Include" />
+            <e p="AdjustEventSuccess.cs" t="Include" />
+            <e p="AdjustLogLevel.cs" t="Include" />
+            <e p="AdjustPlayStoreSubscription.cs" t="Include" />
+            <e p="AdjustSessionFailure.cs" t="Include" />
+            <e p="AdjustSessionSuccess.cs" t="Include" />
+            <e p="AdjustThirdPartySharing.cs" t="Include" />
+            <e p="AdjustUtils.cs" t="Include" />
+          </e>
+          <e p="Windows" t="Include">
+            <e p="AdjustWindows.cs" t="Include" />
+          </e>
+        </e>
+        <e p="BayatGames" t="Include">
+          <e p="SaveGameFree" t="Include">
+            <e p="Documentation" t="Include">
+              <e p="Save Game Free Documentation - Plain Text Version.txt" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="Tests" t="Include">
+                <e p="SaveGameTests.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Examples" t="Include">
+              <e p="Auto Save" t="Include">
+                <e p="ExampleMoveObject.cs" t="Include" />
+              </e>
+              <e p="Save Custom" t="Include">
+                <e p="ExampleSaveCustom.cs" t="Include" />
+              </e>
+              <e p="Save Position" t="Include">
+                <e p="ExampleSavePosition.cs" t="Include" />
+              </e>
+              <e p="Save Rotation" t="Include">
+                <e p="ExampleSaveRotation.cs" t="Include" />
+              </e>
+              <e p="Save Scale" t="Include">
+                <e p="ExampleSaveScale.cs" t="Include" />
+              </e>
+              <e p="Save Web" t="Include">
+                <e p="ExampleSaveWeb.cs" t="Include" />
+              </e>
+              <e p="Shared" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="SerializerDropdown.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Plugins" t="Include">
+              <e p="FullSerializer.xml" t="Include" />
+            </e>
+            <e p="readme.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Encoders" t="Include">
+                <e p="ISaveGameEncoder.cs" t="Include" />
+                <e p="SaveGameSimpleEncoder.cs" t="Include" />
+              </e>
+              <e p="SaveGame.cs" t="Include" />
+              <e p="SaveGameAuto.cs" t="Include" />
+              <e p="SaveGameWeb.cs" t="Include" />
+              <e p="Serializers" t="Include">
+                <e p="ISaveGameSerializer.cs" t="Include" />
+                <e p="SaveGameBinarySerializer.cs" t="Include" />
+                <e p="SaveGameJsonSerializer.cs" t="Include" />
+                <e p="SaveGameXmlSerializer.cs" t="Include" />
+              </e>
+              <e p="Types" t="Include">
+                <e p="Color32Save.cs" t="Include" />
+                <e p="ColorSave.cs" t="Include" />
+                <e p="MeshSave.cs" t="Include" />
+                <e p="QuaternionSave.cs" t="Include" />
+                <e p="Vector2Save.cs" t="Include" />
+                <e p="Vector3Save.cs" t="Include" />
+                <e p="Vector4Save.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="BOXOPHOBIC" t="Include">
+          <e p="Polyverse Skies" t="Include">
+            <e p="Core" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Boxophobic.PolyverseSkies.Editor.asmdef" t="Include" />
+                <e p="PolyverseSkiesCreate.cs" t="Include" />
+                <e p="PolyverseSkiesHub.cs" t="Include" />
+                <e p="PolyverseSkiesShaderGUI.cs" t="Include" />
+                <e p="PolyverseSkiesWindows.cs" t="Include" />
+              </e>
+              <e p="Runtime" t="Include">
+                <e p="Boxophobic.PolyverseSkies.Runtime.asmdef" t="Include" />
+                <e p="PolyverseSkies.cs" t="Include" />
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="Simple.shader" t="Include" />
+                <e p="Standard.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Generator" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Boxophobic.PolyverseSkies.Scripts.asmdef" t="Include" />
+                <e p="PolyverseSkiesGenerator.cs" t="Include" />
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="Rendering Clouds.shader" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Utils" t="Include">
+            <e p="Editor" t="Include">
+              <e p="Boxophobic.Utils.Editor.asmdef" t="Include" />
+              <e p="Constants" t="Include">
+                <e p="Constants.cs" t="Include" />
+              </e>
+              <e p="SettingsUtils" t="Include">
+                <e p="LoadSettingsData.cs" t="Include" />
+                <e p="SaveSettingsData.cs" t="Include" />
+              </e>
+              <e p="StyledGUI" t="Include">
+                <e p="DrawInspectorBanner.cs" t="Include" />
+                <e p="DrawInspectorCategory.cs" t="Include" />
+                <e p="DrawWindowBanner.cs" t="Include" />
+                <e p="DrawWindowCategory.cs" t="Include" />
+              </e>
+              <e p="StyledInspector" t="Include">
+                <e p="StyledBannerDrawer.cs" t="Include" />
+                <e p="StyledButtonDrawer.cs" t="Include" />
+                <e p="StyledCategoryDrawer.cs" t="Include" />
+                <e p="StyledIndentDrawer.cs" t="Include" />
+                <e p="StyledInteractiveDrawer.cs" t="Include" />
+                <e p="StyledMessageDrawer.cs" t="Include" />
+                <e p="StyledPopupArrayDrawer.cs" t="Include" />
+                <e p="StyledPopupLayersDrawer.cs" t="Include" />
+                <e p="StyledRangeOptionsDrawer.cs" t="Include" />
+                <e p="StyledSpaceDrawer.cs" t="Include" />
+                <e p="StyledTextDrawer.cs" t="Include" />
+                <e p="StyledTexturePreviewDrawer.cs" t="Include" />
+              </e>
+              <e p="StyledMaterial" t="Include">
+                <e p="StyledBannerDrawer.cs" t="Include" />
+                <e p="StyledButtonDrawer.cs" t="Include" />
+                <e p="StyledCategoryDrawer.cs" t="Include" />
+                <e p="StyledDiffusionMaterialDrawer.cs" t="Include" />
+                <e p="StyledIndentDrawer.cs" t="Include" />
+                <e p="StyledInteractiveDrawer.cs" t="Include" />
+                <e p="StyledMessageDrawer.cs" t="Include" />
+                <e p="StyledOptionsSliderDrawer.cs" t="Include" />
+                <e p="StyledRemapSliderDrawer.cs" t="Include" />
+                <e p="StyledSpaceDrawer.cs" t="Include" />
+                <e p="StyledTextDrawer.cs" t="Include" />
+                <e p="StyledTextureDrawer.cs" t="Include" />
+                <e p="StyledToggleDrawer.cs" t="Include" />
+              </e>
+              <e p="StyledMono" t="Include">
+                <e p="StyledMonoBehaviourEditor.cs" t="Include" />
+                <e p="StyledScriptableObjectEditor.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Boxophobic.Utils.Scripts.asmdef" t="Include" />
+              <e p="SettingsUtils" t="Include">
+                <e p="SettingsData.cs" t="Include" />
+              </e>
+              <e p="StyledInspector" t="Include">
+                <e p="StyledBanner.cs" t="Include" />
+                <e p="StyledButton.cs" t="Include" />
+                <e p="StyledCategory.cs" t="Include" />
+                <e p="StyledIndent.cs" t="Include" />
+                <e p="StyledInteractive.cs" t="Include" />
+                <e p="StyledMessage.cs" t="Include" />
+                <e p="StyledPopupArray.cs" t="Include" />
+                <e p="StyledPopupLayers.cs" t="Include" />
+                <e p="StyledRangeOptions.cs" t="Include" />
+                <e p="StyledSpace.cs" t="Include" />
+                <e p="StyledText.cs" t="Include" />
+                <e p="StyledTexturePreview.cs" t="Include" />
+              </e>
+              <e p="StyledMono" t="Include">
+                <e p="StyledMonoBehaviour.cs" t="Include" />
+                <e p="StyledScriptableObject.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="JMO Assets" t="Include">
+          <e p="Toony Colors Pro" t="Include">
+            <e p="Shaders Generated" t="Include">
+              <e p="Examples" t="Include">
+                <e p="Water" t="Include">
+                  <e p="Water WindWaker.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="NiceVibrations" t="Include">
+          <e p="Common" t="Include">
+            <e p="Plugins" t="Include">
+              <e p="Android" t="Include">
+                <e p="AndroidManifest.xml" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Editor" t="Include">
+                <e p="DefineSymbols" t="Include">
+                  <e p="NiceVibrationsDefineSymbols.cs" t="Include" />
+                </e>
+                <e p="MMNVAndroidWaveFormAssetEditor.cs" t="Include" />
+                <e p="MMNVAssetPostProcessor.cs" t="Include" />
+                <e p="MMNVBuildPostProcessor.cs" t="Include" />
+                <e p="MMNVRumbleWaveFormAssetEditor.cs" t="Include" />
+                <e p="MoreMountains.NiceVibrations.Editor.asmdef" t="Include" />
+              </e>
+              <e p="Haptics" t="Include">
+                <e p="MMNVAHAP.cs" t="Include" />
+                <e p="MMNVAltThread.cs" t="Include" />
+                <e p="MMNVAndroid.cs" t="Include" />
+                <e p="MMNVAndroidWaveFormAsset.cs" t="Include" />
+                <e p="MMNVEnumCondition.cs" t="Include" />
+                <e p="MMNVHapticTypes.cs" t="Include" />
+                <e p="MMNVInspectorButton.cs" t="Include" />
+                <e p="MMNViOS.cs" t="Include" />
+                <e p="MMNViOSCoreHaptics.cs" t="Include" />
+                <e p="MMNVPlatform.cs" t="Include" />
+                <e p="MMNVRumbleWaveFormAsset.cs" t="Include" />
+                <e p="MoreMountains.NiceVibrations.Haptics.asmdef" t="Include" />
+              </e>
+              <e p="NiceVibrations" t="Include">
+                <e p="MMNVPath.cs" t="Include" />
+                <e p="MMVibrationManager.cs" t="Include" />
+                <e p="MMVibrationManagerTester.cs" t="Include" />
+                <e p="MoreMountains.NiceVibrations.asmdef" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="LICENSE.txt" t="Include" />
+          <e p="OlderVersions" t="Include">
+            <e p="v1.7" t="Include">
+              <e p="NiceVibrations-v-1-7-readme.txt" t="Include" />
+            </e>
+            <e p="v2.0.1" t="Include">
+              <e p="NiceVibrations-v-2-0-1-readme.txt" t="Include" />
+            </e>
+          </e>
+          <e p="readme.txt" t="Include" />
+          <e p="ThirdParty" t="Include">
+            <e p="Newtonsoft" t="Include">
+              <e p="NewtonsoftJsonLicense.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Others" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="best_school" t="Include">
+              <e p="Read Me.txt" t="Include" />
+            </e>
+            <e p="LuckyGuy" t="Include">
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+          </e>
+          <e p="TextMesh Pro" t="Include">
+            <e p="Fonts" t="Include">
+              <e p="LiberationSans - OFL.txt" t="Include" />
+            </e>
+            <e p="Resources" t="Include">
+              <e p="LineBreaking Following Characters.txt" t="Include" />
+              <e p="LineBreaking Leading Characters.txt" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF SSD.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Mobile.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+            <e p="Sprites" t="Include">
+              <e p="EmojiOne Attribution.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PlayServicesResolver" t="Include">
+          <e p="Editor" t="Include">
+            <e p="play-services-resolver_v1.2.135.0.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModuleEPOOutline.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Sirenix" t="Include">
+            <e p="Assemblies" t="Include">
+              <e p="link.xml" t="Include" />
+              <e p="Sirenix.OdinInspector.Attributes.xml" t="Include" />
+              <e p="Sirenix.OdinInspector.Editor.xml" t="Include" />
+              <e p="Sirenix.Serialization.Config.xml" t="Include" />
+              <e p="Sirenix.Serialization.xml" t="Include" />
+              <e p="Sirenix.Utilities.Editor.xml" t="Include" />
+              <e p="Sirenix.Utilities.xml" t="Include" />
+            </e>
+            <e p="Odin Inspector" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="AssemblyImportSettingsAutomation.cs" t="Include" />
+                  <e p="BuildAOTAutomation.cs" t="Include" />
+                  <e p="EnsureOdinInspectorDefine.cs" t="Include" />
+                  <e p="FixBrokenUnityObjectWrapperDrawer.cs" t="Include" />
+                  <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.asmdef" t="Include" />
+                  <e p="SyncListDrawer.cs" t="Include" />
+                  <e p="SyncVarAttributeDrawer.cs" t="Include" />
+                  <e p="Vector2IntMinMaxAttributeDrawer.cs" t="Include" />
+                  <e p="VectorIntDrawers.cs" t="Include" />
+                  <e p="VectorIntPropertyResolvers.cs" t="Include" />
+                </e>
+                <e p="SerializedNetworkBehaviour.cs" t="Include" />
+                <e p="Sirenix.OdinInspector.CompatibilityLayer.asmdef" t="Include" />
+                <e p="VectorIntFormatters.cs" t="Include" />
+              </e>
+            </e>
+            <e p="readme.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Saves" t="Include">
+          <e p="save.txt" t="Include" />
+          <e p="save_1.txt" t="Include" />
+          <e p="save_2.txt" t="Include" />
+          <e p="save_3.txt" t="Include" />
+          <e p="save_4.txt" t="Include" />
+          <e p="save_5.txt" t="Include" />
+          <e p="save_6.txt" t="Include" />
+        </e>
+      </e>
+      <e p="BaseGameTemplate_2019.sln" t="IncludeFlat" />
+      <e p="Boxophobic.PolyverseSkies.Editor.csproj" t="IncludeRecursive" />
+      <e p="Boxophobic.PolyverseSkies.Runtime.csproj" t="IncludeRecursive" />
+      <e p="Boxophobic.PolyverseSkies.Scripts.csproj" t="IncludeRecursive" />
+      <e p="Boxophobic.Utils.Editor.csproj" t="IncludeRecursive" />
+      <e p="Boxophobic.Utils.Scripts.csproj" t="IncludeRecursive" />
+      <e p="MoreMountains.NiceVibrations.csproj" t="IncludeRecursive" />
+      <e p="MoreMountains.NiceVibrations.Editor.csproj" t="IncludeRecursive" />
+      <e p="MoreMountains.NiceVibrations.Haptics.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Sirenix.OdinInspector.CompatibilityLayer.csproj" t="IncludeRecursive" />
+      <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
