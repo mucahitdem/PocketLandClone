@@ -6,7 +6,7 @@ namespace Scripts.BaseGameScripts.State.GameStates
     {
         public override void InitState()
         {
-            GlobalReferences.Instance.uiManager.ShowScreen(Defs.UI_KEY_START_SCREEN);
+            GlobalReferences.Instance.UiManager.ShowScreen(Defs.UI_KEY_START_SCREEN);
         }
 
         public override void ExitState()

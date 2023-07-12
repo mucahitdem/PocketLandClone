@@ -8,7 +8,7 @@ namespace Scripts.BaseGameScripts.Control
         [ReadOnly]
         public Vector2 deltaMousePos;
         [ReadOnly]
-        public Vector2 mouseStartPos;
+        private Vector2 mouseStartPos;
 
         private Vector2 _currentMousePos;
 

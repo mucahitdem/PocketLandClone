@@ -1,4 +1,4 @@
-﻿namespace Scripts.State._Interface
+﻿namespace Scripts.BaseGameScripts.State._Interface
 {
     public interface IGameState
     {

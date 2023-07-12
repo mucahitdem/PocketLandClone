@@ -1,5 +1,4 @@
 ﻿using DG.Tweening;
-using Scripts.BaseGameScripts.CameraManagement;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -37,7 +36,7 @@ namespace Scripts.BaseGameScripts.CoinControl
 
         public void DiamondCollectAnim(Vector3 diamondPos)
         {
-            Vector2 screenPos = CameraManager.Instance.MainCamera.WorldToScreenPoint(diamondPos);
+            Vector2 screenPos = Camera.main.WorldToScreenPoint(diamondPos);
             var clone = gameObject; //GlobalReferences.Instance.poolManager.poolObject.objToPool.PullObjFromPool();
 
             clone.transform.localScale = Vector3.one * .5f;

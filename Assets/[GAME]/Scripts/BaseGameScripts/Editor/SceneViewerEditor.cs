@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-namespace CandyClick.Editor
+namespace Scripts.BaseGameScripts.Editor
 {
     [Overlay(typeof(SceneView), IdSceneViewerOverlay, "Scene Loader")]
     [Icon("Assets/Sprites/Icons/unity_scene.png")]

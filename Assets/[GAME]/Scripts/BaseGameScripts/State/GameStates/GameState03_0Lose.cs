@@ -6,7 +6,7 @@ namespace Scripts.BaseGameScripts.State.GameStates
     {
         public override void InitState()
         {
-            GlobalReferences.Instance.uiManager.ShowScreen(Defs.UI_KEY_LOSE_SCREEN);
+            GlobalReferences.Instance.UiManager.ShowScreen(Defs.UI_KEY_LOSE_SCREEN);
         }
 
         public override void ExitState()

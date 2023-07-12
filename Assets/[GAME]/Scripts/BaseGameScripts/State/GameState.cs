@@ -1,5 +1,5 @@
 ﻿using Scripts.BaseGameScripts.Component;
-using Scripts.State._Interface;
+using Scripts.BaseGameScripts.State._Interface;
 
 namespace Scripts.BaseGameScripts.State
 {

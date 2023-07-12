@@ -6,12 +6,12 @@ namespace Scripts.GameScripts.StatsManagement.PlayerStatsManagement
     [Serializable]
     public class PlayerStatsData : BaseStatsData
     {
-        public StatsPerLevel requiredXpForLevel;
+        public StatsPerLevelByAnimCurve requiredXpForLevelByAnimCurve;
 
         [Button]
         public void UpdateAllData()
         {
-            requiredXpForLevel.UpdateValues();
+            requiredXpForLevelByAnimCurve.UpdateValues();
         }
     }
 }

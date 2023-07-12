@@ -1,10 +1,12 @@
-﻿using System;
-using Cinemachine;
+﻿using Cinemachine;
 using Scripts.BaseGameScripts.Component;
 using UnityEngine;
 
-namespace Scripts.GameScripts.CameraManagement
+namespace Scripts.GameScripts
 {
+    /// <summary>
+    /// Control distance of virtual camera with offset and multiplier
+    /// </summary>
     public class VirtualCameraManager : BaseComponent
     {
         [SerializeField]

@@ -1,4 +1,4 @@
-﻿namespace Scripts.BaseGameScripts.Helper
+﻿namespace Scripts.BaseGameScripts.EventManagement
 {
     public interface IEventSubscriber
     {

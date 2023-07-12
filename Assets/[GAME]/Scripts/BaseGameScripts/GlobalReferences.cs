@@ -4,17 +4,23 @@ using Scripts.BaseGameScripts.Pool;
 using Scripts.BaseGameScripts.State;
 using Scripts.BaseGameScripts.UI;
 using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace Scripts.BaseGameScripts
 {
     public class GlobalReferences : SingletonMono<GlobalReferences>
     {
-        public LevelManager levelManager;
-        public GameStateManager gameStateManager;
-        public PoolManager poolManager;
+        public UiManager UiManager => uiManager;
+        public LevelManager LevelManager => levelManager;
+        public GameStateManager GameStateManager => gameStateManager;
 
-        [Title("Managers")]
-        public UiManager uiManager;
+
+        [SerializeField]
+        private UiManager uiManager;
+        [SerializeField]
+        private LevelManager levelManager;
+        [SerializeField]
+        private GameStateManager gameStateManager;
 
         protected override void OnAwake()
         {

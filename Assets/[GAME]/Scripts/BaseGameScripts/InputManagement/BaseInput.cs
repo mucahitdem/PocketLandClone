@@ -14,11 +14,38 @@ namespace Scripts.BaseGameScripts.InputManagement
             TouchSettings();
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             GetInput();
         }
+        
+        
+        
+        protected virtual void OnTapDown()
+        {
+            if(TouchOnUI())
+                return;
+            
+            InputActionManager.onTapDown?.Invoke();
+        }
 
+        protected virtual void OnTapHold()
+        {
+            InputActionManager.onTapAndHold?.Invoke();
+        }
+
+        protected virtual void OnTapHoldAndNotMove()
+        {
+            InputActionManager.onTapAndHoldAndNotMove?.Invoke();
+        }
+
+        protected virtual void OnTapUp()
+        {
+            InputActionManager.onTapUp?.Invoke();
+        }
+
+        
+        
         private void TouchSettings()
         {
             if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
@@ -73,30 +100,6 @@ namespace Scripts.BaseGameScripts.InputManagement
             }
         }
 
-        protected virtual void OnTapDown()
-        {
-            if(TouchOnUI())
-                return;
-            
-            InputActionManager.onTapDown?.Invoke();
-        }
-
-        protected virtual void OnTapHold()
-        {
-            InputActionManager.onTapAndHold?.Invoke();
-        }
-
-        protected virtual void OnTapHoldAndNotMove()
-        {
-            InputActionManager.onTapAndHoldAndNotMove?.Invoke();
-        }
-
-        protected virtual void OnTapUp()
-        {
-            InputActionManager.onTapUp?.Invoke();
-        }
-        
-        
         private bool TouchOnUI()
         {
             if (!EventSystem.current) 

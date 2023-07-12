@@ -5,6 +5,7 @@ namespace Scripts.GameScripts.OrderManagement
 {
     public static class OrderActionManager
     {
-        public static Action<BaseOrderData> onOrderDelivered;
+        public static Action<BaseOrder> onOrderDelivered;
+        public static Action<BaseOrder> onNewOrderCreated;
     }
 }

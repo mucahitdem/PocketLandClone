@@ -23,17 +23,14 @@
               <e p="UI" t="Include" />
             </e>
             <e p="Items" t="Include" />
+            <e p="UI" t="Include" />
           </e>
           <e p="Scenes" t="Include" />
           <e p="Scripts" t="Include">
             <e p="BaseGameScripts" t="Include">
-              <e p="CameraManagement" t="Include">
-                <e p="CameraFollowTargetCentered.cs" t="Include" />
-                <e p="CameraManager.cs" t="Include" />
-                <e p="FollowCamera.cs" t="Include" />
-              </e>
               <e p="CoinControl" t="Include">
                 <e p="Coin.cs" t="Include" />
+                <e p="CoinActionManager.cs" t="Include" />
                 <e p="CoinCollectAnim.cs" t="Include" />
                 <e p="CoinController.cs" t="Include" />
                 <e p="CoinManager.cs" t="Include" />
@@ -76,7 +73,6 @@
                 <e p="MoneyConverter.cs" t="Include" />
                 <e p="ShortCutManager.cs" t="Include" />
                 <e p="SingletonMono.cs" t="Include" />
-                <e p="TimeManager.cs" t="Include" />
                 <e p="TimeScalingManager.cs" t="Include" />
               </e>
               <e p="InputManagement" t="Include">
@@ -118,7 +114,13 @@
                   <e p="GameState03_1Win.cs" t="Include" />
                 </e>
               </e>
+              <e p="TimerManagement" t="Include">
+                <e p="Timer.cs" t="Include" />
+                <e p="TimerData.cs" t="Include" />
+                <e p="TimerManager.cs" t="Include" />
+              </e>
               <e p="UI" t="Include">
+                <e p="BaseClickableImage.cs" t="Include" />
                 <e p="SafeArea.cs" t="Include" />
                 <e p="UiButton.cs" t="Include" />
                 <e p="UiItem.cs" t="Include" />
@@ -127,7 +129,6 @@
             </e>
             <e p="BaseGameSystemRelatedScripts" t="Include">
               <e p="Animator Control" t="Include">
-                <e p="AnimatorManager.cs" t="Include" />
                 <e p="AnimatorParameter.cs" t="Include" />
                 <e p="AnimatorParameterController.cs" t="Include" />
                 <e p="AnimatorStateManager.cs" t="Include" />
@@ -146,19 +147,12 @@
               </e>
               <e p="SaveManager.cs" t="Include" />
               <e p="SceneLoader.cs" t="Include" />
-              <e p="TimerManagement" t="Include">
-                <e p="Timer.cs" t="Include" />
-                <e p="TimerData.cs" t="Include" />
-                <e p="TimerManager.cs" t="Include" />
-              </e>
               <e p="UI" t="Include">
-                <e p="AdScreen.cs" t="Include" />
                 <e p="CoinUi.cs" t="Include" />
                 <e p="NextButton.cs" t="Include" />
                 <e p="RetryButton.cs" t="Include" />
                 <e p="StartButton.cs" t="Include" />
                 <e p="StartPanel.cs" t="Include" />
-                <e p="WatchAdButton.cs" t="Include" />
               </e>
               <e p="Upgrade" t="Include">
                 <e p="BaseUpgradeButton.cs" t="Include" />
@@ -184,21 +178,27 @@
               </e>
               <e p="GameManager.cs" t="Include" />
               <e p="Helpers" t="Include">
-                <e p="RandomPointGeneratorOnRectangularArea.cs" t="Include" />
+                <e p="RectangularAreaManagement" t="Include">
+                  <e p="RandomPointGeneratorOnRectangularArea.cs" t="Include" />
+                  <e p="RectangularAreaData.cs" t="Include" />
+                  <e p="RectangularAreaVisualizer.cs" t="Include" />
+                </e>
               </e>
               <e p="InteractionManagement" t="Include">
                 <e p="BaseInteractionManager.cs" t="Include" />
                 <e p="PlayerInteractionManager.cs" t="Include" />
               </e>
               <e p="ItemCreatingManagement" t="Include">
-                <e p="BaseItemCreator.cs" t="Include" />
-                <e p="BaseItemCreatorByTimeOnRandomPointInAnArea.cs" t="Include" />
-                <e p="BaseItemCreatorByTimer.cs" t="Include" />
+                <e p="BaseGameObjectSpawner.cs" t="Include" />
+                <e p="GameObjectSpawnerByTimer.cs" t="Include" />
+                <e p="GameObjectSpawnerOnRandomPointInAnArea.cs" t="Include" />
+                <e p="GameObjectSpawnerOnRandomPointInAnAreaByTime.cs" t="Include" />
               </e>
               <e p="ItemManagement" t="Include">
                 <e p="BaseItem.cs" t="Include" />
                 <e p="BaseItemData.cs" t="Include" />
                 <e p="BaseItemDataSo.cs" t="Include" />
+                <e p="ItemManager.cs" t="Include" />
                 <e p="ItemTypes" t="Include">
                   <e p="HarvestableItems" t="Include">
                     <e p="ItemToHarvest.cs" t="Include" />
@@ -213,16 +213,23 @@
                 <e p="MoveWithJoystick.cs" t="Include" />
               </e>
               <e p="OrderManagement" t="Include">
-                <e p="AllOrders.cs" t="Include" />
-                <e p="AllOrdersDataSo.cs" t="Include" />
                 <e p="Order" t="Include">
                   <e p="BaseOrder.cs" t="Include" />
                   <e p="BaseOrderData.cs" t="Include" />
                   <e p="BaseOrderUi.cs" t="Include" />
-                  <e p="OrderTypeAndCount.cs" t="Include" />
+                  <e p="ItemTypeAndCount.cs" t="Include" />
+                  <e p="OrderTypeAndCountUi.cs" t="Include" />
                 </e>
                 <e p="OrderActionManager.cs" t="Include" />
-                <e p="OrderCreationManager.cs" t="Include" />
+                <e p="OrderCreatorManagement" t="Include">
+                  <e p="BaseOrderCreator.cs" t="Include" />
+                  <e p="OrderCreatorData.cs" t="Include" />
+                  <e p="OrderCreatorDataSo.cs" t="Include" />
+                  <e p="OrderCreatorTypes" t="Include">
+                    <e p="RandomOrderCreator.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="OrderManager.cs" t="Include" />
                 <e p="OrderUiManager.cs" t="Include" />
               </e>
               <e p="PlayerManagement" t="Include">
@@ -238,7 +245,8 @@
                   <e p="PlayerStatsManager.cs" t="Include" />
                 </e>
                 <e p="StatsActionManager.cs" t="Include" />
-                <e p="StatsPerLevel.cs" t="Include" />
+                <e p="StatsPanelController.cs" t="Include" />
+                <e p="StatsPerLevelByAnimCurve.cs" t="Include" />
               </e>
               <e p="VirtualCameraManager.cs" t="Include" />
               <e p="XpManagement" t="Include">
@@ -247,7 +255,6 @@
               </e>
             </e>
           </e>
-          <e p="SOs" t="Include" />
           <e p="Textures" t="Include">
             <e p="Icons" t="Include">
               <e p="HumanFaces" t="Include" />
@@ -760,55 +767,6 @@
             </e>
           </e>
         </e>
-        <e p="PathCreator" t="Include">
-          <e p="Core" t="Include">
-            <e p="Editor" t="Include">
-              <e p="Helper" t="Include">
-                <e p="MouseUtility.cs" t="Include" />
-                <e p="PathHandle.cs" t="Include" />
-                <e p="ScreenSpacePolyLine.cs" t="Include" />
-              </e>
-              <e p="PathCreatorEditor.asmdef" t="Include" />
-              <e p="PathEditor.cs" t="Include" />
-            </e>
-            <e p="Runtime" t="Include">
-              <e p="Objects" t="Include">
-                <e p="BezierPath.cs" t="Include" />
-                <e p="EndOfPathInstruction.cs" t="Include" />
-                <e p="GlobalDisplaySettings.cs" t="Include" />
-                <e p="MinMax3D.cs" t="Include" />
-                <e p="PathCreator.cs" t="Include" />
-                <e p="PathCreatorData.cs" t="Include" />
-                <e p="PathSpace.cs" t="Include" />
-                <e p="VertexPath.cs" t="Include" />
-              </e>
-              <e p="PathCreator.asmdef" t="Include" />
-              <e p="Utility" t="Include">
-                <e p="CubicBezierUtility.cs" t="Include" />
-                <e p="MathUtility.cs" t="Include" />
-                <e p="VertexPathUtility.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Settings" t="Include" />
-          </e>
-          <e p="Documentation" t="Include" />
-          <e p="Examples" t="Include">
-            <e p="Materials" t="Include" />
-            <e p="Prefabs" t="Include" />
-            <e p="Scenes" t="Include" />
-            <e p="Scripts" t="Include">
-              <e p="Editor" t="Include">
-                <e p="PathSceneToolEditor.cs" t="Include" />
-              </e>
-              <e p="GeneratePathExample.cs" t="Include" />
-              <e p="PathFollower.cs" t="Include" />
-              <e p="PathPlacer.cs" t="Include" />
-              <e p="PathSceneTool.cs" t="Include" />
-              <e p="PathSpawner.cs" t="Include" />
-              <e p="RoadMeshCreator.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -887,8 +845,6 @@
       <e p="MoreAttributesEditorAssembly.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="PathCreator.csproj" t="IncludeRecursive" />
-      <e p="PathCreatorEditor.csproj" t="IncludeRecursive" />
       <e p="PocketLandClone.sln" t="IncludeFlat" />
       <e p="Sirenix.OdinInspector.CompatibilityLayer.csproj" t="IncludeRecursive" />
       <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />

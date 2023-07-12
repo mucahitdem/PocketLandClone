@@ -11,30 +11,17 @@ namespace Scripts.GameScripts.StatsManagement.PlayerStatsManagement
     {
         public Action<float, float> onXpValueChange;
         public Action<int> onLevelChanged;
-        public Action<float, float> onManaValueChanged;
 
         private PlayerStatsDataSo _playerStatsDataSo;
         
-        private float CurrentMana { get; set; }
-        private int Level { get; set; }
+        public int Level { get; private set; }
         private float Xp { get; set; }
-
-        private float _mana;
-        private float _manaPercentage;
-
-        private float _initialManaIncreaseSpeed;
-        private float _currentManaIncreaseSpeed;
-        private float _nextLevelXpValue;
-        
-        private float _healthIncreaseSpeed;
-        private float _currentHealthIncreaseSpeed;
 
         private float _totalRequiredXp;
         private float _xpPercentage;
 
-        protected override void Awake()
+        protected void Awake()
         {
-            base.Awake();
             _playerStatsDataSo = (PlayerStatsDataSo) baseStatsDataSo;
             CalculateRequiredXp();
         }
@@ -66,7 +53,7 @@ namespace Scripts.GameScripts.StatsManagement.PlayerStatsManagement
         }
         private void CalculateRequiredXp()
         {
-            _totalRequiredXp = _playerStatsDataSo.playerStatsData.requiredXpForLevel.GetStatWithLevel(Level);
+            _totalRequiredXp = _playerStatsDataSo.playerStatsData.requiredXpForLevelByAnimCurve.GetStatWithLevel(Level);
         }
         private void LevelUp()
         {

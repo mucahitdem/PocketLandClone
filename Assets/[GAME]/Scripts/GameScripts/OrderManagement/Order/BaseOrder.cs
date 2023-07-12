@@ -13,5 +13,10 @@ namespace Scripts.GameScripts.OrderManagement.Order
         
         [SerializeField]
         private BaseOrderData baseOrderData;
+
+        public BaseOrder(BaseOrderData baseOrderData)
+        {
+            this.baseOrderData = baseOrderData;
+        }
     }
 }

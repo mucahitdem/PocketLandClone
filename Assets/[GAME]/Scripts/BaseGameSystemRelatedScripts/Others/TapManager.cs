@@ -7,6 +7,9 @@ using UnityEngine.EventSystems;
 
 namespace Scripts.BaseGameSystemRelatedScripts.Others
 {
+    /// <summary>
+    /// On ıdle clicker games we use this
+    /// </summary>
     public class TapManager : BaseComponent
     {
         public static Action<float> onTapFactorChanged;

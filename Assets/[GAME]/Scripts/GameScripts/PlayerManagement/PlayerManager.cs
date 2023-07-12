@@ -8,7 +8,9 @@ using UnityEngine;
 namespace Scripts.GameScripts.PlayerManagement
 {
     public sealed class PlayerManager : BaseComponent
-    { 
+    {
+        public int Level => PlayerStatsManager.Level;
+        
         public BaseMovementManager BaseMovementManager => baseMovementManager;
         public PlayerStatsManager PlayerStatsManager => playerStatsManager;
 

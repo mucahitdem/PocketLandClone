@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1492a06a18144e78acd33c1230af05f, type: 3}
   m_Name: Item To Harvest 4
   m_EditorClassIdentifier: 
-  itemToHarvestData:
+  baseItemData:
     itemPrefab: {fileID: 6674036353744043057, guid: 74f50c22c0834724ebd2959b34a556e4, type: 3}
     itemIcon: {fileID: 21300000, guid: 7ee6b94942ea59e4ab8e3e9bacd042c9, type: 3}
     itemName: Soursop
-    itemPrice: 50
+    itemPrice: 20

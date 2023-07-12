@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1492a06a18144e78acd33c1230af05f, type: 3}
   m_Name: Item To Harvest 2
   m_EditorClassIdentifier: 
-  itemToHarvestData:
+  baseItemData:
     itemPrefab: {fileID: 4414709529912459740, guid: b1c079786e1952a4a9a54ce6620ceeae, type: 3}
     itemIcon: {fileID: 21300000, guid: 97775dc543641a34c9ee712df115d081, type: 3}
-    itemName: Banane
-    itemPrice: 10
+    itemName: Banana
+    itemPrice: 5

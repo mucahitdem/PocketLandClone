@@ -4,7 +4,7 @@ namespace Scripts.GameScripts.ItemManagement.ItemTypes.HarvestableItems
 {
     public class ItemToHarvest : BaseItem
     {
-        public override BaseItemDataSo BaseItemDataSo => itemToHarvestData;
+        public override BaseItemDataSo BaseItemDataSo => baseItemDataSo;
         
         private ItemToHarvestDataSo itemToHarvestData;
 
