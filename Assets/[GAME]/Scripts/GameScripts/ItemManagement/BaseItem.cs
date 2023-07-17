@@ -5,9 +5,9 @@ namespace Scripts.GameScripts.ItemManagement
 {
     public abstract class BaseItem : BaseComponent
     {
-        public virtual BaseItemDataSo BaseItemDataSo => baseItemDataSo;
-        
         [SerializeField]
         protected BaseItemDataSo baseItemDataSo;
+
+        public virtual BaseItemDataSo BaseItemDataSo => baseItemDataSo;
     }
 }

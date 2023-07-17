@@ -21,7 +21,7 @@ namespace Scripts.BaseGameScripts.UI
         protected override void SubscribeEvent()
         {
             base.SubscribeEvent();
-            if(Button)
+            if (Button)
                 Button.onClick.AddListener(OnClick);
             else
                 DebugHelper.LogRed("NO BUTTON FOUND !!!! ");
@@ -30,7 +30,7 @@ namespace Scripts.BaseGameScripts.UI
         protected override void UnsubscribeEvent()
         {
             base.SubscribeEvent();
-            if(Button)
+            if (Button)
                 Button.onClick.RemoveListener(OnClick);
         }
 

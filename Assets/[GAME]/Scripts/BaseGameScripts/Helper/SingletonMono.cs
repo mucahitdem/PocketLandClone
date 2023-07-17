@@ -12,7 +12,7 @@ namespace Scripts.BaseGameScripts.Helper
         {
             get
             {
-                if (!Application.isPlaying) 
+                if (!Application.isPlaying)
                     s_instance = FindObjectOfType<T>();
                 //BuildNewInstanceIfNull();
                 return s_instance;
@@ -30,7 +30,7 @@ namespace Scripts.BaseGameScripts.Helper
             }
         }
 
-        
+
         protected virtual void Awake()
         {
             if (s_instance == null)
@@ -46,9 +46,10 @@ namespace Scripts.BaseGameScripts.Helper
             (Instance as SingletonMono<T>)?.OnAwake();
             SetIfDontDestroyOnLoad();
         }
+
         protected abstract void OnAwake();
 
-        
+
         private static void BuildNewInstanceIfNull()
         {
             if (s_instance == null)
@@ -57,13 +58,12 @@ namespace Scripts.BaseGameScripts.Helper
                 s_instance = newObject.AddComponent<T>();
             }
         }
+
         private void SetIfDontDestroyOnLoad()
         {
             if (dontDestroyOnLoad)
-            {
                 //transform.parent = null;
                 DontDestroyOnLoad(gameObject);
-            }
         }
     }
 }

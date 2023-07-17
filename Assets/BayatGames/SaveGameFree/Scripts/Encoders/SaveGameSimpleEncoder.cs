@@ -6,11 +6,11 @@ using System.Text;
 
 namespace BayatGames.SaveGameFree.Encoders
 {
-	/// <summary>
-	///     Save Game Simple Encoder.
-	///     Grabbed from https://stackoverflow.com/questions/10168240/encrypting-decrypting-a-string-in-c-sharp
-	/// </summary>
-	public class SaveGameSimpleEncoder : ISaveGameEncoder
+    /// <summary>
+    ///     Save Game Simple Encoder.
+    ///     Grabbed from https://stackoverflow.com/questions/10168240/encrypting-decrypting-a-string-in-c-sharp
+    /// </summary>
+    public class SaveGameSimpleEncoder : ISaveGameEncoder
     {
         private const int Keysize = 256;
         private const int DerivationIterations = 1000;

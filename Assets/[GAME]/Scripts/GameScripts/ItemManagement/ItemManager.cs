@@ -1,36 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Scripts.BaseGameScripts.Component;
 using Scripts.GameScripts.PlayerManagement;
-using UnityEngine;
 
 namespace Scripts.GameScripts.ItemManagement
 {
     public class ItemManager : BaseComponent
     {
-        public List<BaseItemDataSo> AvailableItems => availableItems;
-        
-        [SerializeField]
-        private BaseItemDataSo[] allItems;
-        private List<BaseItemDataSo> availableItems;
-
         private PlayerManager playerManager;
-        
+        public List<BaseItemDataSo> AvailableItems { get; }
+
         private void Start()
         {
             playerManager = GameManager.Instance.PlayerManager;
             playerManager.PlayerStatsManager.onLevelChanged += UpdateAvailableItems;
         }
 
-
         private void UpdateAvailableItems(int levelNum)
         {
-            for (int i = 0; i < levelNum; i++)
+            for (var i = 0; i < levelNum; i++)
             {
-                var itemToAdd = allItems[i];
-                if(availableItems.Contains(itemToAdd))
+                var itemToAdd = AllItemsDataSo.Instance.items[i];
+                if (AvailableItems.Contains(itemToAdd))
                     continue;
-                availableItems.Add(itemToAdd);
+                AvailableItems.Add(itemToAdd);
             }
         }
     }

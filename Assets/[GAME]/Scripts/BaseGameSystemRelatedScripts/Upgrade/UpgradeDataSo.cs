@@ -7,6 +7,25 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
     [CreateAssetMenu(menuName = "Base Game/UpgradeData")]
     public class UpgradeDataSo : ScriptableObject
     {
+        [HideLabel]
+        public UpgradeData upgradeData;
+
+        private static IncomeData IncomeData => UpgradesData.upgradeData.incomeData;
+        private static AddData AddData => UpgradesData.upgradeData.addData;
+
+#if UNITY_EDITOR
+        public void SetDataDirty()
+        {
+            EditorUtility.SetDirty(UpgradesData);
+        }
+#endif
+
+        public static void ResetData()
+        {
+            IncomeData.Reset();
+            AddData.Reset();
+        }
+
         #region StaticSO
 
         [ShowInInspector]
@@ -24,23 +43,5 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
         }
 
         #endregion
-        
-        [HideLabel]
-        public UpgradeData upgradeData;
-        private static IncomeData IncomeData => UpgradesData.upgradeData.incomeData;
-        private static AddData AddData => UpgradesData.upgradeData.addData;
-
-#if UNITY_EDITOR
-        public void SetDataDirty()
-        {
-            EditorUtility.SetDirty(UpgradesData);
-        }
-#endif
-
-        public static void ResetData()
-        {
-            IncomeData.Reset();
-            AddData.Reset();
-        }
     }
 }

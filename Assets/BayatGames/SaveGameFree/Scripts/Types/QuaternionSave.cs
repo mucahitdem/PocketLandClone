@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace BayatGames.SaveGameFree.Types
 {
-	/// <summary>
-	///     Quaternions are used represent rotations.
-	/// </summary>
-	[Serializable]
+    /// <summary>
+    ///     Quaternions are used represent rotations.
+    /// </summary>
+    [Serializable]
     public struct QuaternionSave
     {
         public float x;

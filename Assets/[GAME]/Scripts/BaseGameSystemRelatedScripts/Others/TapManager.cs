@@ -1,23 +1,28 @@
 using System;
 using System.Collections.Generic;
 using Scripts.BaseGameScripts.Component;
-using Scripts.BaseGameScripts.Helper;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Scripts.BaseGameSystemRelatedScripts.Others
 {
     /// <summary>
-    /// On ıdle clicker games we use this
+    ///     On ıdle clicker games we use this
     /// </summary>
     public class TapManager : BaseComponent
     {
         public static Action<float> onTapFactorChanged;
         public static bool isTapActive;
-        
-        private float _timer = 0.5f;
 
         private static float s_currentFactor;
+
+        private float _timer = 0.5f;
+
+        [SerializeField]
+        private float defaultVal;
+
+        [SerializeField]
+        private float maxFactor = 5f;
 
         public static float CurrentFactor
         {
@@ -32,26 +37,16 @@ namespace Scripts.BaseGameSystemRelatedScripts.Others
             }
         }
 
-        [SerializeField]
-        private float defaultVal;
-        
-        [SerializeField]
-        private float maxFactor = 5f;
-
         private void Update()
         {
             if (Input.GetMouseButtonDown(0) && !TouchOnUI())
-            {
                 OnTap();
-            }
             else
-            {
                 Resetting();
-            }
-            
+
             //DebugHelper.LogYellow("CURRENT TAP FACTOR : " + CurrentFactor);
         }
-        
+
         private void OnTap()
         {
             _timer = 0.5f;
@@ -71,16 +66,16 @@ namespace Scripts.BaseGameSystemRelatedScripts.Others
 
         private bool TouchOnUI()
         {
-            if (!EventSystem.current) 
+            if (!EventSystem.current)
                 return false;
-            
+
             var eventDataCurrentPosition = new PointerEventData(EventSystem.current);
             eventDataCurrentPosition.position = Input.mousePosition;
 
             var results = new List<RaycastResult>();
             EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
             var onUi = results.Count != 0;
-            
+
             //DebugHelper.LogRed("ON UI : " + onUi);
             return onUi;
         }

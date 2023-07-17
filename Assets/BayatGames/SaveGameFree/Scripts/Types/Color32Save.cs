@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace BayatGames.SaveGameFree.Types
 {
-	/// <summary>
-	///     Representation of RGBA color in 32 bit format.
-	/// </summary>
-	[Serializable]
+    /// <summary>
+    ///     Representation of RGBA color in 32 bit format.
+    /// </summary>
+    [Serializable]
     public struct Color32Save
     {
         public byte r;

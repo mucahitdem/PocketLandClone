@@ -4,6 +4,7 @@ using System.Text;
 using UnityEngine;
 #if !UNITY_WSA || !UNITY_WINRT
 using System.Runtime.Serialization.Formatters.Binary;
+
 #endif
 
 namespace BayatGames.SaveGameFree.Serializers

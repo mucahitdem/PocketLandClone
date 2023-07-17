@@ -6,13 +6,11 @@ namespace Scripts.GameScripts.XpManagement
     public class XpSphere : BaseComponent
     {
         [ShowInInspector]
-        public float Xp => _xp;
-        
-        private float _xp;
+        public float Xp { get; private set; }
 
         public void LoadXp(float xpToLoad)
         {
-            _xp = xpToLoad;
+            Xp = xpToLoad;
         }
     }
 }

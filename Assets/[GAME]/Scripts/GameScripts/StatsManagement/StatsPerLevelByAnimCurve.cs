@@ -10,34 +10,30 @@ namespace Scripts.GameScripts.StatsManagement
         public AnimationCurve statPerLevel;
 
         [ShowInInspector]
-        private int Level => _level;
+        private int Level { get; set; }
+
         [ShowInInspector]
-        private float Stat => _stat;
+        private float Stat { get; set; }
 
 
-        private int _level;
-        private float _stat;
-        
-        
-        
         // [Button]
         // private void ShowLevelValues(int desiredLevel)
         // {
         //     _level = desiredLevel;
         //     _stat = statPerLevel.Evaluate(_level);
         // }
-        
+
         public void UpdateValues()
         {
-            _stat = statPerLevel.Evaluate(_level);
+            Stat = statPerLevel.Evaluate(Level);
         }
-        
+
         public float GetStatWithLevel(int level)
         {
-            _level = level;
-            _stat = statPerLevel.Evaluate(_level);
+            Level = level;
+            Stat = statPerLevel.Evaluate(Level);
 
-            return _stat;
+            return Stat;
         }
     }
 }

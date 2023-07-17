@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using Scripts.BaseGameScripts.Helper;
-using Scripts.BaseGameScripts.State._Interface;
 using Scripts.BaseGameScripts.State.GameStates;
+using Scripts.BaseGameScripts.StateManagement.GameStates;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Scripts.BaseGameScripts.State
+namespace Scripts.BaseGameScripts.StateManagement
 {
     public class GameStateManager : MonoBehaviour
     {
         [ShowInInspector]
         [ReadOnly]
-        private IGameState _currentState;
+        private BaseGameState _currentState;
 
         [Title("Private Variables")]
         private bool _firstState;
 
         private int _indexInList;
-        public List<IGameState> states = new List<IGameState>();
+        public List<BaseGameState> states = new List<BaseGameState>();
 
         private void Awake()
         {
@@ -27,13 +27,13 @@ namespace Scripts.BaseGameScripts.State
 
         private void AddStates()
         {
-            var subClasses = AssemblyManager.GetSubClassesOfType(typeof(GameState));
+            var subClasses = AssemblyManager.GetSubClassesOfType(typeof(BaseGameState));
 
             for (var i = 0; i < subClasses.Count; i++)
             {
                 var currentType = subClasses[i];
 
-                var stateBehaviour = (IGameState) gameObject.AddComponent(currentType);
+                var stateBehaviour = (BaseGameState) gameObject.AddComponent(currentType);
                 states.Add(stateBehaviour);
 
                 if (!_firstState)
@@ -47,7 +47,7 @@ namespace Scripts.BaseGameScripts.State
 
         public bool IsStateGamePlaying()
         {
-            return _currentState == ((IGameState)typeof(GameState02_0Playing));
+            return _currentState.GetType() == typeof(GameState02_0Playing);
         }
 
         /// <summary>
@@ -76,22 +76,24 @@ namespace Scripts.BaseGameScripts.State
         ///     is success
         /// </summary>
         /// <param name="newGameState"></param>
-        public void NextState(IGameState newGameState)
+        public void NextState(BaseGameState newGameState)
         {
             _currentState = FindState(newGameState);
             _currentState.InitState();
         }
-        
+
         public void NextState(bool isSucceed)
         {
             _currentState = FindState(isSucceed);
             _currentState.InitState();
         }
+
         private void IncreaseIndex()
         {
             _indexInList++;
         }
-        private IGameState GetStateWithIndex()
+
+        private BaseGameState GetStateWithIndex()
         {
             try
             {
@@ -102,22 +104,10 @@ namespace Scripts.BaseGameScripts.State
                 throw e;
             }
         }
-        private IGameState FindState(IGameState gameState)
-        {
-            for (int i = 0; i < states.Count; i++)
-            {
-                var currentState = states[i];
-                if (currentState == gameState)
-                {
-                    return currentState;
-                }
-            }
 
-            return null;
-        }
-        private IGameState FindState(bool isSucceed)
+        private BaseGameState FindState(bool isSucceed)
         {
-            for (int i = 0; i < states.Count; i++)
+            for (var i = 0; i < states.Count; i++)
             {
                 var currentState = states[i];
                 if (isSucceed)
@@ -130,13 +120,14 @@ namespace Scripts.BaseGameScripts.State
                 }
                 else
                 {
-                    if ((Type) currentState == typeof(GameState03_0Lose))
+                    if (currentState.GetType() == typeof(GameState03_0Lose))
                     {
                         DebugHelper.LogGreen(" LOSE LEVEL ");
                         return currentState;
                     }
                 }
             }
+
             return null;
         }
     }

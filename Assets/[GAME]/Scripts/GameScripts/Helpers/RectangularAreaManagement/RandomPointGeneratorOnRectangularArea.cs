@@ -8,20 +8,19 @@ namespace Scripts.GameScripts.Helpers.RectangularAreaManagement
     [RequireComponent(typeof(RectangularAreaVisualizer))]
     public class RandomPointGeneratorOnRectangularArea : BaseComponent
     {
+        private Vector3 centerPoint;
         public Func<Vector3> getRandomPos;
+        private float halfHorizontalLength;
+        private float halfVerticalLength;
 
         [SerializeField]
         private RectangularAreaData rectangularAreaData;
 
         private RectangularAreaVisualizer rectangularAreaVisualizer;
-        
-        private Vector3 centerPoint;
-        private float halfVerticalLength;
-        private float halfHorizontalLength;
 
         private void OnValidate()
         {
-            if(!rectangularAreaVisualizer)
+            if (!rectangularAreaVisualizer)
                 rectangularAreaVisualizer = GetComponent<RectangularAreaVisualizer>();
             rectangularAreaVisualizer.InsertData(rectangularAreaData);
         }
@@ -44,13 +43,13 @@ namespace Scripts.GameScripts.Helpers.RectangularAreaManagement
             base.UnsubscribeEvent();
             getRandomPos -= GetRandomPos;
         }
-        
+
 
         private Vector3 GetRandomPos()
         {
-            return new Vector3(centerPoint.x + Random.Range(-halfHorizontalLength, halfHorizontalLength), 
-                                    0, 
-                                        centerPoint.z + Random.Range(-halfVerticalLength, halfVerticalLength));
+            return new Vector3(centerPoint.x + Random.Range(-halfHorizontalLength, halfHorizontalLength),
+                0,
+                centerPoint.z + Random.Range(-halfVerticalLength, halfVerticalLength));
         }
     }
 }

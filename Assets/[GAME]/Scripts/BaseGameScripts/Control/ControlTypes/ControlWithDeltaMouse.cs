@@ -8,11 +8,9 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
     {
         public static Action<Vector2> onDraggedEnough;
         public static Action inputStopped;
-        
-        private CalculateDeltaMouse _calculateDeltaMouse;
 
-        [SerializeField]
-        private float percentageOfScreen;
+        private CalculateDeltaMouse _calculateDeltaMouse;
+        private Vector2 _deltaMousePos;
 
         [ReadOnly]
         [ShowInInspector]
@@ -21,12 +19,14 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
         [ReadOnly]
         [ShowInInspector]
         private float _pixelCountOnWidthToCallAction;
-        
+
         private float _screenHeight;
         private float _screenWidth;
-        private Vector2 _deltaMousePos;
         private Vector2 _way;
-         
+
+        [SerializeField]
+        private float percentageOfScreen;
+
         private void Awake()
         {
             _calculateDeltaMouse = new CalculateDeltaMouse();
@@ -62,15 +62,15 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
 
         public override void GetInput()
         {
-            _calculateDeltaMouse.CalculateDeltaMousePos();      
+            _calculateDeltaMouse.CalculateDeltaMousePos();
             OnDraggedAsDesired();
         }
 
         private void OnDraggedAsDesired()
         {
             _deltaMousePos = _calculateDeltaMouse.deltaMousePos;
-            _way = new Vector2(0,0);
-            
+            _way = new Vector2(0, 0);
+
             if (Mathf.Abs(_deltaMousePos.y) >= _pixelCountOnHeightToCallAction)
             {
                 _way = new Vector2(0, _deltaMousePos.y > 0 ? 1 : -1);

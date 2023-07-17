@@ -23,7 +23,7 @@ namespace Scripts.BaseGameScripts.UI
                 currentUi.Go.SetActive(uiItemId == currentUi.id);
             }
         }
-        
+
 
         [Button]
         public void HideScreen(string uiId)

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using BayatGames.SaveGameFree;
 using Scripts.BaseGameScripts.SaveAndLoad;
 using Scripts.GameScripts;
 using Scripts.GameScripts.Upgrade;
@@ -21,7 +19,7 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
         [GUIColor(0.81f, 1, 0.57f)]
         [TabGroup("Income")]
         public IncomeData incomeData;
-        
+
         // [HideLabel]
         // [GUIColor(0.81f, 1, 0.57f)]
         // [TabGroup("Merge")]
@@ -56,12 +54,10 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
 
         public override void Save()
         {
-            
         }
 
         public override void Load()
         {
-            
         }
     }
 
@@ -78,7 +74,7 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
         {
             return incomeIncreasePercentage;
         }
-        
+
         public override void Save()
         {
             PlayerPrefs.SetInt(Defs.SAVE_KEY_INCOME_UPGRADE_COUNT, upgradeCount);
@@ -95,12 +91,10 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
     {
         public override void Save()
         {
-            
         }
 
         public override void Load()
         {
-            
         }
 
         public override void Upgrade()
@@ -115,7 +109,6 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
         public override void Save()
         {
             PlayerPrefs.SetInt(Defs.SAVE_KEY_ADD_UPGRADE_COUNT, upgradeCount);
-
         }
 
         public override void Load()
@@ -128,19 +121,14 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
     [PropertyOrder(-1)]
     public abstract class UpgradableData : ISaveAndLoad
     {
-        public Action onUpgradeCountChanged;
-        public int UpgradeCount
-        {
-            get => upgradeCount;
-            set => upgradeCount = value;
-        }
-        
         [SerializeField]
         [FoldoutGroup("UpgradableData")]
         [PropertyOrder(-5)]
         [GUIColor(0.57f, 0.91f, 1)]
         protected int maxUpgradeCount;
-        
+
+        public Action onUpgradeCountChanged;
+
 
         [SerializeField]
         [HorizontalGroup("UpgradableData/cost")]
@@ -152,6 +140,12 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
         [SerializeField]
         [HideInEditorMode]
         protected int upgradeCount;
+
+        public int UpgradeCount
+        {
+            get => upgradeCount;
+            set => upgradeCount = value;
+        }
 
         [ShowInInspector]
         [FoldoutGroup("UpgradableData")]

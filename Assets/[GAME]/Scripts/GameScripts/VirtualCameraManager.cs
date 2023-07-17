@@ -5,16 +5,18 @@ using UnityEngine;
 namespace Scripts.GameScripts
 {
     /// <summary>
-    /// Control distance of virtual camera with offset and multiplier
+    ///     Control distance of virtual camera with offset and multiplier
     /// </summary>
     public class VirtualCameraManager : BaseComponent
     {
-        [SerializeField]
-        private Vector3 offset;
+        private CinemachineTransposer _transposer;
 
         [SerializeField]
         private float multiplier;
-        
+
+        [SerializeField]
+        private Vector3 offset;
+
         [SerializeField]
         private CinemachineVirtualCamera vcam;
 
@@ -28,7 +30,6 @@ namespace Scripts.GameScripts
                 return _transposer;
             }
         }
-        private CinemachineTransposer _transposer;
 
 
         private void OnValidate()

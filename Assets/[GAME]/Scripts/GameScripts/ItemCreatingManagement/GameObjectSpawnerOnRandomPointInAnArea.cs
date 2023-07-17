@@ -1,6 +1,4 @@
-﻿using System;
-using Scripts.GameScripts.Helpers;
-using Scripts.GameScripts.Helpers.RectangularAreaManagement;
+﻿using Scripts.GameScripts.Helpers.RectangularAreaManagement;
 using UnityEngine;
 
 namespace Scripts.GameScripts.ItemCreatingManagement
@@ -12,18 +10,17 @@ namespace Scripts.GameScripts.ItemCreatingManagement
 
         private void OnValidate()
         {
-            if(!randomPointGenerator)
+            if (!randomPointGenerator)
                 randomPointGenerator = GetComponent<RandomPointGeneratorOnRectangularArea>();
         }
 
         protected override void CreateObject()
         {
-            
         }
-        
+
         private Vector3 GetRandomPosOnArea()
         {
-            return (Vector3)randomPointGenerator.getRandomPos?.Invoke(); 
+            return (Vector3) randomPointGenerator.getRandomPos?.Invoke();
         }
     }
 }

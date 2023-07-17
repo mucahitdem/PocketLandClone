@@ -19,7 +19,7 @@ namespace Scripts.GameScripts.ItemCreatingManagement
             base.UnsubscribeEvent();
             timer.onTimerEnded -= OnTimerEnded;
         }
-        
+
         private void OnTimerEnded()
         {
             CreateObject();
@@ -28,7 +28,6 @@ namespace Scripts.GameScripts.ItemCreatingManagement
         protected override void CreateObject()
         {
             base.CreateObject();
-            
         }
     }
 }

@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace BayatGames.SaveGameFree.Types
 {
-	/// <summary>
-	///     Representation of 2D vectors and points.
-	/// </summary>
-	[Serializable]
+    /// <summary>
+    ///     Representation of 2D vectors and points.
+    /// </summary>
+    [Serializable]
     public struct Vector2Save
     {
         public float x;

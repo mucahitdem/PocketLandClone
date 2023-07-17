@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace BayatGames.SaveGameFree.Types
 {
-	/// <summary>
-	///     Representation of RGBA color.
-	/// </summary>
-	[Serializable]
+    /// <summary>
+    ///     Representation of RGBA color.
+    /// </summary>
+    [Serializable]
     public struct ColorSave
     {
         public float r;

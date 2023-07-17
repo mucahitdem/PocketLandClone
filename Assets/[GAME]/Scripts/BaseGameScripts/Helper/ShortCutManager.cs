@@ -7,7 +7,7 @@ using UnityEngine.Events;
 namespace Scripts.BaseGameScripts.Helper
 {
     /// <summary>
-    /// This class helps us to test features by using short cuts
+    ///     This class helps us to test features by using short cuts
     /// </summary>
     public class ShortCutManager : MonoBehaviour
     {
@@ -19,7 +19,7 @@ namespace Scripts.BaseGameScripts.Helper
             for (var i = 0; i < keycodes.Count; i++)
             {
                 _shortCutData = keycodes[i];
-                if (UnityEngine.Input.GetKeyDown(_shortCutData.keyCode)) _shortCutData.unityEvent?.Invoke();
+                if (Input.GetKeyDown(_shortCutData.keyCode)) _shortCutData.unityEvent?.Invoke();
             }
         }
     }

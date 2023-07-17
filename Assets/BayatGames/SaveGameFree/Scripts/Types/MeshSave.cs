@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace BayatGames.SaveGameFree.Types
 {
-	/// <summary>
-	///     A class that allows creating and modifying meshes from scripts.
-	/// </summary>
-	[Serializable]
+    /// <summary>
+    ///     A class that allows creating and modifying meshes from scripts.
+    /// </summary>
+    [Serializable]
     public class MeshSave
     {
         public Color[] colors;

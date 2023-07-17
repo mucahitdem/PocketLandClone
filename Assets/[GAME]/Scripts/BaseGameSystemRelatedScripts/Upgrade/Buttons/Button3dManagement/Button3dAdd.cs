@@ -9,7 +9,7 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade.Buttons.Button3dManagemen
             base.Awake();
             upgradableData = UpgradeDataSo.UpgradesData.upgradeData.addData;
         }
-        
+
 
         protected override void OnMouseDown()
         {

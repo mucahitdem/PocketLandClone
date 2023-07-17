@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace BayatGames.SaveGameFree.Types
 {
-	/// <summary>
-	///     Representation of four-dimensional vectors.
-	/// </summary>
-	[Serializable]
+    /// <summary>
+    ///     Representation of four-dimensional vectors.
+    /// </summary>
+    [Serializable]
     public struct Vector4Save
     {
         public float x;

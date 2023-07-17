@@ -36,7 +36,7 @@ namespace Scripts.BaseGameSystemRelatedScripts.Animator_Control
             }
 
             AddParameterName(key);
-            if (_animKeysAndIndexInList.TryGetValue(key, out _value)) 
+            if (_animKeysAndIndexInList.TryGetValue(key, out _value))
                 return animatorParameters[_value].hashKey;
 
             DebugHelper.LogYellow("PLEASE ADD THE KEY BEFORE USING IT");

@@ -8,10 +8,11 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
 {
     public class ControlRotateWithSwipe : BaseControl
     {
+        private bool _isTouchOnUi;
         protected CalculateDeltaMouse calculateDeltaMouse;
 
-        [SerializeField]
-        protected Transform objToRotate;
+        protected float clampedXRot;
+        protected float clampedYRot;
 
         [Header("Swipe Variables")]
         [SerializeField]
@@ -19,32 +20,32 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
 
         [SerializeField]
         protected float lerpMultiplier = 1;
+
         [SerializeField]
         protected float mouseDamp = 600;
-        
+
         [SerializeField]
-        protected MinMaxValue xRot;
-        
-        [SerializeField]
-        protected MinMaxValue yRot;
-        
-        protected float clampedXRot;
-        protected float clampedYRot;
-        
-        
-        protected float screenWidth;
+        protected Transform objToRotate;
+
         protected float screenHeight;
 
-        private bool _isTouchOnUi;
-       
-        
+
+        protected float screenWidth;
+
+        [SerializeField]
+        protected MinMaxValue xRot;
+
+        [SerializeField]
+        protected MinMaxValue yRot;
+
+
         private void Awake()
         {
             screenWidth = Screen.width;
             screenHeight = Screen.height;
             calculateDeltaMouse = new CalculateDeltaMouse();
         }
-        
+
 
         public override void Start()
         {
@@ -59,7 +60,7 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
             yRot = minMaxYRot;
             clampedYRot = 360 - yRot.maxVal;
         }
-        
+
 
         protected override void OnTapDown()
         {
@@ -71,12 +72,12 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
 
         protected override void OnTapHold()
         {
-            if(_isTouchOnUi)
-               return; 
+            if (_isTouchOnUi)
+                return;
             base.OnTapHold();
             GetInput();
         }
-        
+
         public override void GetInput()
         {
             calculateDeltaMouse.CalculateDeltaMousePos();
@@ -85,19 +86,21 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
 
         protected virtual void Swipe()
         {
-            if(!isControlEnabled)
+            if (!isControlEnabled)
                 return;
-            
+
             var objRot = objToRotate.eulerAngles;
 
             var objRotY = objRot.y;
             var objRotX = objRot.x;
-            
-            objRotY = Mathf.Lerp(objRotY, objRotY + mouseDamp * (calculateDeltaMouse.deltaMousePos.x / screenWidth), Time.deltaTime * lerpMultiplier);
-            objRotX = Mathf.Lerp(objRotX, objRotX - mouseDamp * (calculateDeltaMouse.deltaMousePos.y / screenHeight), Time.deltaTime * lerpMultiplier);
-            
+
+            objRotY = Mathf.Lerp(objRotY, objRotY + mouseDamp * (calculateDeltaMouse.deltaMousePos.x / screenWidth),
+                Time.deltaTime * lerpMultiplier);
+            objRotX = Mathf.Lerp(objRotX, objRotX - mouseDamp * (calculateDeltaMouse.deltaMousePos.y / screenHeight),
+                Time.deltaTime * lerpMultiplier);
+
             Clamp(ref objRotY, ref objRotX);
-            
+
             objToRotate.eulerAngles = new Vector3(objRotX, objRotY, objRot.z);
 
             calculateDeltaMouse.ResetValues();
@@ -106,23 +109,13 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
         private float Clamp(ref float objRotY, ref float objRotX)
         {
             if (objRotY > 180 && objRotY < clampedYRot)
-            {
                 objRotY = clampedYRot;
-            }
-            else if (objRotY < 180 && objRotY >= yRot.maxVal)
-            {
-                objRotY = yRot.maxVal;
-            }
+            else if (objRotY < 180 && objRotY >= yRot.maxVal) objRotY = yRot.maxVal;
 
 
             if (objRotX > 180 && objRotX < clampedXRot)
-            {
                 objRotX = clampedXRot;
-            }
-            else if (objRotX < 180 && objRotX >= xRot.maxVal)
-            {
-                objRotX = clampMaxVal;
-            }
+            else if (objRotX < 180 && objRotX >= xRot.maxVal) objRotX = clampMaxVal;
 
             return objRotY;
         }
@@ -132,7 +125,7 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
         {
             if (!EventSystem.current) return false;
             var eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-            eventDataCurrentPosition.position = UnityEngine.Input.mousePosition;
+            eventDataCurrentPosition.position = Input.mousePosition;
 
             var results = new List<RaycastResult>();
             EventSystem.current.RaycastAll(eventDataCurrentPosition, results);

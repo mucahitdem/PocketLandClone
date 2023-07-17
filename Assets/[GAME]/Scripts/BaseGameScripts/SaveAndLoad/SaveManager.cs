@@ -5,13 +5,14 @@ namespace Scripts.BaseGameScripts.SaveAndLoad
 {
     public class SaveManager : MonoBehaviour
     {
+        private readonly List<ISaveAndLoad> _saveAndLoads = new List<ISaveAndLoad>();
+
         [SerializeField]
         private List<GameObject> saveAndLoads = new List<GameObject>();
-        private List<ISaveAndLoad> _saveAndLoads = new List<ISaveAndLoad>();
 
         private void OnApplicationFocus(bool hasFocus)
         {
-            if(hasFocus)
+            if (hasFocus)
                 Save();
         }
 
@@ -22,7 +23,7 @@ namespace Scripts.BaseGameScripts.SaveAndLoad
 
         private void OnApplicationPause(bool pauseStatus)
         {
-            if(pauseStatus)
+            if (pauseStatus)
                 Save();
         }
 
@@ -33,18 +34,12 @@ namespace Scripts.BaseGameScripts.SaveAndLoad
 
         private void Save()
         {
-            for (int i = 0; i < _saveAndLoads.Count; i++)
-            {
-                _saveAndLoads[i].Save();
-            }
+            for (var i = 0; i < _saveAndLoads.Count; i++) _saveAndLoads[i].Save();
         }
-        
+
         private void Load()
         {
-            for (int i = 0; i < _saveAndLoads.Count; i++)
-            {
-                _saveAndLoads[i].Load();
-            }
+            for (var i = 0; i < _saveAndLoads.Count; i++) _saveAndLoads[i].Load();
         }
     }
 }

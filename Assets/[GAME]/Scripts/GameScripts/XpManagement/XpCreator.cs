@@ -9,7 +9,7 @@ namespace Scripts.GameScripts.XpManagement
     {
         [SerializeField]
         private XpSphere xpSphere;
-        
+
         protected override void SubscribeEvent()
         {
             base.SubscribeEvent();

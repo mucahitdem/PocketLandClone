@@ -7,8 +7,9 @@ namespace Scripts.GameScripts.OrderManagement.Order
     [Serializable]
     public class BaseOrderData
     {
+        private int calculatedPrice;
         public List<ItemTypeAndCount> itemsAndCount;
-        
+
         [ReadOnly]
         public int price;
 
@@ -20,19 +21,18 @@ namespace Scripts.GameScripts.OrderManagement.Order
 
         private void CalculatePrice()
         {
-            int calculatedPrice = 0;
-            for (int i = 0; i < itemsAndCount.Count; i++)
+            calculatedPrice = 0;
+            for (var i = 0; i < itemsAndCount.Count; i++)
             {
                 var currentItemAndCount = itemsAndCount[i];
-                
+
                 var currentItemCount = currentItemAndCount.itemAmount;
                 var currentItemData = currentItemAndCount.item.baseItemData;
-                
+
                 var currentItemPrice = currentItemData.itemPrice;
                 var currentItemLaborPrice = currentItemData.itemLaborPrice;
 
                 calculatedPrice += (currentItemPrice + currentItemLaborPrice) * currentItemCount;
-
             }
         }
     }

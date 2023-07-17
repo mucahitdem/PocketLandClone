@@ -19,9 +19,9 @@ namespace Scripts.GameScripts.Editor
         {
             var tree = new OdinMenuTree();
             tree.Selection.SupportsMultiSelect = false;
-            
+
             tree.Add("UPGRADE", UpgradeDataSo.UpgradesData);
-            
+
             return tree;
         }
 

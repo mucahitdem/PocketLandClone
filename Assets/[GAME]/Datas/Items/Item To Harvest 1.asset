@@ -17,3 +17,4 @@ MonoBehaviour:
     itemIcon: {fileID: 21300000, guid: 193d359034b656f4d9ee1dc206a0cd4a, type: 3}
     itemName: Apple
     itemPrice: 2
+    itemLaborPrice: 0

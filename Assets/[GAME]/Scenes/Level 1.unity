@@ -409,9 +409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a481a84ed062ce47821f1cf6b634e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0
-  coinPool: {fileID: 0}
-  basicBulletPool: {fileID: 0}
 --- !u!1 &291848579
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,8 +487,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8275032b48a440c6bc3e1a0e522638fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gizmosColor: {r: 1, g: 0, b: 0, a: 0.4117647}
   disableGizmos: 0
+  gizmosColor: {r: 1, g: 0, b: 0, a: 0.4117647}
 --- !u!114 &291848586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,11 +546,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e18f2a43a2458b8c25420a1481ebb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _index: 0
-  timeScales:
-  - 0.25
-  - 0.5
-  - 1
+--- !u!1 &305323238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305323240}
+  - component: {fileID: 305323239}
+  m_Layer: 0
+  m_Name: PoolCreator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &305323239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305323238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc219fe425fa41069550645415e24c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolObjectDatas:
+  - initialSize: 0
+    prefab: {fileID: 0}
+--- !u!4 &305323240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305323238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &318874858
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,9 +887,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
-  uiManager: {fileID: 1847765930}
-  levelManager: {fileID: 0}
   gameStateManager: {fileID: 0}
+  levelManager: {fileID: 0}
+  uiManager: {fileID: 1847765930}
 --- !u!1 &471807142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,8 +1163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseMovementManager: {fileID: 579397721}
-  playerStatsManager: {fileID: 579397720}
   playerInteractionManager: {fileID: 579397719}
+  playerStatsManager: {fileID: 579397720}
 --- !u!114 &579397719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1163,9 +1202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9d947ca52f48ef9479972005c9c9a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  downForce: 40
   moveSpeed: 10
   turnSpeed: 400
-  downForce: 40
   joystick: {fileID: 862349957}
 --- !u!1 &619911272
 GameObject:
@@ -1476,8 +1515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea807afe5b62b4641b7434469922187d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 10, z: -9}
   multiplier: 3.37
+  offset: {x: 0, y: 10, z: -9}
   vcam: {fileID: 822527472}
 --- !u!1 &855937905
 GameObject:
@@ -1524,41 +1563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1d83c82f4d4805a0cf040b1b44d9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderCreatorDataSo: {fileID: 11400000, guid: 191366a3473cc5e40a4d31c3b7d63010, type: 2}
-  orderAmountMinValueByPlayerLevel:
-    statPerLevel:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0.4205744
-        outSlope: 0.4205744
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.6738312
-        value: 0.28339615
-        inSlope: 1.3088042
-        outSlope: 1.3088042
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 2.197034
-        outSlope: 2.197034
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
+  baseOrderCreatorDataSo: {fileID: 0}
   orderAmountMaxValueByPlayerLevel:
     statPerLevel:
       serializedVersion: 2
@@ -1586,6 +1591,40 @@ MonoBehaviour:
         value: 1000
         inSlope: 406.65002
         outSlope: 406.65002
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  orderAmountMinValueByPlayerLevel:
+    statPerLevel:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.4205744
+        outSlope: 0.4205744
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6738312
+        value: 0.28339615
+        inSlope: 1.3088042
+        outSlope: 1.3088042
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 2.197034
+        outSlope: 2.197034
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -1907,8 +1946,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 254bb01d374941b7bfb034f556f3d32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xpFillBar: {fileID: 1724904472}
   levelText: {fileID: 1737172428}
+  xpFillBar: {fileID: 1724904472}
 --- !u!1 &989613780
 GameObject:
   m_ObjectHideFlags: 0
@@ -2518,6 +2557,53 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1535087217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1535087219}
+  - component: {fileID: 1535087218}
+  m_Layer: 0
+  m_Name: CoinUi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1535087218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535087217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5cfaa988c74d8581619e04ce541259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+  coinCount: {fileID: 0}
+  coinIcon: {fileID: 0}
+--- !u!4 &1535087219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535087217}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1545604265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,8 +2793,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
   cam: {fileID: 1525617197}
-  playerManager: {fileID: 579397718}
   itemManager: {fileID: 0}
+  playerManager: {fileID: 579397718}
 --- !u!1 &1724904470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3258,12 +3344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24c7c788ea84004a543d5ea83179665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allItems:
-  - {fileID: 11400000, guid: fbf17e2e6aab89040815b59b5ec5e439, type: 2}
-  - {fileID: 11400000, guid: ea1596c05bed550409edb58687d1d84b, type: 2}
-  - {fileID: 11400000, guid: ffb88b1a43d41c84ab7096ec1437ffff, type: 2}
-  - {fileID: 11400000, guid: 3440af28bb4cbba4aa958a69c7654ad4, type: 2}
-  - {fileID: 11400000, guid: 23ea557f25ae2fa429c0034db93a0080, type: 2}
 --- !u!4 &2014558148
 Transform:
   m_ObjectHideFlags: 0

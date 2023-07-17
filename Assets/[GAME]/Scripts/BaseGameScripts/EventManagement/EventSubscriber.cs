@@ -1,5 +1,4 @@
-﻿using Scripts.BaseGameScripts.Helper;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Scripts.BaseGameScripts.EventManagement
 {

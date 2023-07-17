@@ -1,22 +1,20 @@
-﻿using System;
-using Scripts.BaseGameScripts.Component;
-using Scripts.BaseGameScripts.Helper;
+﻿using Scripts.BaseGameScripts.Component;
 using UnityEngine;
 
 namespace Scripts.GameScripts.FindTargetsInAreaManagement
 {
     public class FindTargetInAreaVisualizer : BaseComponent
     {
+        private FindTargetsInAreaData _findTargetsInAreaData;
+
         [SerializeField]
         private Color gizmosColor = Color.red;
-        
-        private FindTargetsInAreaData _findTargetsInAreaData;
 
         public void LoadNewData(FindTargetsInAreaData findTargetsInAreaData)
         {
             _findTargetsInAreaData = findTargetsInAreaData;
         }
-        
+
         private void OnDrawGizmos()
         {
             Gizmos.color = gizmosColor;

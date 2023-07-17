@@ -1,6 +1,4 @@
-﻿
-
-namespace Scripts.BaseGameSystemRelatedScripts.Upgrade.Buttons
+﻿namespace Scripts.BaseGameSystemRelatedScripts.Upgrade.Buttons
 {
     public class AddButton : BaseUpgradeButton
     {
@@ -21,7 +19,7 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade.Buttons
             base.UnsubscribeEvent();
             //CellManager.cellsFilled -= OnGridsFilled;
         }
-        
+
         private void OnGridsFilled(bool isFilled)
         {
             ButtonControl(isFilled);

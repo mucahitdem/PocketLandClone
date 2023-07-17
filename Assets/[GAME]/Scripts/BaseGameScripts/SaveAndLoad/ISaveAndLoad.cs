@@ -5,5 +5,6 @@
         void Save();
 
         void Load();
+        //void Register();
     }
 }

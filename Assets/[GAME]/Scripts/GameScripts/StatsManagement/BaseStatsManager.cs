@@ -1,6 +1,4 @@
-﻿using System;
-using Scripts.BaseGameScripts.Component;
-using Scripts.BaseGameScripts.Helper;
+﻿using Scripts.BaseGameScripts.Component;
 using UnityEngine;
 
 namespace Scripts.GameScripts.StatsManagement

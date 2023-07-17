@@ -8,7 +8,7 @@ namespace Scripts.GameScripts.FindTargetsInAreaManagement
     {
         public Transform castPos;
         public LayerMask layerMask;
-        public float radius;
         public int maxTargetCount;
+        public float radius;
     }
 }

@@ -84,13 +84,10 @@
                 <e p="EnvironmentManager.cs" t="Include" />
                 <e p="LevelManager.cs" t="Include" />
               </e>
-              <e p="Pool" t="Include">
-                <e p="IPoolObj.cs" t="Include" />
-                <e p="IPoolObject.cs" t="Include" />
+              <e p="PoolManagement" t="Include">
                 <e p="Pool.cs" t="Include" />
-                <e p="PoolingPattern.cs" t="Include" />
+                <e p="PoolCreator.cs" t="Include" />
                 <e p="PoolManager.cs" t="Include" />
-                <e p="PoolPattern.cs" t="Include" />
               </e>
               <e p="RagDollManagement" t="Include">
                 <e p="RagDoll.cs" t="Include" />
@@ -100,12 +97,8 @@
                 <e p="SaveAndLoadManager.cs" t="Include" />
                 <e p="SaveManager.cs" t="Include" />
               </e>
-              <e p="State" t="Include">
-                <e p="_Interface" t="Include">
-                  <e p="IGameState.cs" t="Include" />
-                </e>
+              <e p="StateManagement" t="Include">
                 <e p="BaseGameState.cs" t="Include" />
-                <e p="GameState.cs" t="Include" />
                 <e p="GameStateManager.cs" t="Include" />
                 <e p="GameStates" t="Include">
                   <e p="GameState01_0Start.cs" t="Include" />
@@ -170,7 +163,11 @@
               </e>
             </e>
             <e p="GameScripts" t="Include">
+              <e p="AllItemsDataSo.cs" t="Include" />
               <e p="Defs.cs" t="Include" />
+              <e p="DevHelperTools" t="Include">
+                <e p="ComponentCopyEditor.cs" t="Include" />
+              </e>
               <e p="FindTargetsInAreaManagement" t="Include">
                 <e p="FindTargetInAreaVisualizer.cs" t="Include" />
                 <e p="FindTargetsInArea.cs" t="Include" />
@@ -223,8 +220,8 @@
                 <e p="OrderActionManager.cs" t="Include" />
                 <e p="OrderCreatorManagement" t="Include">
                   <e p="BaseOrderCreator.cs" t="Include" />
-                  <e p="OrderCreatorData.cs" t="Include" />
-                  <e p="OrderCreatorDataSo.cs" t="Include" />
+                  <e p="BaseOrderCreatorData.cs" t="Include" />
+                  <e p="BaseOrderCreatorDataSo.cs" t="Include" />
                   <e p="OrderCreatorTypes" t="Include">
                     <e p="RandomOrderCreator.cs" t="Include" />
                   </e>

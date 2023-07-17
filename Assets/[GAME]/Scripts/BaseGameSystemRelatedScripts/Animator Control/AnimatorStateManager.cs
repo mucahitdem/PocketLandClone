@@ -6,7 +6,9 @@ namespace Scripts.BaseGameSystemRelatedScripts.Animator_Control
 {
     public class AnimatorStateManager : BaseComponent
     {
-        public override Animator AnimOfObj => animOfObj;
+        private string _prevBoolKey;
+
+        private string _prevTriggerKey;
 
         [SerializeField]
         private AnimatorParameterController animatorParameterController;
@@ -14,8 +16,7 @@ namespace Scripts.BaseGameSystemRelatedScripts.Animator_Control
         [SerializeField]
         private Animator animOfObj;
 
-        private string _prevTriggerKey;
-        private string _prevBoolKey;
+        public override Animator AnimOfObj => animOfObj;
 
         private void Awake()
         {
@@ -24,17 +25,18 @@ namespace Scripts.BaseGameSystemRelatedScripts.Animator_Control
 
         public void SetTrigger(string key, bool reset = false)
         {
-            if(reset)
+            if (reset)
                 ResetAllPrevKey();
-            
+
             AnimOfObj.SetTrigger(animatorParameterController.GetHashKey(key));
             _prevTriggerKey = key;
         }
+
         public void SetBool(string key, bool isEnabled, bool reset = false)
         {
-            if(reset)
+            if (reset)
                 ResetAllPrevKey();
-            
+
             AnimOfObj.SetBool(animatorParameterController.GetHashKey(key), isEnabled);
             _prevBoolKey = key;
         }
@@ -43,14 +45,10 @@ namespace Scripts.BaseGameSystemRelatedScripts.Animator_Control
         {
             StopPlaying();
             if (!_prevBoolKey.IsNullOrWhitespace())
-            {
                 AnimOfObj.SetBool(animatorParameterController.GetHashKey(_prevBoolKey), false);
-            }
-            
+
             if (!_prevTriggerKey.IsNullOrWhitespace())
-            {
                 AnimOfObj.ResetTrigger(animatorParameterController.GetHashKey(_prevTriggerKey));
-            }
         }
 
         private void StopPlaying()
@@ -62,12 +60,12 @@ namespace Scripts.BaseGameSystemRelatedScripts.Animator_Control
         {
             AnimOfObj.SetFloat(animatorParameterController.GetHashKey(key), value);
         }
-        
+
         public void SetInt(string key, int value)
         {
             AnimOfObj.SetInteger(animatorParameterController.GetHashKey(key), value);
         }
-        
+
         public bool GetBool(string key)
         {
             return AnimOfObj.GetBool(animatorParameterController.GetHashKey(key));

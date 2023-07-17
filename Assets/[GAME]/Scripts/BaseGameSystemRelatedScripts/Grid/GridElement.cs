@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using Scripts.BaseGameScripts.Component;
-using Scripts.BaseGameScripts.Helper;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,20 +11,23 @@ namespace Scripts.GameScripts.Grid
 {
     public class GridElement : BaseComponent
     {
-        [SerializeField]
-        private Image outline;
+        private int _currentPosIndex;
+        private bool _stopMovement;
+
+        public ColorContainer container;
+
+        public int gridIndex;
 
         [SerializeField]
         private Image inline;
-        
-        public ColorContainer container;
-        
-        public int gridIndex;
+
         public bool isFull;
+
+        [SerializeField]
+        private Image outline;
+
         public int positionIndex;
-        private int _currentPosIndex;
-        private bool _stopMovement;
-        
+
         public void MoveGrid(Vector3 pos, int posIndex)
         {
             AddAndPlay(MoveTween(pos, .1f, posIndex));
@@ -35,17 +37,14 @@ namespace Scripts.GameScripts.Grid
         {
             return TransformOfObj.DOMove(targetPosition, duration)
                 .SetEase(Ease.OutSine)
-                .OnStart(() =>
-                {
-                    _currentPosIndex = posIndex;
-                });
+                .OnStart(() => { _currentPosIndex = posIndex; });
         }
 
         public void ResetGrid()
         {
             isFull = false;
         }
-        
+
         #region Queue Tweens
 
         public Queue<Sequence> sequenceQueue = new Queue<Sequence>();
@@ -56,14 +55,12 @@ namespace Scripts.GameScripts.Grid
             sequence.Pause();
             sequence.Append(tween);
             sequenceQueue.Enqueue(sequence);
-            
-            if (sequenceQueue.Count == 1)
-            {
-                sequenceQueue.Peek().Play();
-            }
-            
+
+            if (sequenceQueue.Count == 1) sequenceQueue.Peek().Play();
+
             sequence.OnComplete(OnComplete);
         }
+
         private void OnComplete()
         {
             sequenceQueue.Dequeue();
@@ -75,17 +72,14 @@ namespace Scripts.GameScripts.Grid
                 _stopMovement = false;
                 return;
             }
-            
-            if (sequenceQueue.Count > 0)
-            {
-                sequenceQueue.Peek().Play();
-            }
+
+            if (sequenceQueue.Count > 0) sequenceQueue.Peek().Play();
         }
 
         public bool IsRunning()
         {
             // Are tween being processed?
-            return (sequenceQueue.Any());
+            return sequenceQueue.Any();
         }
 
         public void StopMovement()
@@ -95,28 +89,25 @@ namespace Scripts.GameScripts.Grid
 
         private void KillSequences()
         {
-            foreach (var sequence in sequenceQueue)
-            {
-                sequence.Kill();
-            }
+            foreach (var sequence in sequenceQueue) sequence.Kill();
             sequenceQueue.Clear();
         }
 
         #endregion
 
         #region Editor Codes
+
         [ButtonGroup]
         public void GetImage()
         {
-            Image[] imgs = GetComponentsInChildren<Image>();
-            for (int i = 0; i < imgs.Length; i++)
+            var imgs = GetComponentsInChildren<Image>();
+            for (var i = 0; i < imgs.Length; i++)
             {
-                Image currentImage = imgs[i];
+                var currentImage = imgs[i];
                 if (currentImage.name == "Image")
                     outline = currentImage;
                 else
                     inline = currentImage;
-                
             }
         }
 
@@ -126,7 +117,6 @@ namespace Scripts.GameScripts.Grid
             outline.color = container.outlineColor;
             inline.color = container.inlineColor;
         }
-        
 
         #endregion
     }
@@ -134,7 +124,7 @@ namespace Scripts.GameScripts.Grid
     [Serializable]
     public class ColorContainer
     {
-        public Color outlineColor;
         public Color inlineColor;
+        public Color outlineColor;
     }
 }

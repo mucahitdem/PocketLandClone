@@ -19,7 +19,7 @@ namespace Scripts.BaseGameScripts.Helper
         private void IncreaseIndex()
         {
             _index++;
-            if (_index >= timeScales.Count) 
+            if (_index >= timeScales.Count)
                 _index = 0;
         }
     }

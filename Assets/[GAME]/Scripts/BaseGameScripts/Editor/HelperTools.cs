@@ -3,7 +3,6 @@ using System.IO;
 using System.Reflection;
 using BayatGames.SaveGameFree;
 using Scripts.BaseGameSystemRelatedScripts.Upgrade;
-using Scripts.GameScripts.Upgrade;
 using UnityEditor;
 using UnityEngine;
 
@@ -53,7 +52,7 @@ namespace Scripts.BaseGameScripts.Editor
             if (!Directory.Exists(s_path))
                 Directory.CreateDirectory(s_path);
         }
-        
+
         [MenuItem("Developer Tools/Delete Saved Files _d")]
         private static void DeleteSavedFiles()
         {

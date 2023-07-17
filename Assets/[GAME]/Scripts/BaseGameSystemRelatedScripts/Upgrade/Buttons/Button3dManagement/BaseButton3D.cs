@@ -1,7 +1,4 @@
-﻿using DG.Tweening;
-using Scripts.BaseGameScripts.Helper;
-using Scripts.BaseGameSystemRelatedScripts.Upgrade;
-using UnityEngine;
+﻿using Scripts.BaseGameSystemRelatedScripts.Upgrade;
 
 namespace Scripts.GameScripts.Button3dManagement
 {

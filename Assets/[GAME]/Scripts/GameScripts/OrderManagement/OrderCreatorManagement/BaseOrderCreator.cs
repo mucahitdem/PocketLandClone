@@ -6,20 +6,18 @@ namespace Scripts.GameScripts.OrderManagement.OrderCreatorManagement
 {
     public abstract class BaseOrderCreator : BaseComponent
     {
-        protected OrderCreatorDataSo OrderCreatorDataSo => orderCreatorDataSo;
-        protected int PlayerLevel => playerManager.Level;
-
         [SerializeField]
-        private OrderCreatorDataSo orderCreatorDataSo;
+        private BaseOrderCreatorDataSo baseOrderCreatorDataSo;
 
         private PlayerManager playerManager;
+        protected BaseOrderCreatorDataSo BaseOrderCreatorDataSo => baseOrderCreatorDataSo;
+        protected int PlayerLevel => playerManager.Level;
 
         protected virtual void Start()
         {
             playerManager = GameManager.Instance.PlayerManager;
         }
 
-        
 
         public abstract void CreateNewOrder();
     }

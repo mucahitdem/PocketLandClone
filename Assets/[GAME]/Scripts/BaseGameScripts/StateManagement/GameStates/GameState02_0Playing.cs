@@ -1,8 +1,8 @@
 ﻿using Scripts.GameScripts;
 
-namespace Scripts.BaseGameScripts.State.GameStates
+namespace Scripts.BaseGameScripts.StateManagement.GameStates
 {
-    public class GameState02_0Playing : GameState
+    public class GameState02_0Playing : BaseGameState
     {
         public override void InitState()
         {

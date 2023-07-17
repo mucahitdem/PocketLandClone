@@ -1,11 +1,8 @@
-﻿using System;
-using Scripts.BaseGameScripts.Component;
-using UnityEngine;
+﻿using Scripts.BaseGameScripts.Component;
 
 namespace Scripts.GameScripts.InteractionManagement
 {
     public class BaseInteractionManager : BaseComponent
     {
-       
     }
 }

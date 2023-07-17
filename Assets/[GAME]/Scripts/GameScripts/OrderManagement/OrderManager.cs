@@ -10,7 +10,7 @@ namespace Scripts.GameScripts.OrderManagement
     {
         [SerializeField]
         private BaseOrderCreator orderCreator;
-        
+
         protected override void SubscribeEvent()
         {
             base.SubscribeEvent();

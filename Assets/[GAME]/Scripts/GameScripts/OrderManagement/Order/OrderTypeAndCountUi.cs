@@ -8,10 +8,10 @@ namespace Scripts.GameScripts.OrderManagement.Order
     public class OrderTypeAndCountUi : BaseComponent
     {
         [SerializeField]
-        private Image orderImage;
-        
-        [SerializeField]
         private TextMeshProUGUI orderCountText;
+
+        [SerializeField]
+        private Image orderImage;
 
         public void UpdateVariables(ItemTypeAndCount typeAndCount)
         {

@@ -10,16 +10,16 @@ namespace Scripts.BaseGameSystemRelatedScripts
 {
     public class SceneLoader : MonoBehaviour
     {
+        private int _fakeLevelNum = 1;
+        private int _levelNum = 1;
+
         [SerializeField]
         private bool addDelayBeforeLoad;
 
         [ShowIf("addDelayBeforeLoad")]
         [SerializeField]
         private float delayDuration;
-        
-        private int _fakeLevelNum = 1;
-        private int _levelNum = 1;
-        
+
         private IEnumerator Start()
         {
             yield return new WaitForSeconds(addDelayBeforeLoad ? delayDuration : 0);
@@ -32,7 +32,7 @@ namespace Scripts.BaseGameSystemRelatedScripts
             _fakeLevelNum = SaveGame.Load(Defs.SAVE_KEY_FAKE_LEVEL, 1);
 
             SceneManager.LoadScene(_levelNum);
-            
+
             DebugHelper.LogRed("LEVEL NUM : " + _levelNum);
             DebugHelper.LogRed("FAKE LEVEL NUM : " + _fakeLevelNum);
         }

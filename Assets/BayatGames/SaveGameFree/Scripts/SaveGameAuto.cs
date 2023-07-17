@@ -6,32 +6,32 @@ using UnityEngine;
 
 namespace BayatGames.SaveGameFree
 {
-	/// <summary>
-	///     Save Game Auto.
-	///     Make your game objects save their position, rotaiton and scale automatically.
-	/// </summary>
-	[AddComponentMenu("Save Game Free/Auto Save")]
+    /// <summary>
+    ///     Save Game Auto.
+    ///     Make your game objects save their position, rotaiton and scale automatically.
+    /// </summary>
+    [AddComponentMenu("Save Game Free/Auto Save")]
     public class SaveGameAuto : MonoBehaviour
     {
-	    /// <summary>
-	    ///     Save format.
-	    /// </summary>
-	    public enum SaveFormat
+        /// <summary>
+        ///     Save format.
+        /// </summary>
+        public enum SaveFormat
         {
-	        /// <summary>
-	        ///     The XML.
-	        /// </summary>
-	        XML,
+            /// <summary>
+            ///     The XML.
+            /// </summary>
+            XML,
 
-	        /// <summary>
-	        ///     The JSON.
-	        /// </summary>
-	        JSON,
+            /// <summary>
+            ///     The JSON.
+            /// </summary>
+            JSON,
 
-	        /// <summary>
-	        ///     The Ninary.
-	        /// </summary>
-	        Binary
+            /// <summary>
+            ///     The Ninary.
+            /// </summary>
+            Binary
         }
 
 

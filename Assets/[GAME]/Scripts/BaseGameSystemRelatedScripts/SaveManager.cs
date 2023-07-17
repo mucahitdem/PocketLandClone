@@ -11,7 +11,7 @@ namespace Scripts.BaseGameSystemRelatedScripts
 
         private void OnApplicationFocus(bool hasFocus)
         {
-            if(hasFocus)
+            if (hasFocus)
                 Save();
         }
 
@@ -22,24 +22,18 @@ namespace Scripts.BaseGameSystemRelatedScripts
 
         private void OnApplicationPause(bool pauseStatus)
         {
-            if(pauseStatus)
+            if (pauseStatus)
                 Save();
         }
 
         private void Save()
         {
-            for (int i = 0; i < saveAndLoads.Count; i++)
-            {
-                (saveAndLoads[i]).GetComponent<ISaveAndLoad>().Save();
-            }
+            for (var i = 0; i < saveAndLoads.Count; i++) saveAndLoads[i].GetComponent<ISaveAndLoad>().Save();
         }
-        
+
         private void Load() // initial loads are better
         {
-            for (int i = 0; i < saveAndLoads.Count; i++)
-            {
-                (saveAndLoads[i]).GetComponent<ISaveAndLoad>().Load();
-            }
+            for (var i = 0; i < saveAndLoads.Count; i++) saveAndLoads[i].GetComponent<ISaveAndLoad>().Load();
         }
     }
 }

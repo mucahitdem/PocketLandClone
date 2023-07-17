@@ -30,10 +30,7 @@ namespace Boxophobic.StyledGUI
             {
                 var toggle = false;
 
-                if (prop.floatValue > 0.5f)
-                {
-                    toggle = true;
-                }
+                if (prop.floatValue > 0.5f) toggle = true;
 
                 toggle = EditorGUILayout.Toggle(label, toggle);
 
@@ -42,13 +39,9 @@ namespace Boxophobic.StyledGUI
                 if (EditorGUI.EndChangeCheck())
                 {
                     if (toggle)
-                    {
                         prop.floatValue = 1;
-                    }
                     else
-                    {
                         prop.floatValue = 0;
-                    }
                 }
             }
             else
@@ -59,10 +52,7 @@ namespace Boxophobic.StyledGUI
 
                 var toggle = false;
 
-                if (prop.floatValue > 0.5f)
-                {
-                    toggle = true;
-                }
+                if (prop.floatValue > 0.5f) toggle = true;
 
                 toggle = GUILayout.Toggle(toggle, "", GUILayout.Width(width));
 
@@ -71,13 +61,9 @@ namespace Boxophobic.StyledGUI
                 if (EditorGUI.EndChangeCheck())
                 {
                     if (toggle)
-                    {
                         prop.floatValue = 1;
-                    }
                     else
-                    {
                         prop.floatValue = 0;
-                    }
                 }
 
                 GUILayout.EndHorizontal();

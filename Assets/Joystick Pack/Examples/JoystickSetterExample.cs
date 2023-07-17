@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class JoystickSetterExample : MonoBehaviour
 {
-    public VariableJoystick variableJoystick;
-    public Text valueText;
-    public Image background;
     public Sprite[] axisSprites;
+    public Image background;
+    public Text valueText;
+    public VariableJoystick variableJoystick;
 
     public void ModeChanged(int index)
     {
-        switch(index)
+        switch (index)
         {
             case 0:
                 variableJoystick.SetMode(JoystickType.Fixed);
@@ -23,9 +21,7 @@ public class JoystickSetterExample : MonoBehaviour
             case 2:
                 variableJoystick.SetMode(JoystickType.Dynamic);
                 break;
-            default:
-                break;
-        }     
+        }
     }
 
     public void AxisChanged(int index)
@@ -43,8 +39,6 @@ public class JoystickSetterExample : MonoBehaviour
             case 2:
                 variableJoystick.AxisOptions = AxisOptions.Vertical;
                 background.sprite = axisSprites[index];
-                break;
-            default:
                 break;
         }
     }

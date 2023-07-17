@@ -1,8 +1,9 @@
-﻿using Scripts.GameScripts;
+﻿using Scripts.BaseGameScripts.StateManagement;
+using Scripts.GameScripts;
 
 namespace Scripts.BaseGameScripts.State.GameStates
 {
-    public class GameState01_0Start : GameState
+    public class GameState01_0Start : BaseGameState
     {
         public override void InitState()
         {

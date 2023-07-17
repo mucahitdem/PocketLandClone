@@ -1,24 +1,20 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using Scripts.BaseGameScripts.Helper;
-using Scripts.BaseGameScripts.SaveAndLoad;
-using UnityEngine;
 
 namespace Scripts.GameScripts.StatsManagement.PlayerStatsManagement
 {
     public class PlayerStatsManager : BaseStatsManager
     {
-        public Action<float, float> onXpValueChange;
-        public Action<int> onLevelChanged;
-
         private PlayerStatsDataSo _playerStatsDataSo;
-        
-        public int Level { get; private set; }
-        private float Xp { get; set; }
 
         private float _totalRequiredXp;
         private float _xpPercentage;
+        public Action<int> onLevelChanged;
+        public Action<float, float> onXpValueChange;
+
+        public int Level { get; private set; }
+        private float Xp { get; set; }
 
         protected void Awake()
         {
@@ -32,6 +28,7 @@ namespace Scripts.GameScripts.StatsManagement.PlayerStatsManagement
             CollectXp(0);
             onLevelChanged?.Invoke(Level);
         }
+
         public void CollectXp(float xpAmountToCollect)
         {
             Xp += xpAmountToCollect;
@@ -43,18 +40,21 @@ namespace Scripts.GameScripts.StatsManagement.PlayerStatsManagement
                 CalculateRequiredXp();
                 LevelUp();
             }
-            
+
             CalculateXpPercentage();
             onXpValueChange?.Invoke(Xp, _xpPercentage);
         }
+
         private void CalculateXpPercentage()
         {
             _xpPercentage = Xp / _totalRequiredXp;
         }
+
         private void CalculateRequiredXp()
         {
             _totalRequiredXp = _playerStatsDataSo.playerStatsData.requiredXpForLevelByAnimCurve.GetStatWithLevel(Level);
         }
+
         private void LevelUp()
         {
             Level++;

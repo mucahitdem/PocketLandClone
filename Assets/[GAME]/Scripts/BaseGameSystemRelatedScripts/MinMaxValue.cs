@@ -7,15 +7,15 @@ namespace Scripts.BaseGameSystemRelatedScripts
     public class MinMaxValue
     {
         private float _rangeBetweenMaxAndMin;
-        public float minVal;
         public float maxVal;
+        public float minVal;
 
         public MinMaxValue(float minVal, float maxVal)
         {
             this.minVal = minVal;
             this.maxVal = maxVal;
         }
-        
+
         public float RangeBetweenMaxAndMin
         {
             get
@@ -36,9 +36,9 @@ namespace Scripts.BaseGameSystemRelatedScripts
 
         public int RandomInt()
         {
-            return (int)Random.Range(minVal, maxVal);
+            return (int) Random.Range(minVal, maxVal);
         }
-        
+
         public float RandomFloat()
         {
             return Random.Range(minVal, maxVal);

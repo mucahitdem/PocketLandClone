@@ -12,17 +12,6 @@ namespace Scripts.BaseGameScripts.CoinControl
         public static Action<float> onCoinCountChanged;
 
         private float TotalCoins { get; set; }
-        
-        
-        protected override void OnAwake()
-        {
-            Load();
-        }
-
-        private void Start()
-        {
-            onCoinCountChanged?.Invoke(TotalCoins);
-        }
 
         public void Save()
         {
@@ -34,15 +23,26 @@ namespace Scripts.BaseGameScripts.CoinControl
             TotalCoins = PlayerPrefs.GetFloat(Defs.SAVE_KEY_COIN_COUNT, 0);
             Debug.Log("TOTAL COIN COUNT LOADED: " + TotalCoins);
         }
-        
-        
+
+
+        protected override void OnAwake()
+        {
+            Load();
+        }
+
+        private void Start()
+        {
+            onCoinCountChanged?.Invoke(TotalCoins);
+        }
+
+
         [Button]
         public void AddCoin(float coinToAdd)
         {
             TotalCoins += coinToAdd;
             onCoinCountChanged?.Invoke(TotalCoins);
         }
-        
+
         [Button]
         public void SpendCoin(float coinToSpend)
         {

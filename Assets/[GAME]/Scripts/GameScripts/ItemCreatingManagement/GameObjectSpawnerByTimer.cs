@@ -19,14 +19,14 @@ namespace Scripts.GameScripts.ItemCreatingManagement
             base.UnsubscribeEvent();
             timer.onTimerEnded -= OnTimerEnded;
         }
+
         protected virtual void OnTimerEnded()
         {
             CreateObject();
         }
-        
+
         protected override void CreateObject()
         {
-            
         }
     }
 }

@@ -12,6 +12,8 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
     public abstract class BaseUpgradeButton : UiButton
     {
         private Image _bgImage;
+
+        private bool _canPlayAnim;
         private CoinManager _coinManager;
 
         private float _cost;
@@ -21,8 +23,6 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
         public Text levelText;
         public Text nameOfButton;
         protected UpgradableData upgradableData;
-
-        private bool _canPlayAnim;
 
         protected virtual void Awake()
         {
@@ -34,6 +34,49 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
         {
             _coinManager = CoinManager.Instance;
             OnUpgradeCountChanged();
+        }
+
+        protected override void OnClick()
+        {
+            base.OnClick();
+            TryUpgrade();
+        }
+
+        protected void TryUpgrade()
+        {
+            if (upgradableData.UpgradeMaxed)
+                return;
+
+            var upCost = upgradableData.UpgradeCost;
+            if (!_coinManager.CheckIfYouHaveEnoughCoin(upCost))
+                //NotEnoughTextController.NotEnoughAction?.Invoke();
+                return;
+
+            if (_canPlayAnim)
+            {
+                _canPlayAnim = false;
+                TransformOfObj.DOPunchScale(Vector3.one * .1f, .3f)
+                    .OnComplete(() => { _canPlayAnim = true; });
+            }
+
+            CoinManager.Instance.SpendCoin(upCost);
+            upgradableData.Upgrade();
+
+            OnUpgradeCountChanged();
+
+            if (upgradableData.UpgradeMaxed)
+                ButtonControl(false);
+        }
+
+        private void OnUpgradeCountChanged()
+        {
+            UpdateLevel();
+            UpdateCost();
+        }
+
+        private void OnCoinCountChanged(float obj)
+        {
+            // button activate controller
         }
 
         #region Subs
@@ -51,52 +94,6 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
         }
 
         #endregion
-        
-        protected override void OnClick()
-        {
-            base.OnClick();
-            TryUpgrade();
-        }
-
-        protected void TryUpgrade()
-        {
-            if (upgradableData.UpgradeMaxed) 
-                return;
-            
-            var upCost = upgradableData.UpgradeCost;
-            if (!_coinManager.CheckIfYouHaveEnoughCoin(upCost))
-                //NotEnoughTextController.NotEnoughAction?.Invoke();
-                return;
-            
-            if (_canPlayAnim)
-            {
-                _canPlayAnim = false;
-                TransformOfObj.DOPunchScale(Vector3.one * .1f, .3f)
-                    .OnComplete(() =>
-                    {
-                        _canPlayAnim = true;
-                    });
-            }
-           
-            CoinManager.Instance.SpendCoin(upCost);
-            upgradableData.Upgrade();
-
-            OnUpgradeCountChanged();
-            
-            if (upgradableData.UpgradeMaxed) 
-                ButtonControl(false);
-        }
-
-        private void OnUpgradeCountChanged()
-        {
-            UpdateLevel();
-            UpdateCost();
-        }
-
-        private void OnCoinCountChanged(float obj)
-        {
-            // button activate controller
-        }
 
         #region Button Data
 
@@ -121,19 +118,19 @@ namespace Scripts.BaseGameSystemRelatedScripts.Upgrade
 
         protected void ButtonControl(bool isActive)
         {
-            if(button)
+            if (button)
                 button.interactable = isActive;
-           
+
             ButtonActivateControlVisually(isActive);
         }
 
         private void ButtonActivateControlVisually(bool isActive)
         {
-            if(nameOfButton)
+            if (nameOfButton)
                 nameOfButton.enabled = isActive;
-            if(icon)
+            if (icon)
                 icon.enabled = isActive;
-            
+
             //costText.enabled = isActive;
             if (_bgImage)
             {

@@ -20,7 +20,7 @@ namespace Scripts.BaseGameScripts.SaveAndLoad
         private void GetAllSaveAndLoadDataOnScene()
         {
             var subClasses = AssemblyManager.GetClassesImplementedInterface(typeof(ISaveAndLoad));
-            
+
             for (var i = 0; i < subClasses.Count; i++)
             {
                 var currentType = subClasses[i];

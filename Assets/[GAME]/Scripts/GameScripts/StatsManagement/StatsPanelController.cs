@@ -9,13 +9,13 @@ namespace Scripts.GameScripts.StatsManagement
 {
     public class StatsPanelController : BaseComponent
     {
-        [SerializeField]
-        private Image xpFillBar;
+        private PlayerManager _playerManager;
 
         [SerializeField]
         private TextMeshProUGUI levelText;
 
-        private PlayerManager _playerManager;
+        [SerializeField]
+        private Image xpFillBar;
 
         private void Start()
         {
@@ -23,7 +23,7 @@ namespace Scripts.GameScripts.StatsManagement
             _playerManager.PlayerStatsManager.onXpValueChange += OnXpValueChanged;
             _playerManager.PlayerStatsManager.onLevelChanged += OnLevelChanged;
         }
-        
+
         private void OnLevelChanged(int level)
         {
             levelText.text = level.ToString();

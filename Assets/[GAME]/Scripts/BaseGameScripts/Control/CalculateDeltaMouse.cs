@@ -5,19 +5,22 @@ namespace Scripts.BaseGameScripts.Control
 {
     public class CalculateDeltaMouse
     {
+        private Vector2 _currentMousePos;
+
         [ReadOnly]
         public Vector2 deltaMousePos;
+
         [ReadOnly]
         private Vector2 mouseStartPos;
-
-        private Vector2 _currentMousePos;
 
         public void CalculateDeltaMousePos()
         {
             _currentMousePos = Input.mousePosition;
-            deltaMousePos = new Vector2(_currentMousePos.x - mouseStartPos.x, _currentMousePos.y - mouseStartPos.y); // how much mouse dragged
+            deltaMousePos =
+                new Vector2(_currentMousePos.x - mouseStartPos.x,
+                    _currentMousePos.y - mouseStartPos.y); // how much mouse dragged
         }
-        
+
         public void ResetValues()
         {
             mouseStartPos = Input.mousePosition;

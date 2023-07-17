@@ -23,10 +23,7 @@ namespace Scripts.BaseGameScripts.Helper
             if (Math.Abs(moneyInt - money) < 0.0001f)
                 s_text = moneyInt.ToString(CultureInfo.InvariantCulture) + s_suffixes[k];
             else
-            {
                 s_text = money.ToString("F0", new CultureInfo("en-US")) + s_suffixes[k];
-            }
-                
 
 
             return s_text;

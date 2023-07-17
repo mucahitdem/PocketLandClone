@@ -1,5 +1,4 @@
 ﻿using System;
-using Scripts.BaseGameScripts.Helper;
 using Scripts.BaseGameSystemRelatedScripts.TimerManagement;
 using UnityEngine;
 
@@ -7,17 +6,17 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
 {
     public class ControlGetHoldAndNotMove : BaseControl
     {
-        public Action tapAndNotMove;
-        
-        [SerializeField]
-        private Timer timer;
+        private CalculateDeltaMouse _calculateDeltaMouse;
+        private float _screenHeight;
+        private float _screenWidth;
 
         [SerializeField]
         private float sensitivity;
-            
-        private CalculateDeltaMouse _calculateDeltaMouse;
-        private float _screenWidth;
-        private float _screenHeight;
+
+        public Action tapAndNotMove;
+
+        [SerializeField]
+        private Timer timer;
 
         private void Awake()
         {
@@ -28,7 +27,6 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
 
         public override void GetInput()
         {
-            
         }
 
         public void Reset()
@@ -48,19 +46,19 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
             //     return;
             base.OnTapHold();
             _calculateDeltaMouse.CalculateDeltaMousePos();
-            
+
             if (Mathf.Abs(_calculateDeltaMouse.deltaMousePos.x) <= _screenWidth &&
-                Mathf.Abs(_calculateDeltaMouse.deltaMousePos.y) <= _screenHeight )
+                Mathf.Abs(_calculateDeltaMouse.deltaMousePos.y) <= _screenHeight)
             {
-                if(timer.TimerValue <= 0f || !timer.IsRunning)
+                if (timer.TimerValue <= 0f || !timer.IsRunning)
                     timer.RestartTimer();
             }
             else
             {
-                if(timer.IsRunning)
+                if (timer.IsRunning)
                     timer.StopTimer();
             }
-            
+
             Reset();
         }
 

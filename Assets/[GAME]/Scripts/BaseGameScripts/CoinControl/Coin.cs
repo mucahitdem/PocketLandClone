@@ -1,8 +1,4 @@
-﻿using System;
-using DG.Tweening;
-using Scripts.BaseGameScripts.Component;
-using Scripts.BaseGameScripts.Pool;
-using Sirenix.OdinInspector;
+﻿using Scripts.BaseGameScripts.Component;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,10 +14,10 @@ namespace Scripts.BaseGameScripts.CoinControl
 
         private void Awake()
         {
-            if(sprite && image)
+            if (sprite && image)
                 image.sprite = sprite;
         }
-        
+
         public void MoveToCounter(Vector2 targetPos, float duration = 1f)
         {
             // Rect.DOMove(targetPos, duration)

@@ -5,7 +5,7 @@
         protected override void Awake()
         {
             base.Awake();
-           // upgradableData = UpgradeDataSo.UpgradesData.upgradeData.mergeData;
+            // upgradableData = UpgradeDataSo.UpgradesData.upgradeData.mergeData;
         }
     }
 }

@@ -4,8 +4,19 @@ using UnityEngine;
 namespace Scripts.BaseGameScripts.Component
 {
     public class BaseComponent : EventSubscriber
-    { 
+    {
+        private Animator _anim;
+
+
+        private Collider _col;
+
+
+        private GameObject _go;
+
+
+        private Rigidbody _rb;
         private Transform _transformOfObj;
+
         public virtual Transform TransformOfObj
         {
             get
@@ -16,9 +27,7 @@ namespace Scripts.BaseGameScripts.Component
             }
             set => _transformOfObj = value;
         }
-        
-        
-        private GameObject _go;
+
         public virtual GameObject Go
         {
             get
@@ -29,9 +38,7 @@ namespace Scripts.BaseGameScripts.Component
             }
             set => _go = value;
         }
-        
-        
-        private Rigidbody _rb;
+
         public virtual Rigidbody Rb
         {
             get
@@ -42,9 +49,7 @@ namespace Scripts.BaseGameScripts.Component
             }
             set => _rb = value;
         }
-        
-        
-        private Collider _col;
+
         public virtual Collider Col
         {
             get
@@ -55,9 +60,7 @@ namespace Scripts.BaseGameScripts.Component
             }
             set => _col = value;
         }
-        
-        
-        private Animator _anim;
+
         public virtual Animator AnimOfObj
         {
             get
@@ -70,15 +73,15 @@ namespace Scripts.BaseGameScripts.Component
             private set => _anim = value;
         }
 
-        
+
         /// <summary>
-        /// This function helps us to send data from manager class to composite classes
+        ///     This function helps us to send data from manager class to composite classes
         /// </summary>
         /// <param name="baseComponent"></param>
         public virtual void Insert(BaseComponent baseComponent)
         {
         }
-        
+
         public virtual void OnGetFromPool()
         {
             TransformOfObj.parent = null;
@@ -92,9 +95,8 @@ namespace Scripts.BaseGameScripts.Component
             Go.hideFlags = HideFlags.HideInHierarchy;
             Go.SetActive(false);
         }
-        
-        
-        
+
+
         protected override void SubscribeEvent()
         {
         }
