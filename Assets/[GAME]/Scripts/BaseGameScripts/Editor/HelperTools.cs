@@ -58,7 +58,7 @@ namespace Scripts.BaseGameScripts.Editor
         {
             PlayerPrefs.DeleteAll();
             SaveGame.DeleteAll();
-            UpgradeDataSo.ResetData();
+            //UpgradeDataSo.ResetData();
         }
     }
 }

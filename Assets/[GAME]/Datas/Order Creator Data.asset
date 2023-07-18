@@ -12,13 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455f0cd53da54692825dc63cdb8a46aa, type: 3}
   m_Name: Order Creator Data
   m_EditorClassIdentifier: 
-  orderCreatorData:
-    allItems:
-    - {fileID: 11400000, guid: fbf17e2e6aab89040815b59b5ec5e439, type: 2}
-    - {fileID: 11400000, guid: ea1596c05bed550409edb58687d1d84b, type: 2}
-    - {fileID: 11400000, guid: ffb88b1a43d41c84ab7096ec1437ffff, type: 2}
-    - {fileID: 11400000, guid: 3440af28bb4cbba4aa958a69c7654ad4, type: 2}
-    - {fileID: 11400000, guid: 23ea557f25ae2fa429c0034db93a0080, type: 2}
+  baseOrderCreatorData:
     customerFaces:
     - {fileID: 1936197, guid: 5baed1130f3e4334baee20ac695de166, type: 3}
     - {fileID: -807022290, guid: 5baed1130f3e4334baee20ac695de166, type: 3}

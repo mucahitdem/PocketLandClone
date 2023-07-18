@@ -13,42 +13,24 @@ MonoBehaviour:
   m_Name: Player Stats
   m_EditorClassIdentifier: 
   playerStatsData:
-    requiredXpForLevel:
+    requiredXpForLevelByAnimCurve:
       statPerLevel:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
-          inSlope: 35.813496
-          outSlope: 35.813496
+          value: 100
+          inSlope: 90
+          outSlope: 90
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1.9737377
-          value: 70.68645
-          inSlope: 14.899563
-          outSlope: 14.899563
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 6.856166
-          value: 41.321712
-          inSlope: 6.3250957
-          outSlope: 6.3250957
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
           time: 10
-          value: 100
-          inSlope: 18.664562
-          outSlope: 18.664562
+          value: 1000
+          inSlope: 90
+          outSlope: 90
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334

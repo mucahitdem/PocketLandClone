@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using Scripts.BaseGameScripts.Helper;
+using UnityEngine;
 
 namespace Scripts.GameScripts.StatsManagement.PlayerStatsManagement
 {
@@ -24,12 +25,25 @@ namespace Scripts.GameScripts.StatsManagement.PlayerStatsManagement
 
         private IEnumerator Start()
         {
-            yield return null;
-            CollectXp(0);
+            yield return new WaitForEndOfFrame();
+            Level = 1;
+            GainXp(0);
             onLevelChanged?.Invoke(Level);
         }
 
-        public void CollectXp(float xpAmountToCollect)
+        protected override void SubscribeEvent()
+        {
+            base.SubscribeEvent();
+            StatsActionManager.onGainedXp += GainXp;
+        }
+
+        protected override void UnsubscribeEvent()
+        {
+            base.UnsubscribeEvent();
+            StatsActionManager.onGainedXp -= GainXp;
+        }
+
+        private void GainXp(float xpAmountToCollect)
         {
             Xp += xpAmountToCollect;
             DebugHelper.LogRed("TOTAL XP : " + Xp);

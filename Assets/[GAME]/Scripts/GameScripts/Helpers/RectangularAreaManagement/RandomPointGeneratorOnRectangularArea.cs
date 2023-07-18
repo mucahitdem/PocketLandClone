@@ -9,7 +9,6 @@ namespace Scripts.GameScripts.Helpers.RectangularAreaManagement
     public class RandomPointGeneratorOnRectangularArea : BaseComponent
     {
         private Vector3 centerPoint;
-        public Func<Vector3> getRandomPos;
         private float halfHorizontalLength;
         private float halfVerticalLength;
 
@@ -31,21 +30,8 @@ namespace Scripts.GameScripts.Helpers.RectangularAreaManagement
             halfVerticalLength = rectangularAreaData.verticalLength / 2f;
             halfHorizontalLength = rectangularAreaData.horizontalLength / 2f;
         }
-
-        protected override void SubscribeEvent()
-        {
-            base.SubscribeEvent();
-            getRandomPos += GetRandomPos;
-        }
-
-        protected override void UnsubscribeEvent()
-        {
-            base.UnsubscribeEvent();
-            getRandomPos -= GetRandomPos;
-        }
-
-
-        private Vector3 GetRandomPos()
+        
+        public Vector3 GetRandomPos()
         {
             return new Vector3(centerPoint.x + Random.Range(-halfHorizontalLength, halfHorizontalLength),
                 0,

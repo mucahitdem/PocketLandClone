@@ -1,5 +1,4 @@
-﻿using System;
-using Scripts.GameScripts.XpManagement;
+﻿using Scripts.GameScripts.ItemManagement;
 using UnityEngine;
 
 namespace Scripts.GameScripts.InteractionManagement
@@ -8,18 +7,15 @@ namespace Scripts.GameScripts.InteractionManagement
     {
         private Transform _collidedTransform;
 
-        private XpSphere _xpSphere;
-        public Action<float> onXpCollected;
-
-        private void OnCollisionEnter(Collision other)
+        private BaseItem item;
+        
+        private void OnTriggerEnter(Collider other)
         {
-            _collidedTransform = other.transform;
-            if (_collidedTransform.CompareTag(Defs.TAG_XP_SPHERE))
-                if (_collidedTransform.TryGetComponent(out _xpSphere))
-                {
-                    onXpCollected?.Invoke(_xpSphere.Xp);
-                    other.gameObject.SetActive(false);
-                }
+            if (other.TryGetComponent(out item))
+            {
+                InteractionActionManager.onCollectedItem?.Invoke(item.BaseItemDataSo);
+                item.gameObject.SetActive(false); // use pooling
+            }
         }
     }
 }

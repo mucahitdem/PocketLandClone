@@ -6,17 +6,22 @@ namespace Scripts.BaseGameScripts.Component
     public class BaseComponent : EventSubscriber
     {
         private Animator _anim;
-
-
         private Collider _col;
-
-
         private GameObject _go;
-
-
         private Rigidbody _rb;
         private Transform _transformOfObj;
+        private RectTransform _rectTransformObj;
 
+        public virtual RectTransform RectTransformObj
+        {
+            get
+            {
+                if (!_rectTransformObj)
+                    _rectTransformObj = GetComponent<RectTransform>();
+                return _rectTransformObj;
+            }
+            set => _rectTransformObj = value;
+        }
         public virtual Transform TransformOfObj
         {
             get
@@ -27,7 +32,6 @@ namespace Scripts.BaseGameScripts.Component
             }
             set => _transformOfObj = value;
         }
-
         public virtual GameObject Go
         {
             get
@@ -38,7 +42,6 @@ namespace Scripts.BaseGameScripts.Component
             }
             set => _go = value;
         }
-
         public virtual Rigidbody Rb
         {
             get
@@ -60,7 +63,6 @@ namespace Scripts.BaseGameScripts.Component
             }
             set => _col = value;
         }
-
         public virtual Animator AnimOfObj
         {
             get

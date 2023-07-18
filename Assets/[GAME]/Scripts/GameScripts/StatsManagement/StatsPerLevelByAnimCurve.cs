@@ -10,18 +10,20 @@ namespace Scripts.GameScripts.StatsManagement
         public AnimationCurve statPerLevel;
 
         [ShowInInspector]
+        [ReadOnly]
         private int Level { get; set; }
 
         [ShowInInspector]
+        [ReadOnly]
         private float Stat { get; set; }
 
 
-        // [Button]
-        // private void ShowLevelValues(int desiredLevel)
-        // {
-        //     _level = desiredLevel;
-        //     _stat = statPerLevel.Evaluate(_level);
-        // }
+        [Button]
+        private void ShowLevelValues(int desiredLevel)
+        {
+            Level = desiredLevel;
+            Stat = statPerLevel.Evaluate(Level);
+        }
 
         public void UpdateValues()
         {

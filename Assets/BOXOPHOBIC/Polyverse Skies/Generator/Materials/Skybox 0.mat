@@ -122,7 +122,7 @@ Material:
     - _CloudsLightColor: {r: 1, g: 0.97559017, b: 0.9198113, a: 1}
     - _CloudsShadowColor: {r: 0.15419187, g: 0.53798515, b: 0.9339623, a: 1}
     - _EquatorColor: {r: 0.3915094, g: 0.611977, b: 1, a: 1}
-    - _GroundColor: {r: 0.80195904, g: 0.46564615, b: 0.9056604, a: 1}
+    - _GroundColor: {r: 0.0693307, g: 0.50454336, b: 0.7735849, a: 1}
     - _MoonColor: {r: 1, g: 1, b: 1, a: 1}
     - _SkyColor: {r: 0.3443396, g: 0.81596506, b: 1, a: 1}
     - _SkyboxRotationAxis: {r: 1, g: 1, b: 0, a: 0}

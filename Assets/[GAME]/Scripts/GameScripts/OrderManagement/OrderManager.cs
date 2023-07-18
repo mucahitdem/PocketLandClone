@@ -2,6 +2,7 @@
 using Scripts.BaseGameScripts.Component;
 using Scripts.GameScripts.OrderManagement.Order;
 using Scripts.GameScripts.OrderManagement.OrderCreatorManagement;
+using Scripts.GameScripts.StatsManagement;
 using UnityEngine;
 
 namespace Scripts.GameScripts.OrderManagement
@@ -25,7 +26,9 @@ namespace Scripts.GameScripts.OrderManagement
 
         private void OnOrderDelivered(BaseOrder baseOrder)
         {
+            StatsActionManager.onGainedXp?.Invoke(baseOrder.BaseOrderData.xp);
             CoinManager.Instance.AddCoin(baseOrder.BaseOrderData.price);
+
             orderCreator.CreateNewOrder();
         }
     }

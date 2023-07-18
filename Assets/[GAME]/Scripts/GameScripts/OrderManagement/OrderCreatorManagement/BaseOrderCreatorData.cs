@@ -7,7 +7,5 @@ namespace Scripts.GameScripts.OrderManagement.OrderCreatorManagement
     [Serializable]
     public class BaseOrderCreatorData
     {
-        [PreviewField(ObjectFieldAlignment.Left)]
-        public Sprite[] customerFaces;
     }
 }

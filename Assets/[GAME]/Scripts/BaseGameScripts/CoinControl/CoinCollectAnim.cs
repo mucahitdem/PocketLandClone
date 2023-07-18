@@ -20,7 +20,7 @@ namespace Scripts.BaseGameScripts.CoinControl
             get
             {
                 if (!_camera)
-                    _camera = GameManager.Instance.MainCam;
+                    _camera = GameManager.Instance.MainMainCam;
 
                 return _camera;
             }

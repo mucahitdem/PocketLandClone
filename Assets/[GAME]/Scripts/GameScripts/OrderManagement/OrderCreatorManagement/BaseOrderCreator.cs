@@ -1,4 +1,5 @@
-﻿using Scripts.BaseGameScripts.Component;
+﻿using System.Collections;
+using Scripts.BaseGameScripts.Component;
 using Scripts.GameScripts.PlayerManagement;
 using UnityEngine;
 

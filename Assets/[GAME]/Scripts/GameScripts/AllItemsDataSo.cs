@@ -4,27 +4,28 @@ using UnityEngine;
 
 namespace Scripts.GameScripts
 {
-    [CreateAssetMenu(fileName = "All Items Data So", menuName = "Game/Static Data/All Items Data So", order = 0)]
+    [CreateAssetMenu(fileName = "AllItemsDataSo", menuName = "Game/Static Data/AllItemsDataSo", order = 0)]
     public class AllItemsDataSo : ScriptableObject
     {
-        public BaseItemDataSo[] items;
-
         #region StaticSO
 
         [ShowInInspector]
-        [DisableInEditorMode]
+        //[DisableInEditorMode]
         [LabelText("Static Reference")]
         [InlineButton("FindHolesDataAsset")]
         private static AllItemsDataSo s_instance;
 
-        public static AllItemsDataSo Instance => s_instance ??= Resources.Load<AllItemsDataSo>("All Items Data So");
+        public static AllItemsDataSo Instance => s_instance ??= Resources.Load<AllItemsDataSo>("AllItemsDataSo");
 
         private void FindHolesDataAsset()
         {
-            if (Instance) return;
+            if (Instance) 
+                return;
             Debug.LogError("AllItemsDataSo asset of type HoleDataSo is missing in the resources folder.");
         }
 
         #endregion
+        
+        public BaseItemDataSo[] items;
     }
 }

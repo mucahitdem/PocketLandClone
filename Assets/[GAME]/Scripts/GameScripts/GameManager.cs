@@ -1,6 +1,7 @@
 using Scripts.BaseGameScripts;
 using Scripts.BaseGameScripts.Helper;
 using Scripts.BaseGameScripts.StateManagement;
+using Scripts.GameScripts.InventoryManagement;
 using Scripts.GameScripts.ItemManagement;
 using Scripts.GameScripts.PlayerManagement;
 using UnityEngine;
@@ -9,10 +10,16 @@ namespace Scripts.GameScripts
 {
     public class GameManager : SingletonMono<GameManager>
     {
-        [SerializeField]
-        private Camera cam;
+        public bool IsGamePlaying => gameStateManager && gameStateManager.IsStateGamePlaying();
 
-        private GameStateManager gameStateManager;
+        public Camera MainMainCam => mainCam;
+        public ItemManager ItemManager => itemManager;
+        public PlayerManager PlayerManager => playerManager;
+        public InventoryManager InventoryManager => inventoryManager;
+        
+        
+        [SerializeField]
+        private Camera mainCam;
 
         [SerializeField]
         private ItemManager itemManager;
@@ -20,11 +27,11 @@ namespace Scripts.GameScripts
         [SerializeField]
         private PlayerManager playerManager;
 
-        public bool IsGamePlaying => gameStateManager && gameStateManager.IsStateGamePlaying();
-        public Camera MainCam => cam;
-        public PlayerManager PlayerManager => playerManager;
+        [SerializeField]
+        private InventoryManager inventoryManager;
 
-        public ItemManager ItemManager => itemManager;
+     
+        private GameStateManager gameStateManager;
 
         protected override void OnAwake()
         {

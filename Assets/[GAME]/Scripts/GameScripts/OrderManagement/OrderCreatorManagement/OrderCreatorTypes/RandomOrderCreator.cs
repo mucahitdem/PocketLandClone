@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Scripts.BaseGameScripts.Helper;
 using Scripts.GameScripts.ItemManagement;
 using Scripts.GameScripts.OrderManagement.Order;
 using Scripts.GameScripts.StatsManagement;
@@ -12,7 +14,7 @@ namespace Scripts.GameScripts.OrderManagement.OrderCreatorManagement.OrderCreato
         private ItemManager itemManager;
 
         [Title("Temp Variables")]
-        private List<ItemTypeAndCount> itemTypeAndCount;
+        private List<ItemTypeAndCount> itemTypeAndCount = new List<ItemTypeAndCount>();
 
         [SerializeField]
         private StatsPerLevelByAnimCurve orderAmountMaxValueByPlayerLevel;
@@ -25,30 +27,42 @@ namespace Scripts.GameScripts.OrderManagement.OrderCreatorManagement.OrderCreato
         {
             base.Start();
             itemManager = GameManager.Instance.ItemManager;
+            StartCoroutine(FakeStart());
+        }
+
+        private IEnumerator FakeStart()
+        {
+            yield return new WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
+
+            for (int i = 0; i < 4; i++)
+            {
+                CreateNewOrder();   
+                DebugHelper.LogYellow("CREATE ORDER");
+            }
         }
 
 
         public override void CreateNewOrder()
         {
-            var baseOrder = new BaseOrder(new BaseOrderData(RandomItemTypeAndCount()));
+            var randomItemAndCount = RandomItemTypeAndCount();
+            var baseOrder = new BaseOrder(new BaseOrderData(randomItemAndCount));
+            OrderActionManager.onNewOrderCreated?.Invoke(baseOrder);
         }
 
 
         private List<ItemTypeAndCount> RandomItemTypeAndCount()
         {
             itemTypeAndCount.Clear();
-
             itemTypeAndCount.Add(new ItemTypeAndCount(RandomItemInAvailableItems(), RandomItemCount()));
-
-            return null;
+            return itemTypeAndCount;
         }
-
         private BaseItemDataSo RandomItemInAvailableItems()
         {
+            DebugHelper.LogYellow("GET AVAILABLE ITEMS");
             var randomIndex = Random.Range(0, itemManager.AvailableItems.Count);
             return itemManager.AvailableItems[randomIndex];
         }
-
         private int RandomItemCount()
         {
             var randomValue = Random.Range(orderAmountMinValueByPlayerLevel.GetStatWithLevel(PlayerLevel),

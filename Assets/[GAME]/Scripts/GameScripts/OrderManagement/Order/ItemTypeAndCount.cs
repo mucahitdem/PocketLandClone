@@ -6,12 +6,12 @@ namespace Scripts.GameScripts.OrderManagement.Order
     [Serializable]
     public struct ItemTypeAndCount
     {
-        public BaseItemDataSo item;
+        public BaseItemDataSo itemDataSo;
         public int itemAmount;
 
-        public ItemTypeAndCount(BaseItemDataSo item, int itemAmount)
+        public ItemTypeAndCount(BaseItemDataSo itemDataSo, int itemAmount)
         {
-            this.item = item;
+            this.itemDataSo = itemDataSo;
             this.itemAmount = itemAmount;
         }
     }

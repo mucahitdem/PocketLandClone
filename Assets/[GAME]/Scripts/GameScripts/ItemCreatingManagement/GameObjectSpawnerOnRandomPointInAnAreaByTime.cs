@@ -1,4 +1,5 @@
-﻿using Scripts.BaseGameSystemRelatedScripts.TimerManagement;
+﻿using System;
+using Scripts.BaseGameSystemRelatedScripts.TimerManagement;
 using UnityEngine;
 
 namespace Scripts.GameScripts.ItemCreatingManagement
@@ -23,11 +24,6 @@ namespace Scripts.GameScripts.ItemCreatingManagement
         private void OnTimerEnded()
         {
             CreateObject();
-        }
-
-        protected override void CreateObject()
-        {
-            base.CreateObject();
         }
     }
 }

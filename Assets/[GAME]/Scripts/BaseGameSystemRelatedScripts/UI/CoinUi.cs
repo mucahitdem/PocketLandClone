@@ -1,4 +1,5 @@
 ﻿using Scripts.BaseGameScripts.CoinControl;
+using Scripts.BaseGameScripts.Helper;
 using Scripts.BaseGameScripts.UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,8 +10,9 @@ namespace Scripts.BaseGameSystemRelatedScripts.UI
     {
         [SerializeField]
         private Text coinCount;
-
-        public Image coinIcon;
+        
+        [SerializeField]
+        private Image coinIcon;
 
         protected override void SubscribeEvent()
         {
@@ -26,7 +28,7 @@ namespace Scripts.BaseGameSystemRelatedScripts.UI
 
         private void UpdateCoinCount(float newCoinCount)
         {
-            //coinCount.text = MoneyConverter.CurrencyConvert(newCoinCount);
+            coinCount.text = MoneyConverter.CurrencyConvert(newCoinCount);
         }
     }
 }

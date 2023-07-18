@@ -183,10 +183,16 @@
               </e>
               <e p="InteractionManagement" t="Include">
                 <e p="BaseInteractionManager.cs" t="Include" />
+                <e p="InteractionActionManager.cs" t="Include" />
                 <e p="PlayerInteractionManager.cs" t="Include" />
+              </e>
+              <e p="InventoryManagement" t="Include">
+                <e p="InventoryActionManager.cs" t="Include" />
+                <e p="InventoryManager.cs" t="Include" />
               </e>
               <e p="ItemCreatingManagement" t="Include">
                 <e p="BaseGameObjectSpawner.cs" t="Include" />
+                <e p="BaseItemSpawnerOnRandomPointInAnAreaByTime.cs" t="Include" />
                 <e p="GameObjectSpawnerByTimer.cs" t="Include" />
                 <e p="GameObjectSpawnerOnRandomPointInAnArea.cs" t="Include" />
                 <e p="GameObjectSpawnerOnRandomPointInAnAreaByTime.cs" t="Include" />
@@ -213,9 +219,7 @@
                 <e p="Order" t="Include">
                   <e p="BaseOrder.cs" t="Include" />
                   <e p="BaseOrderData.cs" t="Include" />
-                  <e p="BaseOrderUi.cs" t="Include" />
                   <e p="ItemTypeAndCount.cs" t="Include" />
-                  <e p="OrderTypeAndCountUi.cs" t="Include" />
                 </e>
                 <e p="OrderActionManager.cs" t="Include" />
                 <e p="OrderCreatorManagement" t="Include">
@@ -227,7 +231,6 @@
                   </e>
                 </e>
                 <e p="OrderManager.cs" t="Include" />
-                <e p="OrderUiManager.cs" t="Include" />
               </e>
               <e p="PlayerManagement" t="Include">
                 <e p="PlayerManager.cs" t="Include" />
@@ -245,11 +248,20 @@
                 <e p="StatsPanelController.cs" t="Include" />
                 <e p="StatsPerLevelByAnimCurve.cs" t="Include" />
               </e>
-              <e p="VirtualCameraManager.cs" t="Include" />
-              <e p="XpManagement" t="Include">
-                <e p="XpCreator.cs" t="Include" />
-                <e p="XpSphere.cs" t="Include" />
+              <e p="UiManagement" t="Include">
+                <e p="OrderUi" t="Include">
+                  <e p="BaseOrderUi.cs" t="Include" />
+                  <e p="ConfirmOrderButton.cs" t="Include" />
+                  <e p="OrderTypeAndCountUi.cs" t="Include" />
+                  <e p="OrderUiCreator.cs" t="Include" />
+                  <e p="OrderUiManager.cs" t="Include" />
+                </e>
+                <e p="UiGridManagement" t="Include">
+                  <e p="UiGridElement.cs" t="Include" />
+                  <e p="UiGridManager.cs" t="Include" />
+                </e>
               </e>
+              <e p="VirtualCameraManager.cs" t="Include" />
             </e>
           </e>
           <e p="Textures" t="Include">

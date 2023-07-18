@@ -1,4 +1,5 @@
-﻿using Scripts.GameScripts.Helpers.RectangularAreaManagement;
+﻿using System;
+using Scripts.GameScripts.Helpers.RectangularAreaManagement;
 using UnityEngine;
 
 namespace Scripts.GameScripts.ItemCreatingManagement
@@ -8,19 +9,19 @@ namespace Scripts.GameScripts.ItemCreatingManagement
     {
         private RandomPointGeneratorOnRectangularArea randomPointGenerator;
 
-        private void OnValidate()
+        protected virtual void Awake()
         {
-            if (!randomPointGenerator)
-                randomPointGenerator = GetComponent<RandomPointGeneratorOnRectangularArea>();
+            randomPointGenerator = GetComponent<RandomPointGeneratorOnRectangularArea>();
         }
 
         protected override void CreateObject()
         {
+            createdObj = Instantiate(ItemToCreate, GetRandomPosOnArea(), Quaternion.identity);
         }
 
-        private Vector3 GetRandomPosOnArea()
+        protected Vector3 GetRandomPosOnArea()
         {
-            return (Vector3) randomPointGenerator.getRandomPos?.Invoke();
+            return randomPointGenerator.GetRandomPos();
         }
     }
 }

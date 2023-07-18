@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Item To Harvest 5
   m_EditorClassIdentifier: 
   baseItemData:
-    itemPrefab: {fileID: 8508947853199854160, guid: 54f4431e8d8b085439cdf94d57887240, type: 3}
-    itemIcon: {fileID: 21300000, guid: 5f358318c655c6e4292450473d5c7d5a, type: 3}
     itemName: Watermelon
+    itemIcon: {fileID: 21300000, guid: 5f358318c655c6e4292450473d5c7d5a, type: 3}
+    itemPrefab: {fileID: 8508947853199854160, guid: 54f4431e8d8b085439cdf94d57887240, type: 3}
+    xpValue: 50
     itemPrice: 50
+    itemLaborPrice: 5
