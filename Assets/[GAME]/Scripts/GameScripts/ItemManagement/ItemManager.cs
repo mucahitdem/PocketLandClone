@@ -29,7 +29,7 @@ namespace Scripts.GameScripts.ItemManagement
         private void UpdateAvailableItems(int levelNum)
         {
             var allItems = AllItemsDataSo.Instance.items;
-            levelNum = levelNum < allItems.Length ? levelNum : allItems.Length;
+            levelNum = levelNum <= allItems.Length ? levelNum : allItems.Length;
             for (var i = 0; i < levelNum; i++)
             {
                 var itemToAdd = AllItemsDataSo.Instance.items[i];

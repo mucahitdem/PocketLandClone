@@ -1187,7 +1187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   downForce: 40
-  moveSpeed: 10
+  moveSpeed: 20
   turnSpeed: 400
   joystick: {fileID: 862349957}
 --- !u!1 &591816303
