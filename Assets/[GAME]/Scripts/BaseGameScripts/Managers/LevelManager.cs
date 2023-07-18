@@ -37,7 +37,6 @@ namespace Scripts.BaseGameScripts.Managers
             Application.targetFrameRate = 30;
             //Load();
         }
-
         public void NextLevel()
         {
             _fakeLevelNum++;
@@ -50,7 +49,6 @@ namespace Scripts.BaseGameScripts.Managers
 
             SceneManager.LoadScene(_levelNum);
         }
-
         public void RetryLevel()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -61,12 +59,10 @@ namespace Scripts.BaseGameScripts.Managers
         {
             Save();
         }
-
         private void OnApplicationPause(bool pauseStatus)
         {
             Save();
         }
-
         private void OnApplicationQuit()
         {
             Save();

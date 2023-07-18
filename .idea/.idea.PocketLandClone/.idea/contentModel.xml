@@ -32,7 +32,6 @@
                 <e p="Coin.cs" t="Include" />
                 <e p="CoinActionManager.cs" t="Include" />
                 <e p="CoinCollectAnim.cs" t="Include" />
-                <e p="CoinController.cs" t="Include" />
                 <e p="CoinManager.cs" t="Include" />
               </e>
               <e p="Component" t="Include">
