@@ -54,7 +54,7 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
         private void CreateBaseOrderUi(BaseOrder order)
         {
             var createdObj = Instantiate(orderUi, orderParentUiObj, true); // pool eklenecek
-            createdObj.RectTransformObj.anchoredPosition = createPos.anchoredPosition;
+            createdObj.RectTransformObj.anchoredPosition = createPos.position;
             createdObj.InsertData(order, GetCustomerFaceSprite(), CreateItemAndCount(order));
             onOrderUiCreated?.Invoke(createdObj);
             IncreaseCutomerFaceIndex();

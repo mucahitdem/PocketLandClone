@@ -101,6 +101,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderTypeAndCountUi.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/CoinControl/CoinManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/BaseItemDataSo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/DevHelperTools/ComponentCopyEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/EventManagement/IEventSubscriber.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/EventManagement/EventSubscriber.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SaveAndLoad/ISaveAndLoad.cs" root0="FORCE_HIGHLIGHTING" />
@@ -134,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/PoolManagement/PoolManager.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/DevHelperTools/SelectTypeManagement/SelectedTypeData.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/DevHelperTools/SelectTypeManagement/SelectType.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/DevHelperTools/SelectTypeManagement/SelectTypeEditor.cs" />
@@ -185,6 +185,7 @@
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/BaseItemSpawnerOnRandomPointInAnAreaByTime.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemManager.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemSpawnClamper.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/DevHelperTools/ComponentCopyEditor.cs" />
       </list>
     </option>
   </component>
