@@ -28,5 +28,10 @@ namespace Scripts.GameScripts.ItemCreatingManagement
         protected override void CreateObject()
         {
         }
+
+        protected override GameObject GetItemToCreate()
+        {
+            return itemToCreate;
+        }
     }
 }

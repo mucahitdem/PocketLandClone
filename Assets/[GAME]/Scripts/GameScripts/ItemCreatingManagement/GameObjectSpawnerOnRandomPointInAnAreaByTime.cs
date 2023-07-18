@@ -7,7 +7,7 @@ namespace Scripts.GameScripts.ItemCreatingManagement
     public class GameObjectSpawnerOnRandomPointInAnAreaByTime : GameObjectSpawnerOnRandomPointInAnArea
     {
         [SerializeField]
-        private Timer timer;
+        protected Timer timer;
 
         protected override void SubscribeEvent()
         {

@@ -23,7 +23,6 @@ namespace Scripts.GameScripts.UiManagement.UiGridManagement
         public bool IsFull()
         {
             var value = TransformOfObj.childCount > 0;
-            DebugHelper.LogRed("IS FULL : " + gridIndex + " --- " + value);
             return value;
         }
 

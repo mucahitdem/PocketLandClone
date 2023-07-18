@@ -70,7 +70,6 @@ namespace Scripts.GameScripts.UiManagement.UiGridManagement
                 }
             }
             
-            DebugHelper.LogRed("REORDERING COMPLETED ");
             if(IsReOrderEnded())
                 isReOrdering = false;
             else

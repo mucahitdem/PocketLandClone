@@ -1,19 +1,41 @@
-﻿using System;
+﻿using Scripts.BaseGameScripts.Helper;
 using Scripts.GameScripts.ItemManagement;
 using UnityEngine;
 
 namespace Scripts.GameScripts.ItemCreatingManagement
 {
-    public class BaseItemSpawnerOnRandomPointInAnAreaByTime : GameObjectSpawnerOnRandomPointInAnAreaByTime
+    public sealed class BaseItemSpawnerOnRandomPointInAnAreaByTime : GameObjectSpawnerOnRandomPointInAnAreaByTime
     {
-        protected override GameObject ItemToCreate => itemManager.GetRandomItemDataSo().baseItemData.itemPrefab.Go;
-
         private ItemManager itemManager;
-
-
-        protected virtual void Start()
+       
+        private void Start()
         {
             itemManager = GameManager.Instance.ItemManager;
+        }
+
+        protected override void SubscribeEvent()
+        {
+            base.SubscribeEvent();
+            ItemActionManager.canCreateItems += CanCreateItems;
+        }
+        
+        protected override void UnsubscribeEvent()
+        {
+            base.UnsubscribeEvent();
+            ItemActionManager.canCreateItems -= CanCreateItems;
+        }
+        
+        private void CanCreateItems(bool value)
+        {
+            if(value && !timer.IsRunning)
+                timer.RestartTimer();
+            else
+                timer.StopTimer();
+        }
+
+        protected override GameObject GetItemToCreate()
+        {
+            return itemManager.GetRandomItemObj();
         }
     }
 }

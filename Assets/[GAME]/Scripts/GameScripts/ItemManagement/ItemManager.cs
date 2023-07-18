@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Scripts.BaseGameScripts.Component;
-using Scripts.BaseGameScripts.Helper;
 using Scripts.GameScripts.PlayerManagement;
 using UnityEngine;
 
@@ -8,9 +8,18 @@ namespace Scripts.GameScripts.ItemManagement
 {
     public class ItemManager : BaseComponent
     {
+        public Action onAvailableItemsUpdated;
+        
+        [SerializeField]
+        private ItemSpawnClamper itemSpawnClamper;
+        public List<BaseItemDataSo> AvailableItems { get; private set;} = new List<BaseItemDataSo>();
+
         private PlayerManager playerManager;
-        [field: SerializeField]
-        public List<BaseItemDataSo> AvailableItems { get;} = new List<BaseItemDataSo>();
+
+        private void Awake()
+        {
+            itemSpawnClamper.Insert(this);
+        }
 
         public override void OnEnable()
         {
@@ -19,7 +28,8 @@ namespace Scripts.GameScripts.ItemManagement
         }
         private void UpdateAvailableItems(int levelNum)
         {
-            DebugHelper.LogRed("SET AVAILABLE ITEMS");
+            var allItems = AllItemsDataSo.Instance.items;
+            levelNum = levelNum < allItems.Length ? levelNum : allItems.Length;
             for (var i = 0; i < levelNum; i++)
             {
                 var itemToAdd = AllItemsDataSo.Instance.items[i];
@@ -27,10 +37,12 @@ namespace Scripts.GameScripts.ItemManagement
                     continue;
                 AvailableItems.Add(itemToAdd);
             }
+            onAvailableItemsUpdated?.Invoke();
         }
-        public BaseItemDataSo GetRandomItemDataSo()
+        
+        public GameObject GetRandomItemObj()
         {
-            return AvailableItems[Random.Range(0, AvailableItems.Count)];
+            return itemSpawnClamper.GetRandomItem();
         }
     }
 }

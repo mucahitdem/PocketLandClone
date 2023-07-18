@@ -1,15 +1,24 @@
 ﻿using Scripts.BaseGameScripts.Component;
+using Scripts.BaseGameScripts.Helper;
 using UnityEngine;
 
 namespace Scripts.GameScripts.ItemCreatingManagement
 {
     public abstract class BaseGameObjectSpawner : BaseComponent
     {
-        protected virtual GameObject ItemToCreate => null;
+        protected GameObject itemToCreate;
         protected GameObject createdObj;
         protected virtual void CreateObject()
         {
-            createdObj = Instantiate(ItemToCreate);
+            if(!GetItemToCreate())
+            {
+                DebugHelper.LogYellow("ITEM TO CREATE IS NULL");
+                return;
+            }
+            createdObj = Instantiate(GetItemToCreate());
         }
+
+        protected abstract GameObject GetItemToCreate();
+
     }
 }

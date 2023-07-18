@@ -63,6 +63,7 @@ namespace Scripts.BaseGameSystemRelatedScripts.TimerManagement
             
             ResetTimer();
             StartTimer();
+            DebugHelper.LogRed("TIMER RESTARTED");
         }
         
         /// <summary>

@@ -201,7 +201,9 @@
                 <e p="BaseItem.cs" t="Include" />
                 <e p="BaseItemData.cs" t="Include" />
                 <e p="BaseItemDataSo.cs" t="Include" />
+                <e p="ItemActionManager.cs" t="Include" />
                 <e p="ItemManager.cs" t="Include" />
+                <e p="ItemSpawnClamper.cs" t="Include" />
                 <e p="ItemTypes" t="Include">
                   <e p="HarvestableItems" t="Include">
                     <e p="ItemToHarvest.cs" t="Include" />

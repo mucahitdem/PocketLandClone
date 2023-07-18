@@ -26,7 +26,6 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
         }
         private void OnOrderUiCreated(BaseOrderUi baseOrderUi)
         {
-            DebugHelper.LogYellow("ON ORDER CREATED");
             uiGridManager.AddItemToQueue(baseOrderUi.RectTransformObj);
         }
     }

@@ -33,12 +33,10 @@ namespace Scripts.GameScripts.OrderManagement.OrderCreatorManagement.OrderCreato
         private IEnumerator FakeStart()
         {
             yield return new WaitForEndOfFrame();
-            yield return new WaitForEndOfFrame();
 
             for (int i = 0; i < 4; i++)
             {
                 CreateNewOrder();   
-                DebugHelper.LogYellow("CREATE ORDER");
             }
         }
 
@@ -59,7 +57,6 @@ namespace Scripts.GameScripts.OrderManagement.OrderCreatorManagement.OrderCreato
         }
         private BaseItemDataSo RandomItemInAvailableItems()
         {
-            DebugHelper.LogYellow("GET AVAILABLE ITEMS");
             var randomIndex = Random.Range(0, itemManager.AvailableItems.Count);
             return itemManager.AvailableItems[randomIndex];
         }

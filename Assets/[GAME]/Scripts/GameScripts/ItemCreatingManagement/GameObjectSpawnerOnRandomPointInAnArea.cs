@@ -1,4 +1,5 @@
 ﻿using System;
+using Scripts.BaseGameScripts.Helper;
 using Scripts.GameScripts.Helpers.RectangularAreaManagement;
 using UnityEngine;
 
@@ -16,10 +17,17 @@ namespace Scripts.GameScripts.ItemCreatingManagement
 
         protected override void CreateObject()
         {
-            createdObj = Instantiate(ItemToCreate, GetRandomPosOnArea(), Quaternion.identity);
+            itemToCreate = GetItemToCreate();
+            if(itemToCreate)
+                createdObj = Instantiate(itemToCreate, GetRandomPosOnArea(), Quaternion.identity);
         }
 
-        protected Vector3 GetRandomPosOnArea()
+        protected override GameObject GetItemToCreate()
+        {
+            return itemToCreate;
+        }
+
+        private Vector3 GetRandomPosOnArea()
         {
             return randomPointGenerator.GetRandomPos();
         }
