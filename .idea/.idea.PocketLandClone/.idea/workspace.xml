@@ -159,7 +159,6 @@
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InteractionManagement/PlayerInteractionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/StatsPerLevelByAnimCurve.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderUiCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/Order/ItemTypeAndCount.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderTypeAndCountUi.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/BaseClickableImage.cs" />
@@ -186,6 +185,7 @@
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemManager.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemSpawnClamper.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/DevHelperTools/ComponentCopyEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderUiCreator.cs" />
       </list>
     </option>
   </component>
