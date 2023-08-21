@@ -1,7 +1,7 @@
 ﻿using Scripts.BaseGameScripts.EventManagement;
 using UnityEngine;
 
-namespace Scripts.BaseGameScripts.Component
+namespace Scripts.BaseGameScripts.ComponentManager
 {
     public class BaseComponent : EventSubscriber
     {

@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Scripts.BaseGameScripts.Component;
+using Scripts.BaseGameScripts.ComponentManager;
 using UnityEngine;
 using UnityEngine.EventSystems;
 

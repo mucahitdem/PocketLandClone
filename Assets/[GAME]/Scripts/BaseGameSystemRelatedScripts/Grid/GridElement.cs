@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
-using Scripts.BaseGameScripts.Component;
+using Scripts.BaseGameScripts.ComponentManager;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;

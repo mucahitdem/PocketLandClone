@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Scripts.BaseGameScripts.CoinControl;
-using Scripts.BaseGameScripts.Component;
+using Scripts.BaseGameScripts.ComponentManager;
 using Scripts.GameScripts.InventoryManagement;
 using Scripts.GameScripts.ItemManagement;
 using Scripts.GameScripts.OrderManagement;

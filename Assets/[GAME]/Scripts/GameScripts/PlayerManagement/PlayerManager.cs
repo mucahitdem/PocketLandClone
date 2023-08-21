@@ -1,4 +1,4 @@
-﻿using Scripts.BaseGameScripts.Component;
+﻿using Scripts.BaseGameScripts.ComponentManager;
 using Scripts.GameScripts.InteractionManagement;
 using Scripts.GameScripts.InventoryManagement;
 using Scripts.GameScripts.MovementManagement;

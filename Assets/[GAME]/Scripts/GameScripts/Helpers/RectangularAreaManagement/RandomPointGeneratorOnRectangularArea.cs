@@ -1,5 +1,5 @@
 ﻿using System;
-using Scripts.BaseGameScripts.Component;
+using Scripts.BaseGameScripts.ComponentManager;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

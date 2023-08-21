@@ -1,4 +1,4 @@
-﻿using Scripts.BaseGameScripts.Component;
+﻿using Scripts.BaseGameScripts.ComponentManager;
 using Scripts.GameScripts.InventoryManagement;
 using Scripts.GameScripts.OrderManagement.Order;
 using TMPro;

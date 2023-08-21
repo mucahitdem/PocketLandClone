@@ -1,6 +1,6 @@
 ﻿using System;
 using DG.Tweening;
-using Scripts.BaseGameScripts.Component;
+using Scripts.BaseGameScripts.ComponentManager;
 using Scripts.BaseGameScripts.Helper;
 using Sirenix.OdinInspector;
 using UnityEngine;

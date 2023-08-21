@@ -1,5 +1,5 @@
 ﻿using Cinemachine;
-using Scripts.BaseGameScripts.Component;
+using Scripts.BaseGameScripts.ComponentManager;
 using UnityEngine;
 
 namespace Scripts.GameScripts

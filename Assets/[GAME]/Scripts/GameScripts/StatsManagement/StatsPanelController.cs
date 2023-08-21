@@ -1,4 +1,4 @@
-﻿using Scripts.BaseGameScripts.Component;
+﻿using Scripts.BaseGameScripts.ComponentManager;
 using Scripts.BaseGameScripts.Helper;
 using Scripts.GameScripts.PlayerManagement;
 using TMPro;

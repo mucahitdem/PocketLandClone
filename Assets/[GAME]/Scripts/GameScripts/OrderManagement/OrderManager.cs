@@ -1,5 +1,5 @@
 ﻿using Scripts.BaseGameScripts.CoinControl;
-using Scripts.BaseGameScripts.Component;
+using Scripts.BaseGameScripts.ComponentManager;
 using Scripts.GameScripts.OrderManagement.Order;
 using Scripts.GameScripts.OrderManagement.OrderCreatorManagement;
 using Scripts.GameScripts.StatsManagement;

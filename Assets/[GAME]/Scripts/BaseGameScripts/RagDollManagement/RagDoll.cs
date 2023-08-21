@@ -1,4 +1,4 @@
-﻿using Scripts.BaseGameScripts.Component;
+﻿using Scripts.BaseGameScripts.ComponentManager;
 using Scripts.BaseGameSystemRelatedScripts;
 using Scripts.GameScripts;
 using Sirenix.OdinInspector;

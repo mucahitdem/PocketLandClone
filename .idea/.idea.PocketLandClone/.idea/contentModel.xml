@@ -34,7 +34,7 @@
                 <e p="CoinCollectAnim.cs" t="Include" />
                 <e p="CoinManager.cs" t="Include" />
               </e>
-              <e p="Component" t="Include">
+              <e p="ComponentManager" t="Include">
                 <e p="BaseComponent.cs" t="Include" />
               </e>
               <e p="Control" t="Include">
@@ -83,9 +83,10 @@
                 <e p="EnvironmentManager.cs" t="Include" />
                 <e p="LevelManager.cs" t="Include" />
               </e>
-              <e p="PoolManagement" t="Include">
-                <e p="Pool.cs" t="Include" />
-                <e p="PoolCreator.cs" t="Include" />
+              <e p="Pool" t="Include">
+                <e p="BasePoolItem.cs" t="Include" />
+                <e p="IPoolItem.cs" t="Include" />
+                <e p="PoolingPattern.cs" t="Include" />
                 <e p="PoolManager.cs" t="Include" />
               </e>
               <e p="RagDollManagement" t="Include">
