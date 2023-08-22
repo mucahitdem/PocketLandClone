@@ -38,11 +38,12 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
         private Dictionary<BaseItemDataSo,OrderTypeAndCountUi> itemsInOrderAndDatas = new Dictionary<BaseItemDataSo, OrderTypeAndCountUi>();
         private OrderTypeAndCountUi orderUi;
         private BaseOrder baseOrder;
-        protected override void OnEnable()
+
+        protected override void OnDisable()
         {
-            base.OnEnable();
-            
-            UpdateData();
+            base.OnDisable();
+            itemsInOrderAndDatas.Clear();
+            confirmOrderButton.isInteractable = false;
         }
 
         public override void SubscribeEvent()
@@ -56,6 +57,7 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
             base.UnsubscribeEvent();
             InventoryActionManager.onItemCountUpdated -= OnItemCountUpdated;
             confirmOrderButton.onClicked -= OnClickedConfirmOrderButton;
+            bg.color = Color.blue; // todo fix hard coded
         }
         
         
@@ -71,6 +73,8 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
                 currentItem.RectTransformObj.SetParent(itemsParent);
                 itemsInOrderAndDatas.Add(currentItem.ItemTypeAndCount.itemDataSo, currentItem);
             }
+            
+            UpdateData();
         }
 
 
