@@ -14,7 +14,8 @@ namespace Scripts.GameScripts.InteractionManagement
             if (other.TryGetComponent(out item))
             {
                 InteractionActionManager.onCollectedItem?.Invoke(item.BaseItemDataSo);
-                item.gameObject.SetActive(false); // use pooling
+                item.Pool.AddObjToPool(item); //item.gameObject.SetActive(false); // use pooling
+                item = null;
             }
         }
     }

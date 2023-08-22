@@ -1,4 +1,5 @@
 ﻿using Scripts.BaseGameScripts.ComponentManagement;
+using Scripts.BaseGameScripts.Pool;
 using Scripts.GameScripts.OrderManagement.Order;
 using TMPro;
 using UnityEngine;
@@ -9,6 +10,11 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
     public class OrderTypeAndCountUi : BaseComponent
     {
         public ItemTypeAndCount ItemTypeAndCount { get; private set; }
+
+        public BasePoolItem Pool => pool;
+        
+        [SerializeField]
+        private BasePoolItem pool;
             
         [SerializeField]
         private Image orderImage;
@@ -30,21 +36,19 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
             currentItemCount = 0;
             UpdateItemCountText();
         }
-
-        private void UpdateItemCountText()
-        {
-            orderCountText.text = currentItemCount + "/" + orderedCount;
-        }
-        
         public void UpdateItemCount(int newItemCount)
         {
             currentItemCount = newItemCount;
             UpdateItemCountText();
         }
-
         public bool IsOrderCompleted()
         {
             return currentItemCount >= orderedCount;
+        }
+        
+        private void UpdateItemCountText()
+        {
+            orderCountText.text = currentItemCount + "/" + orderedCount;
         }
     }
 }

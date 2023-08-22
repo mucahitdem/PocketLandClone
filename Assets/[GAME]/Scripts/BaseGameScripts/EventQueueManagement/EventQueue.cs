@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Scripts.BaseGameScripts.ComponentManagement;
 
-namespace Scripts.BaseGameScripts
+namespace Scripts.BaseGameScripts.EventQueueManagement
 {
     public class EventQueue : BaseComponent
     {

@@ -17,12 +17,19 @@ namespace Scripts.GameScripts.ItemCreatingManagement
             base.SubscribeEvent();
             ItemActionManager.canCreateItems += CanCreateItems;
         }
-        
         public override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             ItemActionManager.canCreateItems -= CanCreateItems;
         }
+        
+        
+        protected override GameObject GetItemToCreate()
+        {
+            return itemManager.GetRandomItemObj();
+        }
+
+        
         
         private void CanCreateItems(bool value)
         {
@@ -30,11 +37,6 @@ namespace Scripts.GameScripts.ItemCreatingManagement
                 timer.RestartTimer();
             else
                 timer.StopTimer();
-        }
-
-        protected override GameObject GetItemToCreate()
-        {
-            return itemManager.GetRandomItemObj();
         }
     }
 }

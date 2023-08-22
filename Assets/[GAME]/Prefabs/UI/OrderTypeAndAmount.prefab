@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 3132654047522699182}
   - component: {fileID: 3132654047522699217}
   - component: {fileID: 3132654047522699183}
+  - component: {fileID: 5837337881129488587}
   m_Layer: 5
   m_Name: OrderTypeAndAmount
   m_TagString: Untagged
@@ -183,8 +184,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7988dfc5794c0cb38f912a7d4d4028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  pool: {fileID: 5837337881129488587}
   orderImage: {fileID: 3132654047124050511}
   orderCountText: {fileID: 3132654047659693610}
+--- !u!114 &5837337881129488587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3132654047522699219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8bca3c94ae40f7a6a27efdab87eab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  count: 5
+  poolId: OrderTypeAndAmount
+  poolItem: {fileID: 3132654047522699183}
 --- !u!1 &3132654047659693612
 GameObject:
   m_ObjectHideFlags: 0

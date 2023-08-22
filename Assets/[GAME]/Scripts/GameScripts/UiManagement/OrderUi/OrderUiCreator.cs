@@ -33,38 +33,39 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
             customerFaceIndex = 0;
         }
 
+        
+        
         public override void SubscribeEvent()
         {
             base.SubscribeEvent();
             OrderActionManager.onNewOrderCreated += OnNewOrderCreated;
         }
-
         public override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             OrderActionManager.onNewOrderCreated -= OnNewOrderCreated;
         }
 
+        
+        
         private void OnNewOrderCreated(BaseOrder order)
         {
             CreateBaseOrderUi(order);
         }
-
         private void CreateBaseOrderUi(BaseOrder order)
         {
-            var createdObj = Instantiate(orderUi, orderParentUiObj, true); // pool eklenecek
+            //var createdObj = Instantiate(orderUi, orderParentUiObj, true); // pool eklenecek
+            var createdObj = orderUi.Pool.PullObjFromPool<BaseOrderUi>(orderParentUiObj, Vector3.zero, Vector3.zero);
             createdObj.RectTransformObj.anchoredPosition = createPos.position;
             createdObj.InsertData(order, GetCustomerFaceSprite(), CreateItemAndCount(order));
             onOrderUiCreated?.Invoke(createdObj);
-            IncreaseCutomerFaceIndex();
+            IncreaseCustomerFaceIndex();
         }
-
         private Sprite GetCustomerFaceSprite()
         {
             return customerFaces[customerFaceIndex];
         }
-
-        private void IncreaseCutomerFaceIndex()
+        private void IncreaseCustomerFaceIndex()
         {
             customerFaceIndex++;
             if (customerFaceIndex >= customerFaces.Length)
@@ -72,7 +73,6 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
                 customerFaceIndex = 0;
             }
         }
-
         private OrderTypeAndCountUi[] CreateItemAndCount(BaseOrder order)
         {
             var itemsAndCounts = order.BaseOrderData.itemsAndCount;
@@ -82,7 +82,8 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
             for (int i = 0; i < orderCount; i++)
             {
                 var currentItemAndCount = itemsAndCounts[i];
-                var createdUi = Instantiate(orderTypeAndCountUi);
+                //var createdUi = Instantiate(orderTypeAndCountUi);
+                var createdUi = orderTypeAndCountUi.Pool.PullObjFromPool<OrderTypeAndCountUi>(Vector3.zero, Vector3.zero);
                 createdUi.InsertData(currentItemAndCount);
                 rectArray[i] = createdUi;
             }

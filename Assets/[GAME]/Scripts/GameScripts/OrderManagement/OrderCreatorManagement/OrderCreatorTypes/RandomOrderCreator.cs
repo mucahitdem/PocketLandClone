@@ -31,7 +31,6 @@ namespace Scripts.GameScripts.OrderManagement.OrderCreatorManagement.OrderCreato
             itemManager = GameManager.Instance.ItemManager;
             StartCoroutine(FakeStart());
         }
-
         private IEnumerator FakeStart()
         {
             yield return new WaitForEndOfFrame();

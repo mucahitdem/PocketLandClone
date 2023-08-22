@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
   baseItemDataSo: {fileID: 11400000, guid: ffb88b1a43d41c84ab7096ec1437ffff, type: 2}
-  basePoolItem: {fileID: 0}
+  basePoolItem: {fileID: 4389593227110127815}
 --- !u!114 &4389593227110127815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
-  count: 10
+  count: 5
   poolId: item 3
   poolItem: {fileID: 6916754310220609480}
 --- !u!65 &4369997328353601016

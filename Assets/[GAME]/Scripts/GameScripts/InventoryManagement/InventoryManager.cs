@@ -7,7 +7,8 @@ namespace Scripts.GameScripts.InventoryManagement
 {
     public class InventoryManager : BaseComponent
     {
-        public Dictionary<BaseItemDataSo, int> itemAndCount = new Dictionary<BaseItemDataSo, int>();
+        
+        private Dictionary<BaseItemDataSo, int> itemAndCount = new Dictionary<BaseItemDataSo, int>();
 
         private int _tempItemCount;
         private int _tempHasEnoughItem;
@@ -17,14 +18,21 @@ namespace Scripts.GameScripts.InventoryManagement
             base.SubscribeEvent();
             InteractionActionManager.onCollectedItem += AddNewItem;
             InventoryActionManager.useItem += TryUseIfHasEnoughItem;
+            InventoryActionManager.getItemsAndCount += ItemAndCount;
         }
         public override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             InteractionActionManager.onCollectedItem -= AddNewItem;
             InventoryActionManager.useItem -= TryUseIfHasEnoughItem;
+            InventoryActionManager.getItemsAndCount -= ItemAndCount;
         }
         
+
+        private Dictionary<BaseItemDataSo, int> ItemAndCount()
+        {
+            return itemAndCount;
+        }
 
         private int CurrentItemCount(BaseItemDataSo itemDataSo)
         {
@@ -49,7 +57,6 @@ namespace Scripts.GameScripts.InventoryManagement
                 InventoryActionManager.onItemCountUpdated?.Invoke(itemDataSo, 1);
             }
         }
-
         private bool TryUseIfHasEnoughItem(BaseItemDataSo itemDataSo, int itemCountToUse)
         {
             if (itemAndCount.TryGetValue(itemDataSo, out _tempHasEnoughItem))

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04be0ad5f0af0f44b819b66119b15305, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  isLogsEnabled: 0
+  isLogsEnabled: 1

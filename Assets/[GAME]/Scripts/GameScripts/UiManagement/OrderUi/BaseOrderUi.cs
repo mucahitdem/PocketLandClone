@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Scripts.BaseGameScripts.ComponentManagement;
+using Scripts.BaseGameScripts.Pool;
 using Scripts.GameScripts.InventoryManagement;
 using Scripts.GameScripts.ItemManagement;
 using Scripts.GameScripts.OrderManagement;
@@ -13,6 +14,11 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
 {
     public class BaseOrderUi : BaseComponent
     {
+        public BasePoolItem Pool => pool;
+        
+        [SerializeField]
+        private BasePoolItem pool;
+        
         [SerializeField]
         private Image customerIcon;
 
@@ -32,6 +38,12 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
         private Dictionary<BaseItemDataSo,OrderTypeAndCountUi> itemsInOrderAndDatas = new Dictionary<BaseItemDataSo, OrderTypeAndCountUi>();
         private OrderTypeAndCountUi orderUi;
         private BaseOrder baseOrder;
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            
+            UpdateData();
+        }
 
         public override void SubscribeEvent()
         {
@@ -61,20 +73,37 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
             }
         }
 
-        
+
+        private void UpdateData()
+        {
+            var data = InventoryActionManager.getItemsAndCount?.Invoke();
+            if(data == null)
+                return;
+            for (int i = 0; i < data.Count; i++)
+            {
+                var currentData = data.ElementAt(i);
+                var currentElement = currentData.Key;
+                var currentCount = currentData.Value;
+                OnItemCountUpdated(currentElement, currentCount);
+            }
+        }
         private void OnClickedConfirmOrderButton()
         {
             for (int i = 0; i < itemsInOrderAndDatas.Count; i++)
             {
                 var elementAtIndex = itemsInOrderAndDatas.ElementAt(i);
                 var itemData = elementAtIndex.Key;
-                var amount = elementAtIndex.Value.ItemTypeAndCount.itemAmount;
+                var ui = elementAtIndex.Value;
+                var amount = ui.ItemTypeAndCount.itemAmount;
+                ui.Pool.AddObjToPool(ui);
                 InventoryActionManager.useItem.Invoke(itemData,amount);
             }
             
             TransformOfObj.SetParent(null);
             OrderActionManager.onOrderDelivered?.Invoke(baseOrder);
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            itemsInOrderAndDatas.Clear();
+            Pool.AddObjToPool(this);
         }
         private void OnItemCountUpdated(BaseItemDataSo updatedItemDataSo, int newCurrentItemCount)
         {

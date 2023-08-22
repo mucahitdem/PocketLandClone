@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
   baseItemDataSo: {fileID: 11400000, guid: ea1596c05bed550409edb58687d1d84b, type: 2}
-  basePoolItem: {fileID: 0}
+  basePoolItem: {fileID: 6767336317836389374}
 --- !u!114 &6767336317836389374
 MonoBehaviour:
   m_ObjectHideFlags: 0

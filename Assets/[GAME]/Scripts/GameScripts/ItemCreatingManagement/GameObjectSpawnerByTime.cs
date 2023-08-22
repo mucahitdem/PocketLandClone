@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace Scripts.GameScripts.ItemCreatingManagement
 {
-    public class GameObjectSpawnerByTimer : BaseGameObjectSpawner
+    public sealed class GameObjectSpawnerByTime : BaseGameObjectSpawner
     {
         [SerializeField]
-        protected Timer timer;
+        private Timer timer;
 
         public override void SubscribeEvent()
         {
@@ -21,7 +21,7 @@ namespace Scripts.GameScripts.ItemCreatingManagement
             timer.onTimerEnded -= OnTimerEnded;
         }
 
-        protected virtual void OnTimerEnded()
+        private void OnTimerEnded()
         {
             CreateObject();
         }
