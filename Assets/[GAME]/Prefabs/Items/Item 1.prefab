@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7076842048907124593}
   - component: {fileID: 8099228852063287987}
+  - component: {fileID: 943095098096361064}
   - component: {fileID: 3195145843477457057}
   m_Layer: 0
   m_Name: Item 1
@@ -78,7 +79,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a466d3262fea4dfb88620ce6ada0c002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
   baseItemDataSo: {fileID: 11400000, guid: fbf17e2e6aab89040815b59b5ec5e439, type: 2}
+  basePoolItem: {fileID: 943095098096361064}
+--- !u!114 &943095098096361064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7076842048907124592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8bca3c94ae40f7a6a27efdab87eab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  count: 5
+  poolId: Item 1
+  poolItem: {fileID: 8099228852063287987}
 --- !u!65 &3195145843477457057
 BoxCollider:
   m_ObjectHideFlags: 0

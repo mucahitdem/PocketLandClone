@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using Scripts.BaseGameScripts.Helper;
+using Scripts.BaseGameScripts.SourceManagement;
 using Sirenix.OdinInspector;
 
 namespace Scripts.GameScripts.OrderManagement.Order
@@ -10,6 +9,8 @@ namespace Scripts.GameScripts.OrderManagement.Order
     public class BaseOrderData
     {
         public List<ItemTypeAndCount> itemsAndCount = new List<ItemTypeAndCount>();
+        
+        public BaseSourceDataSo sourceToEarn;
 
         [ReadOnly]
         public int price;
@@ -21,8 +22,9 @@ namespace Scripts.GameScripts.OrderManagement.Order
         private int calculatedPrice;
         private float calculatedXp;
 
-        public BaseOrderData(List<ItemTypeAndCount> newItemsAndCount)
+        public BaseOrderData(List<ItemTypeAndCount> newItemsAndCount, BaseSourceDataSo sourceToEarn)
         {
+            this.sourceToEarn = sourceToEarn;
             itemsAndCount = newItemsAndCount;
             CalculatePriceAndXp();
         }

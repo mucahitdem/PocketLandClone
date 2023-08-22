@@ -1,4 +1,5 @@
 ﻿using UnityEditor;
+using UnityEngine;
 
 namespace Scripts.BaseGameScripts.Helper
 {
@@ -9,7 +10,7 @@ namespace Scripts.BaseGameScripts.Helper
         [MenuItem("CONTEXT/Component/Name Game Object")]
         private static void DoubleMass(MenuCommand command)
         {
-            var body = (UnityEngine.Component) command.context;
+            var body = (Component) command.context;
             Undo.RecordObject(body.gameObject, " recordObj");
             body.gameObject.name = body.GetType().Name;
         }

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acc46ab01254a58b1ac046dd60b794c, type: 3}
+  m_Name: Level Start
+  m_EditorClassIdentifier: 
+  allScenesToLoad:
+  - isActiveScene: 1
+    neverUnloadScene: 0
+    scene: {fileID: 102900000, guid: 8dcf1d42bee7bbd478d428302878d4c3, type: 3}
+    sceneName: LevelStart
+  levelName: Level Start

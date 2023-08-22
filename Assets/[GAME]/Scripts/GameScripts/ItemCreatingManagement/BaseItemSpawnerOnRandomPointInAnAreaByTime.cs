@@ -1,5 +1,4 @@
-﻿using Scripts.BaseGameScripts.Helper;
-using Scripts.GameScripts.ItemManagement;
+﻿using Scripts.GameScripts.ItemManagement;
 using UnityEngine;
 
 namespace Scripts.GameScripts.ItemCreatingManagement
@@ -13,13 +12,13 @@ namespace Scripts.GameScripts.ItemCreatingManagement
             itemManager = GameManager.Instance.ItemManager;
         }
 
-        protected override void SubscribeEvent()
+        public override void SubscribeEvent()
         {
             base.SubscribeEvent();
             ItemActionManager.canCreateItems += CanCreateItems;
         }
         
-        protected override void UnsubscribeEvent()
+        public override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             ItemActionManager.canCreateItems -= CanCreateItems;

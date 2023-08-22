@@ -1,5 +1,4 @@
-﻿using Scripts.BaseGameScripts.ComponentManager;
-using Scripts.GameScripts.InventoryManagement;
+﻿using Scripts.BaseGameScripts.ComponentManagement;
 using Scripts.GameScripts.OrderManagement.Order;
 using TMPro;
 using UnityEngine;

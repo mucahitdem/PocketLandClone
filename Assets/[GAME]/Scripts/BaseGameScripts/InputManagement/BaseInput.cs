@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Scripts.BaseGameScripts.ComponentManager;
+using Scripts.BaseGameScripts.ComponentManagement;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -14,35 +14,10 @@ namespace Scripts.BaseGameScripts.InputManagement
             TouchSettings();
         }
 
-        protected virtual void Update()
+        private void Update()
         {
             GetInput();
         }
-
-
-        protected virtual void OnTapDown()
-        {
-            if (TouchOnUI())
-                return;
-
-            InputActionManager.onTapDown?.Invoke();
-        }
-
-        protected virtual void OnTapHold()
-        {
-            InputActionManager.onTapAndHold?.Invoke();
-        }
-
-        protected virtual void OnTapHoldAndNotMove()
-        {
-            InputActionManager.onTapAndHoldAndNotMove?.Invoke();
-        }
-
-        protected virtual void OnTapUp()
-        {
-            InputActionManager.onTapUp?.Invoke();
-        }
-
 
         private void TouchSettings()
         {
@@ -97,6 +72,30 @@ namespace Scripts.BaseGameScripts.InputManagement
                     break;
             }
         }
+
+        protected virtual void OnTapDown()
+        {
+            if (TouchOnUI())
+                return;
+
+            InputActionManager.onTapDown?.Invoke();
+        }
+
+        protected virtual void OnTapHold()
+        {
+            InputActionManager.onTapAndHold?.Invoke();
+        }
+
+        protected virtual void OnTapHoldAndNotMove()
+        {
+            InputActionManager.onTapAndHoldAndNotMove?.Invoke();
+        }
+
+        protected virtual void OnTapUp()
+        {
+            InputActionManager.onTapUp?.Invoke();
+        }
+
 
         private bool TouchOnUI()
         {

@@ -31,13 +31,13 @@ namespace Scripts.GameScripts.StatsManagement.PlayerStatsManagement
             onLevelChanged?.Invoke(Level);
         }
 
-        protected override void SubscribeEvent()
+        public override void SubscribeEvent()
         {
             base.SubscribeEvent();
             StatsActionManager.onGainedXp += GainXp;
         }
 
-        protected override void UnsubscribeEvent()
+        public override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             StatsActionManager.onGainedXp -= GainXp;

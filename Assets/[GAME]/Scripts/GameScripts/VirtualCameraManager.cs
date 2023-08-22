@@ -1,12 +1,9 @@
 ﻿using Cinemachine;
-using Scripts.BaseGameScripts.ComponentManager;
+using Scripts.BaseGameScripts.ComponentManagement;
 using UnityEngine;
 
 namespace Scripts.GameScripts
 {
-    /// <summary>
-    ///     Control distance of virtual camera with offset and multiplier
-    /// </summary>
     public class VirtualCameraManager : BaseComponent
     {
         private CinemachineTransposer _transposer;

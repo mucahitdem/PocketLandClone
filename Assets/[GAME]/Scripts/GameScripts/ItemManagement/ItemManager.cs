@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Scripts.BaseGameScripts.ComponentManager;
+using Scripts.BaseGameScripts.ComponentManagement;
 using Scripts.GameScripts.PlayerManagement;
 using UnityEngine;
 
@@ -21,7 +21,7 @@ namespace Scripts.GameScripts.ItemManagement
             itemSpawnClamper.Insert(this);
         }
 
-        public override void OnEnable()
+        protected override void OnEnable()
         {
             playerManager = GameManager.Instance.PlayerManager;
             playerManager.PlayerStatsManager.onLevelChanged += UpdateAvailableItems;

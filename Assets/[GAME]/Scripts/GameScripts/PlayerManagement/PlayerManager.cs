@@ -1,4 +1,4 @@
-﻿using Scripts.BaseGameScripts.ComponentManager;
+﻿using Scripts.BaseGameScripts.ComponentManagement;
 using Scripts.GameScripts.InteractionManagement;
 using Scripts.GameScripts.InventoryManagement;
 using Scripts.GameScripts.MovementManagement;
@@ -31,18 +31,6 @@ namespace Scripts.GameScripts.PlayerManagement
         private void Awake()
         {
             baseMovementManager.Insert(this);
-        }
-
-        protected override void SubscribeEvent()
-        {
-            base.SubscribeEvent();
-            //InteractionActionManager.onCollectedItem += inventoryManager.AddNewItem;
-        }
-
-        protected override void UnsubscribeEvent()
-        {
-            base.UnsubscribeEvent();
-            //InteractionActionManager.onCollectedItem -= inventoryManager.AddNewItem;
         }
 
         private void Update()

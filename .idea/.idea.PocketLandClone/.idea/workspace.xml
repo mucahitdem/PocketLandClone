@@ -8,187 +8,150 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Control/CalculateDeltaMouse.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Control/ControlManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Control/BaseControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/FindTargetsInAreaManagement/FindTargetInAreaVisualizer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/FindTargetsInAreaManagement/FindTargetsInAreaData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/FindTargetsInAreaManagement/FindTargetsInArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Helpers/RectangularAreaManagement/RectangularAreaVisualizer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/ConfirmOrderButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/Order/ItemTypeAndCount.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/BaseGameObjectSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Control/ControlTypes/ControlGetHoldAndNotMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/11D97693-183D-4A6B-B35C-29AE7882C66B/05/fcb61bab/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/96/e65365eb/Func`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SourceManagement/BaseSource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InventoryManagement/InventoryActionManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/BasePoolItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/GameObjectSpawnerByTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/GameObjectSpawnerOnRandomPointInAnArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Editor/HelperTools.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/TimerManagement/TimerData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/StateManagement/GameStates/GameState02_0Playing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderCreatorManagement/BaseOrderCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/StatsPanelController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/StateManagement/GameStates/GameState03_1Win.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/StateManagement/GameStates/GameState01_0Start.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/Animator Control/AnimatorStateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemActionManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/StateManagement/GameStates/GameState03_0Lose.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderUiManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/PlayerStatsManagement/PlayerStatsDataSo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/PlayerStatsManagement/PlayerStatsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/ShortCutManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Editor/SceneViewerEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/PlayerStatsManagement/PlayerStatsData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderActionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/AllItemsDataSo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/MoneyConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/VirtualCameraManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderUiCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/DebugHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/PlayerManagement/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4746C126-B0B5-4F3B-8348-45974D1A9190/ae/b240e88f/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/GameStateManagement/GameStates/GameStateLose.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/ContextClass.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/BaseOrderUi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InteractionManagement/BaseInteractionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/MovementManagement/MoveWithJoystick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/TimeScalingManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InteractionManagement/PlayerInteractionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/SingletonMono.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/FindClasses.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/AssemblyManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InventoryManagement/InventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/StateManagement/GameStateManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InteractionManagement/InteractionActionManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/StateManagement/BaseGameState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/StatsActionManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/Animator Control/AnimatorParameterController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Helpers/RectangularAreaManagement/RectangularAreaData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/TimerManagement/TimerManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/TimerManagement/Timer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/UiManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/SafeArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/UiItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4746C126-B0B5-4F3B-8348-45974D1A9190/06/5d02d45f/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemSpawnClamper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/UiButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/FindTargetsInAreaManagement/FindTargetInAreaVisualizer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/UI/RetryButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/FindTargetsInAreaManagement/FindTargetsInAreaData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/FindTargetsInAreaManagement/FindTargetsInArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/UI/NextButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/UI/CoinUi.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Helpers/RectangularAreaManagement/RectangularAreaVisualizer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/Others/TapManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/ConfirmOrderButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/Order/ItemTypeAndCount.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/Editor/GameWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/Grid/GridManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/Grid/GridElement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/UI/StartButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/Upgrade/UpgradeData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/11D97693-183D-4A6B-B35C-29AE7882C66B/05/fcb61bab/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/Upgrade/UpgradeDataSo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InventoryManagement/InventoryActionManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/GlobalReferences.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/BasePoolItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/Upgrade/BaseUpgradeButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderCreatorManagement/BaseOrderCreator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/IPoolItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderUiManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/Ease.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/PlayerStatsManagement/PlayerStatsDataSo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/PlayerStatsManagement/PlayerStatsManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/PlayerStatsManagement/PlayerStatsData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderActionManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/MinMaxValue.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/PlayerManagement/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/BaseOrderUi.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InteractionManagement/BaseInteractionManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/CoinControl/CoinActionManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InteractionManagement/PlayerInteractionManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/UI/StartPanel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/BaseClickableImage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/ComponentManagement/BaseComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemTypes/HarvestableItems/ItemToHarvestData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SaveAndLoad/SaveAndLoadManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InventoryManagement/InventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/Order/BaseOrder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderCreatorManagement/OrderCreatorTypes/RandomOrderCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemTypes/HarvestableItems/ItemToHarvestDataSo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderTypeAndCountUi.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/CoinControl/CoinManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/BaseItemDataSo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/DevHelperTools/ComponentCopyEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/EventManagement/IEventSubscriber.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/EventManagement/EventSubscriber.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SaveAndLoad/ISaveAndLoad.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Defs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemTypes/HarvestableItems/ItemToHarvest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/BaseStatsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/InputManagement/BaseInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/InputManagement/InputActionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/InputManagement/InputHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/StatsPerLevelByAnimCurve.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InteractionManagement/InteractionActionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/RagDollManagement/RagDoll.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/Order/BaseOrderData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/BaseItemSpawnerOnRandomPointInAnAreaByTime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UiManagement/BaseClickableImage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/UiGridManagement/UiGridElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/UiGridManagement/UiGridManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Managers/EnvironmentManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SceneLoadingManagement/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/StatsActionManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SceneLoadingManagement/SceneLoadManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SceneLoadingManagement/BaseAsyncSceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SourceManagement/SourceActionManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SourceManagement/SourceManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Helpers/RectangularAreaManagement/RectangularAreaData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderCreatorManagement/BaseOrderCreatorData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/TimerManagement/TimerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/TimerManagement/Timer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/DevHelperTools/Editor/GameWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/BaseItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/GameObjectSpawnerOnRandomPointInAnAreaByTime.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/BaseItemData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Managers/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4746C126-B0B5-4F3B-8348-45974D1A9190/06/5d02d45f/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Helpers/RectangularAreaManagement/RandomPointGeneratorOnRectangularArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/CoinControl/CoinCollectAnim.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/PoolingPattern.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/CoinControl/Coin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemSpawnClamper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/MovementManagement/BaseMovementManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderCreatorManagement/BaseOrderCreatorDataSo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/ComponentManager/BaseComponent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderCreatorManagement/BaseOrderCreatorData.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderCreatorManagement/OrderCreatorTypes/RandomOrderCreatorData.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Component/BaseComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/PlayerManagement/PlayerManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Editor/HelperTools.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderCreatorManagement/BaseOrderCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/Order/BaseOrderData.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/UiGridManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/UiGridElement.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InteractionManagement/PlayerInteractionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/StatsPerLevelByAnimCurve.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/Order/ItemTypeAndCount.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderTypeAndCountUi.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UI/BaseClickableImage.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/ConfirmOrderButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InventoryManagement/InventoryActionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InventoryManagement/InventoryManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/StatsActionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/PlayerStatsManagement/PlayerStatsManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/UI/CoinUi.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderActionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/BaseOrderUi.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/GameObjectSpawnerOnRandomPointInAnAreaByTime.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/UiGridManagement/UiGridElement.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderCreatorManagement/OrderCreatorTypes/RandomOrderCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderUiManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemActionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/TimerManagement/Timer.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/UiGridManagement/UiGridManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/DevHelperTools/ComponentCopyEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderUiCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Managers/LevelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/BaseItemDataSo.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemSpawnClamper.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/BaseItemSpawnerOnRandomPointInAnAreaByTime.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/GameObjectSpawnerByTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/GameObjectSpawnerOnRandomPointInAnArea.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/ItemToCreate.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/CoinControl/Coin.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/IPoolItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/BaseGameObjectSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/CoinControl/CoinCollectAnim.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/IPoolItem.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/ComponentManager/BaseComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/IPoolItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/BaseItem.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/BasePoolItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/UiGridManagement/UiGridElement.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/DevHelperTools/Editor/GameWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/ConfirmOrderButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/FindTargetsInAreaManagement/FindTargetInAreaVisualizer.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderUiCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderUiManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/UiManagement/BaseClickableImage.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InventoryManagement/InventoryManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/UiGridManagement/UiGridManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemSpawnClamper.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/BaseItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderCreatorManagement/BaseOrderCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Helpers/RectangularAreaManagement/RectangularAreaVisualizer.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/VirtualCameraManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Helpers/RectangularAreaManagement/RandomPointGeneratorOnRectangularArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/OrderTypeAndCountUi.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/StatsPanelController.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/PlayerManagement/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/BaseStatsManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/InteractionManagement/BaseInteractionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StatsManagement/PlayerStatsManagement/PlayerStatsManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemManagement/ItemTypes/HarvestableItems/ItemToHarvest.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/GameStateManagement/GameStates/GameStateLose.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SceneLoadingManagement/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SceneLoadingManagement/BaseAsyncSceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SourceManagement/SourceManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/SourceManagement/SourceActionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/Order/BaseOrderData.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/OrderManagement/OrderCreatorManagement/OrderCreatorTypes/RandomOrderCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/UiManagement/OrderUi/BaseOrderUi.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/MovementManagement/BaseMovementManager.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/PoolingPattern.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/GameObjectSpawnerOnRandomPointInAnArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/BaseGameObjectSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/ComponentManagement/BaseComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/GameObjectSpawnerOnRandomPointInAnAreaByTime.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/BaseItemSpawnerOnRandomPointInAnAreaByTime.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ItemCreatingManagement/GameObjectSpawnerByTimer.cs" />
       </list>
     </option>
   </component>
@@ -226,17 +189,17 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="718" y="400" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1080@0.0.1920.1080" timestamp="1689619626116" />
-    <state x="788" y="214" key="RiderGenerateDialog" timestamp="1692654243690">
+    <state x="788" y="214" key="RiderGenerateDialog" timestamp="1692659313543">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="788" y="214" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1692654243690" />
+    <state x="788" y="214" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1692659313543" />
     <state width="546" height="446" key="SwitcherDM" timestamp="1689691457281">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="546" height="446" key="SwitcherDM/0.0.1920.1080@0.0.1920.1080" timestamp="1689691457281" />
-    <state x="567" y="275" width="786" height="530" key="find.popup" timestamp="1692647452348">
+    <state x="567" y="275" width="786" height="530" key="find.popup" timestamp="1692662833117">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="567" y="275" width="786" height="530" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1692647452348" />
+    <state x="567" y="275" width="786" height="530" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1692662833117" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Scripts.BaseGameScripts.Helper;
+using Scripts.BaseGameScripts.SourceManagement;
 using Scripts.GameScripts.ItemManagement;
 using Scripts.GameScripts.OrderManagement.Order;
 using Scripts.GameScripts.StatsManagement;
@@ -11,11 +12,9 @@ namespace Scripts.GameScripts.OrderManagement.OrderCreatorManagement.OrderCreato
 {
     public class RandomOrderCreator : BaseOrderCreator
     {
-        private ItemManager itemManager;
-
-        [Title("Temp Variables")]
-        private List<ItemTypeAndCount> itemTypeAndCount = new List<ItemTypeAndCount>();
-
+        [SerializeField]
+        private BaseSourceDataSo sourceToEarn;
+        
         [SerializeField]
         private StatsPerLevelByAnimCurve orderAmountMaxValueByPlayerLevel;
 
@@ -23,6 +22,9 @@ namespace Scripts.GameScripts.OrderManagement.OrderCreatorManagement.OrderCreato
         private StatsPerLevelByAnimCurve orderAmountMinValueByPlayerLevel;
 
 
+        private List<ItemTypeAndCount> itemTypeAndCount = new List<ItemTypeAndCount>();
+        private ItemManager itemManager;
+        
         protected override void Start()
         {
             base.Start();
@@ -44,7 +46,7 @@ namespace Scripts.GameScripts.OrderManagement.OrderCreatorManagement.OrderCreato
         public override void CreateNewOrder()
         {
             var randomItemAndCount = RandomItemTypeAndCount();
-            var baseOrder = new BaseOrder(new BaseOrderData(randomItemAndCount));
+            var baseOrder = new BaseOrder(new BaseOrderData(randomItemAndCount, sourceToEarn));
             OrderActionManager.onNewOrderCreated?.Invoke(baseOrder);
         }
 

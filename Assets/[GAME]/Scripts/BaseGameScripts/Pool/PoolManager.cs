@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Scripts.BaseGameScripts.Helper;
-using Scripts.GameScripts.PlayerManagement;
 using UnityEngine;
 
 namespace Scripts.BaseGameScripts.Pool

@@ -2,7 +2,7 @@
 {
     public interface IEventSubscriber
     {
-        protected void SubscribeEvent();
-        protected void UnsubscribeEvent();
+        public void SubscribeEvent();
+        void UnsubscribeEvent();
     }
 }

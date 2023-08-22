@@ -1,6 +1,5 @@
 ﻿using System;
-using Scripts.BaseGameScripts.ComponentManager;
-using Scripts.BaseGameScripts.Helper;
+using Scripts.BaseGameScripts.ComponentManagement;
 using Scripts.GameScripts.OrderManagement;
 using Scripts.GameScripts.OrderManagement.Order;
 using Sirenix.OdinInspector;
@@ -34,13 +33,13 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
             customerFaceIndex = 0;
         }
 
-        protected override void SubscribeEvent()
+        public override void SubscribeEvent()
         {
             base.SubscribeEvent();
             OrderActionManager.onNewOrderCreated += OnNewOrderCreated;
         }
 
-        protected override void UnsubscribeEvent()
+        public override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             OrderActionManager.onNewOrderCreated -= OnNewOrderCreated;

@@ -6,9 +6,6 @@ using UnityEngine.Events;
 
 namespace Scripts.BaseGameScripts.Helper
 {
-    /// <summary>
-    ///     This class helps us to test features by using short cuts
-    /// </summary>
     public class ShortCutManager : MonoBehaviour
     {
         private ShortCutData _shortCutData;

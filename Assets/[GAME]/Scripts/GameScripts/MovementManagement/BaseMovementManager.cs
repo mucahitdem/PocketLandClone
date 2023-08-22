@@ -1,4 +1,4 @@
-﻿using Scripts.BaseGameScripts.ComponentManager;
+﻿using Scripts.BaseGameScripts.ComponentManagement;
 using UnityEngine;
 
 namespace Scripts.GameScripts.MovementManagement
@@ -35,7 +35,7 @@ namespace Scripts.GameScripts.MovementManagement
         private void AddDownForce()
         {
             Rb.angularVelocity = Vector3.zero;
-            Rb.AddForce(-Vector3.up * downForce, ForceMode.Acceleration);
+            //Rb.AddForce(-Vector3.up * downForce, ForceMode.Acceleration);
         }
 
         private void Look()

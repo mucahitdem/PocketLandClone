@@ -12,32 +12,34 @@
         <e p="[GAME]" t="Include">
           <e p="Animations" t="Include" />
           <e p="Datas" t="Include">
+            <e p="_Scenes" t="Include" />
             <e p="Items" t="Include" />
             <e p="PlayerStats" t="Include" />
+            <e p="Sources" t="Include" />
           </e>
           <e p="Fonts" t="Include" />
           <e p="Materials" t="Include" />
           <e p="Models" t="Include" />
           <e p="Prefabs" t="Include">
-            <e p="BaseGame" t="Include">
-              <e p="UI" t="Include" />
-            </e>
             <e p="Items" t="Include" />
             <e p="UI" t="Include" />
           </e>
-          <e p="Scenes" t="Include" />
+          <e p="Scenes" t="Include">
+            <e p="Level 1" t="Include" />
+          </e>
           <e p="Scripts" t="Include">
             <e p="BaseGameScripts" t="Include">
-              <e p="CoinControl" t="Include">
-                <e p="Coin.cs" t="Include" />
-                <e p="CoinActionManager.cs" t="Include" />
-                <e p="CoinCollectAnim.cs" t="Include" />
-                <e p="CoinManager.cs" t="Include" />
+              <e p="Animator Control" t="Include">
+                <e p="AnimatorParameter.cs" t="Include" />
+                <e p="AnimatorParameterController.cs" t="Include" />
+                <e p="AnimatorStateManager.cs" t="Include" />
               </e>
-              <e p="ComponentManager" t="Include">
+              <e p="BaseGameManager.cs" t="Include" />
+              <e p="ComponentManagement" t="Include">
                 <e p="BaseComponent.cs" t="Include" />
+                <e p="BaseMono.cs" t="Include" />
               </e>
-              <e p="Control" t="Include">
+              <e p="ControlManagement" t="Include">
                 <e p="BaseControl.cs" t="Include" />
                 <e p="CalculateDeltaMouse.cs" t="Include" />
                 <e p="ControlManager.cs" t="Include" />
@@ -55,23 +57,62 @@
                 </e>
                 <e p="IControl.cs" t="Include" />
               </e>
-              <e p="Editor" t="Include">
-                <e p="HelperTools.cs" t="Include" />
-                <e p="SceneViewerEditor.cs" t="Include" />
+              <e p="DevHelperTools" t="Include">
+                <e p="ComponentCopyEditor.cs" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="GameWindow.cs" t="Include" />
+                  <e p="HelperTools.cs" t="Include" />
+                  <e p="ObjectSearchEditor.cs" t="Include" />
+                  <e p="SceneLoaderTool.cs" t="Include" />
+                  <e p="ScriptCreatorEditor.cs" t="Include" />
+                  <e p="ScriptGeneratorWindow.cs" t="Include" />
+                </e>
+                <e p="SoCreator" t="Include">
+                  <e p="BaseScriptableObject.cs" t="Include" />
+                  <e p="SoCreatorEditorWindow.cs" t="Include" />
+                </e>
               </e>
               <e p="EventManagement" t="Include">
+                <e p="_BaseEvent" t="Include">
+                  <e p="BaseEvent.cs" t="Include" />
+                </e>
+                <e p="EventMediator.cs" t="Include" />
+                <e p="Events" t="Include">
+                  <e p="AddSourceEvent.cs" t="Include" />
+                </e>
                 <e p="EventSubscriber.cs" t="Include" />
+                <e p="EventSystemHelper.cs" t="Include" />
                 <e p="IEventSubscriber.cs" t="Include" />
               </e>
-              <e p="GlobalReferences.cs" t="Include" />
+              <e p="EventQueue.cs" t="Include" />
+              <e p="FadeUiManagement" t="Include">
+                <e p="FadeManager.cs" t="Include" />
+              </e>
+              <e p="GameSettingsDataSo.cs" t="Include" />
+              <e p="GameStateManagement" t="Include">
+                <e p="AllGameStateDataSo.cs" t="Include" />
+                <e p="BaseGameState.cs" t="Include" />
+                <e p="GameStateActionManager.cs" t="Include" />
+                <e p="GameStateManager.cs" t="Include" />
+                <e p="GameStates" t="Include">
+                  <e p="GameStateLose.cs" t="Include" />
+                  <e p="GameStatePlaying.cs" t="Include" />
+                  <e p="GameStateStart.cs" t="Include" />
+                  <e p="GameStateWin.cs" t="Include" />
+                </e>
+                <e p="IGameState.cs" t="Include" />
+              </e>
               <e p="Helper" t="Include">
                 <e p="AssemblyManager.cs" t="Include" />
                 <e p="ContextClass.cs" t="Include" />
                 <e p="DebugHelper.cs" t="Include" />
+                <e p="DefineSymbolsManager.cs" t="Include" />
                 <e p="FindClasses.cs" t="Include" />
+                <e p="MinMaxValue.cs" t="Include" />
                 <e p="MoneyConverter.cs" t="Include" />
                 <e p="ShortCutManager.cs" t="Include" />
                 <e p="SingletonMono.cs" t="Include" />
+                <e p="TargetFrameManager.cs" t="Include" />
                 <e p="TimeScalingManager.cs" t="Include" />
               </e>
               <e p="InputManagement" t="Include">
@@ -80,31 +121,44 @@
                 <e p="InputHandler.cs" t="Include" />
               </e>
               <e p="Managers" t="Include">
-                <e p="EnvironmentManager.cs" t="Include" />
                 <e p="LevelManager.cs" t="Include" />
               </e>
               <e p="Pool" t="Include">
                 <e p="BasePoolItem.cs" t="Include" />
-                <e p="IPoolItem.cs" t="Include" />
                 <e p="PoolingPattern.cs" t="Include" />
                 <e p="PoolManager.cs" t="Include" />
               </e>
               <e p="RagDollManagement" t="Include">
                 <e p="RagDoll.cs" t="Include" />
               </e>
-              <e p="SaveAndLoad" t="Include">
+              <e p="SaveAndLoadManagement" t="Include">
                 <e p="ISaveAndLoad.cs" t="Include" />
                 <e p="SaveAndLoadManager.cs" t="Include" />
-                <e p="SaveManager.cs" t="Include" />
               </e>
-              <e p="StateManagement" t="Include">
-                <e p="BaseGameState.cs" t="Include" />
-                <e p="GameStateManager.cs" t="Include" />
-                <e p="GameStates" t="Include">
-                  <e p="GameState01_0Start.cs" t="Include" />
-                  <e p="GameState02_0Playing.cs" t="Include" />
-                  <e p="GameState03_0Lose.cs" t="Include" />
-                  <e p="GameState03_1Win.cs" t="Include" />
+              <e p="SceneLoadingManagement" t="Include">
+                <e p="AllLevelsDataSo.cs" t="Include" />
+                <e p="BaseAsyncSceneLoader.cs" t="Include" />
+                <e p="SceneLoadActionManager.cs" t="Include" />
+                <e p="SceneLoader.cs" t="Include" />
+                <e p="SceneLoadManager.cs" t="Include" />
+                <e p="SceneSerialization.cs" t="Include" />
+                <e p="ScenesToLoadAtLevelDataSo.cs" t="Include" />
+                <e p="UI" t="Include">
+                  <e p="LoadingSceneUi.cs" t="Include" />
+                </e>
+              </e>
+              <e p="SourceManagement" t="Include">
+                <e p="BaseSource.cs" t="Include" />
+                <e p="BaseSourceData.cs" t="Include" />
+                <e p="BaseSourceDataSo.cs" t="Include" />
+                <e p="BaseSourceUi.cs" t="Include" />
+                <e p="ClampedSourceUi.cs" t="Include" />
+                <e p="SourceActionManager.cs" t="Include" />
+                <e p="SourceManager.cs" t="Include" />
+                <e p="SourceTypes" t="Include">
+                  <e p="RenewableClampedSource.cs" t="Include" />
+                  <e p="RenewableClampedSourceData.cs" t="Include" />
+                  <e p="RenewableClampedSourceDataSo.cs" t="Include" />
                 </e>
               </e>
               <e p="TimerManagement" t="Include">
@@ -112,62 +166,25 @@
                 <e p="TimerData.cs" t="Include" />
                 <e p="TimerManager.cs" t="Include" />
               </e>
-              <e p="UI" t="Include">
+              <e p="UiManagement" t="Include">
                 <e p="BaseClickableImage.cs" t="Include" />
-                <e p="SafeArea.cs" t="Include" />
-                <e p="UiButton.cs" t="Include" />
-                <e p="UiItem.cs" t="Include" />
-                <e p="UiManager.cs" t="Include" />
-              </e>
-            </e>
-            <e p="BaseGameSystemRelatedScripts" t="Include">
-              <e p="Animator Control" t="Include">
-                <e p="AnimatorParameter.cs" t="Include" />
-                <e p="AnimatorParameterController.cs" t="Include" />
-                <e p="AnimatorStateManager.cs" t="Include" />
-              </e>
-              <e p="Ease.cs" t="Include" />
-              <e p="Editor" t="Include">
-                <e p="GameWindow.cs" t="Include" />
-              </e>
-              <e p="Grid" t="Include">
-                <e p="GridElement.cs" t="Include" />
-                <e p="GridManager.cs" t="Include" />
-              </e>
-              <e p="MinMaxValue.cs" t="Include" />
-              <e p="Others" t="Include">
-                <e p="TapManager.cs" t="Include" />
-              </e>
-              <e p="SaveManager.cs" t="Include" />
-              <e p="SceneLoader.cs" t="Include" />
-              <e p="UI" t="Include">
-                <e p="CoinUi.cs" t="Include" />
-                <e p="NextButton.cs" t="Include" />
-                <e p="RetryButton.cs" t="Include" />
-                <e p="StartButton.cs" t="Include" />
-                <e p="StartPanel.cs" t="Include" />
-              </e>
-              <e p="Upgrade" t="Include">
-                <e p="BaseUpgradeButton.cs" t="Include" />
-                <e p="Buttons" t="Include">
-                  <e p="AddButton.cs" t="Include" />
-                  <e p="Button3dManagement" t="Include">
-                    <e p="BaseButton3D.cs" t="Include" />
-                    <e p="Button3dAdd.cs" t="Include" />
-                    <e p="Button3dIncome.cs" t="Include" />
-                  </e>
-                  <e p="MergeButton.cs" t="Include" />
+                <e p="BaseUiButton.cs" t="Include" />
+                <e p="BaseUiItemManagement" t="Include">
+                  <e p="BaseUiItem.cs" t="Include" />
                 </e>
-                <e p="UpgradeData.cs" t="Include" />
-                <e p="UpgradeDataSo.cs" t="Include" />
+                <e p="FloatingUiManagement" t="Include">
+                  <e p="BaseFloatingUi.cs" t="Include" />
+                  <e p="FloatingText.cs" t="Include" />
+                  <e p="FloatingUiCreator.cs" t="Include" />
+                </e>
+                <e p="SafeArea.cs" t="Include" />
+                <e p="UiActionManager.cs" t="Include" />
+                <e p="UiManager.cs" t="Include" />
               </e>
             </e>
             <e p="GameScripts" t="Include">
               <e p="AllItemsDataSo.cs" t="Include" />
               <e p="Defs.cs" t="Include" />
-              <e p="DevHelperTools" t="Include">
-                <e p="ComponentCopyEditor.cs" t="Include" />
-              </e>
               <e p="FindTargetsInAreaManagement" t="Include">
                 <e p="FindTargetInAreaVisualizer.cs" t="Include" />
                 <e p="FindTargetsInArea.cs" t="Include" />

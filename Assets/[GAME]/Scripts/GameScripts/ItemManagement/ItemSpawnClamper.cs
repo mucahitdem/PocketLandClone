@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Scripts.BaseGameScripts.ComponentManager;
+using Scripts.BaseGameScripts.ComponentManagement;
 using Scripts.GameScripts.InteractionManagement;
 using Scripts.GameScripts.OrderManagement.Order;
 using Sirenix.OdinInspector;
@@ -31,12 +31,12 @@ namespace Scripts.GameScripts.ItemManagement
             itemManager.onAvailableItemsUpdated += OnAvailableItemsUpdated;
         }
 
-        protected override void SubscribeEvent()
+        public override void SubscribeEvent()
         {
             base.SubscribeEvent();
             InteractionActionManager.onCollectedItem += OnCollectedItemFromGround;
         }
-        protected override void UnsubscribeEvent()
+        public override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();            
             InteractionActionManager.onCollectedItem -= OnCollectedItemFromGround;

@@ -1,5 +1,5 @@
 ﻿using System;
-using Scripts.BaseGameScripts.UI;
+using Scripts.BaseGameScripts.UiManagement;
 using UnityEngine.EventSystems;
 
 namespace Scripts.GameScripts.UiManagement.OrderUi
@@ -10,9 +10,14 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
         
         public override void OnPointerClick(PointerEventData eventData)
         {
-            if(!IsInteractable)
+            if(!isInteractable)
                 return;
             onClicked?.Invoke();
+        }
+
+        protected override string GetUiId()
+        {
+            return null;
         }
     }
 }

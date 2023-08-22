@@ -2,43 +2,43 @@
 using Scripts.BaseGameScripts.Helper;
 using UnityEngine;
 
-namespace Scripts.BaseGameSystemRelatedScripts.TimerManagement
-{    
-    /// <summary>
-    /// Updates all desired timers
-    /// </summary>
+namespace Scripts.BaseGameScripts.TimerManagement
+{
     public class TimerManager : SingletonMono<TimerManager>
     {
-        private List<TimerManagement.Timer> _timerList = new List<TimerManagement.Timer>();
-
+        private readonly List<Timer> _timerList = new List<Timer>();
+        
         protected override void OnAwake()
         {
-            
         }
-        
-        public void AddNewTimer(TimerManagement.Timer timer)
-        {
-            //DebugHelper.LogGreen("TIMER ADDED : " + timer.name);
-            if(!_timerList.Contains(timer))
-                _timerList.Add(timer);    
-        }
-
-        public void RemoveTimer(Timer timer)
-        {
-            if(_timerList.Contains(timer))
-                _timerList.Remove(timer);
-        }
-
         private void Update()
         {
             UpdateTimers();
         }
 
+        
+        public void AddNewTimer(Timer timer)
+        {
+            //DebugHelper.LogGreen("TIMER ADDED : " + timer.name);
+            if (!_timerList.Contains(timer))
+                _timerList.Add(timer);
+        }
+        public void RemoveTimer(Timer timer)
+        {
+            if (_timerList.Contains(timer))
+                _timerList.Remove(timer);
+        }
+        public void RemoveAllTimers()
+        {
+            _timerList.Clear();
+        }
+        
         private void UpdateTimers()
         {
-            for (int i = 0; i < _timerList.Count; i++)
+            var currentDeltaTime = Time.deltaTime;
+            for (var i = 0; i < _timerList.Count; i++)
             {
-                _timerList[i].TimerValue -= Time.deltaTime;
+                _timerList[i].UpdateTimer(currentDeltaTime);
             }
         }
     }

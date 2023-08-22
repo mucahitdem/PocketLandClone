@@ -6,64 +6,48 @@ namespace Scripts.BaseGameScripts.Helper
     {
         private static T s_instance;
 
-        public bool dontDestroyOnLoad;
+        [SerializeField]
+        private bool dontDestroyOnLoad;
 
         public static T Instance
         {
             get
             {
-                if (!Application.isPlaying)
+                if (!s_instance)
+                {
                     s_instance = FindObjectOfType<T>();
-                //BuildNewInstanceIfNull();
+
+                    if (!s_instance)
+                    {
+                        var singletonObject = new GameObject(typeof(T).Name);
+                        s_instance = singletonObject.AddComponent<T>();
+                    }
+
+                    //DontDestroyOnLoad(s_instance.gameObject);
+                }
+                else
+                {
+                    var existingInstances = FindObjectsOfType<T>();
+                    foreach (var existingInstance in existingInstances)
+                        if (existingInstance != s_instance)
+                            Destroy(existingInstance.gameObject);
+                }
+
                 return s_instance;
             }
-            set => s_instance = value;
         }
-
-        public static bool IsNull
-        {
-            get
-            {
-                if (!Application.isPlaying)
-                    s_instance = FindObjectOfType<T>();
-                return s_instance == null;
-            }
-        }
-
 
         protected virtual void Awake()
         {
-            if (s_instance == null)
+            if (dontDestroyOnLoad)
             {
-                s_instance = this as T;
-            }
-            else
-            {
-                Destroy(gameObject);
-                return;
+                transform.SetParent(null);
+                DontDestroyOnLoad(gameObject);
             }
 
-            (Instance as SingletonMono<T>)?.OnAwake();
-            SetIfDontDestroyOnLoad();
+            OnAwake();
         }
 
         protected abstract void OnAwake();
-
-
-        private static void BuildNewInstanceIfNull()
-        {
-            if (s_instance == null)
-            {
-                var newObject = new GameObject("" + typeof(T).Name);
-                s_instance = newObject.AddComponent<T>();
-            }
-        }
-
-        private void SetIfDontDestroyOnLoad()
-        {
-            if (dontDestroyOnLoad)
-                //transform.parent = null;
-                DontDestroyOnLoad(gameObject);
-        }
     }
 }

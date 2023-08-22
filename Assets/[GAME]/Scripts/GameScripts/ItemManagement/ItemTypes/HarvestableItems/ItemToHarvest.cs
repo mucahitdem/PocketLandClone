@@ -5,7 +5,7 @@
         private ItemToHarvestDataSo itemToHarvestData;
         public override BaseItemDataSo BaseItemDataSo => baseItemDataSo;
 
-        public override void OnEnable()
+        protected override void OnEnable()
         {
             base.OnEnable();
             itemToHarvestData = (ItemToHarvestDataSo) baseItemDataSo;

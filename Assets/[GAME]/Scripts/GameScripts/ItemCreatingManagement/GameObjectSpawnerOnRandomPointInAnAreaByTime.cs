@@ -1,5 +1,4 @@
-﻿using System;
-using Scripts.BaseGameSystemRelatedScripts.TimerManagement;
+﻿using Scripts.BaseGameScripts.TimerManagement;
 using UnityEngine;
 
 namespace Scripts.GameScripts.ItemCreatingManagement
@@ -9,13 +8,13 @@ namespace Scripts.GameScripts.ItemCreatingManagement
         [SerializeField]
         protected Timer timer;
 
-        protected override void SubscribeEvent()
+        public override void SubscribeEvent()
         {
             base.SubscribeEvent();
             timer.onTimerEnded += OnTimerEnded;
         }
 
-        protected override void UnsubscribeEvent()
+        public override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             timer.onTimerEnded -= OnTimerEnded;

@@ -1,19 +1,19 @@
-﻿using UnityEngine;
+﻿using Scripts.BaseGameScripts.ComponentManagement;
 
 namespace Scripts.BaseGameScripts.EventManagement
 {
-    public abstract class EventSubscriber : MonoBehaviour
+    public abstract class EventSubscriber : BaseMono , IEventSubscriber
     {
-        protected abstract void SubscribeEvent();
+        public abstract void SubscribeEvent();
 
-        protected abstract void UnsubscribeEvent();
+        public abstract void UnsubscribeEvent();
 
-        public virtual void OnEnable()
+        protected virtual void OnEnable()
         {
             SubscribeEvent();
         }
 
-        public virtual void OnDisable()
+        protected virtual void OnDisable()
         {
             UnsubscribeEvent();
         }

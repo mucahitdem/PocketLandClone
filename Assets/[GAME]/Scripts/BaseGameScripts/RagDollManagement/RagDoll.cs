@@ -1,4 +1,5 @@
-﻿using Scripts.BaseGameScripts.ComponentManager;
+﻿using Scripts.BaseGameScripts.ComponentManagement;
+using Scripts.BaseGameScripts.Helper;
 using Scripts.BaseGameSystemRelatedScripts;
 using Scripts.GameScripts;
 using Sirenix.OdinInspector;
@@ -43,7 +44,6 @@ namespace Scripts.BaseGameScripts.RagDollManagement
             WholeBodyRagDoll(false);
         }
 
-
         [Button]
         public void WholeBodyRagDoll(bool ragDollState, bool isKinematic = false)
         {
@@ -70,6 +70,16 @@ namespace Scripts.BaseGameScripts.RagDollManagement
                 npcRb.AddForce(dir * 50, ForceMode.Impulse);
         }
 
+        public void AddForceToCustomRb(Vector3 dir, Rigidbody rb)
+        {
+            // foreach (var npcRb in _subRigidBody) 
+            //     npcRb.AddForce(dir * 50, ForceMode.Impulse);
+
+            DebugHelper.LogRed("YEEYY");
+            rb.AddForce(dir.normalized * 1000f, ForceMode.Impulse);
+            //rb.AddForce((dir + Vector3.up * 2f )* 1000, ForceMode.Impulse);
+        }
+
         [Button]
         public void HeadShot(float forceMultiplier, bool isKinematic = false)
         {
@@ -88,10 +98,16 @@ namespace Scripts.BaseGameScripts.RagDollManagement
                 ForceMode.Impulse);
         }
 
-
         private void ChangeAllColliderLayer()
         {
-            foreach (var col in _subCollider) col.gameObject.layer = LayerMask.NameToLayer(Defs.LAYER_DEAD);
+            foreach (var col in _subCollider) col.gameObject.layer = LayerMask.NameToLayer(Defs.LAYER_INTERACT_WITH_NOTHING);
         }
+
+        // [Button]
+        // public void AddForce(Rigidbody rbToAddForce, Transform forcePos)
+        // {
+        //     WholeBodyRagDoll(true);
+        //     rbToAddForce.AddForce((forcePos.position - rbToAddForce.position).normalized * 100, ForceMode.Impulse);
+        // }
     }
 }

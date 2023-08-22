@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Scripts.BaseGameScripts.ComponentManager;
-using Scripts.BaseGameScripts.Helper;
+﻿using System.Collections.Generic;
+using Scripts.BaseGameScripts.ComponentManagement;
 using Scripts.GameScripts.UiManagement.UiGridManagement;
 using Sirenix.OdinInspector;
 using UnityEngine;

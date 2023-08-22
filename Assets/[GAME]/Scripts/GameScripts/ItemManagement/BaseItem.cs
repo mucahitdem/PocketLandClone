@@ -1,21 +1,20 @@
-﻿using Scripts.BaseGameScripts.ComponentManager;
+﻿using Scripts.BaseGameScripts.ComponentManagement;
 using Scripts.BaseGameScripts.Pool;
 using UnityEngine;
 
 namespace Scripts.GameScripts.ItemManagement
 {
-    public abstract class BaseItem : BaseComponent , IPoolItem<BaseItem>
+    public abstract class BaseItem : BaseComponent
     {
+        public BasePoolItem Pool => basePoolItem;
+        public virtual BaseItemDataSo BaseItemDataSo => baseItemDataSo;
+
+        
+        
         [SerializeField]
         protected BaseItemDataSo baseItemDataSo;
 
-        public virtual BaseItemDataSo BaseItemDataSo => baseItemDataSo;
-        
-        [field: SerializeField]
-        public BasePoolItem PoolItem { get; set; }
-        public BaseItem GetItem()
-        {
-            return PoolItem.PullObjFromPool<BaseItem>(Vector3.zero, Vector3.zero);
-        }
+        [SerializeField]
+        private BasePoolItem basePoolItem;
     }
 }

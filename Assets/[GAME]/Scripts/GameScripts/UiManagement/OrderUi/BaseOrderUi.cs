@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Scripts.BaseGameScripts.CoinControl;
-using Scripts.BaseGameScripts.ComponentManager;
+using Scripts.BaseGameScripts.ComponentManagement;
 using Scripts.GameScripts.InventoryManagement;
 using Scripts.GameScripts.ItemManagement;
 using Scripts.GameScripts.OrderManagement;
@@ -33,14 +32,14 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
         private Dictionary<BaseItemDataSo,OrderTypeAndCountUi> itemsInOrderAndDatas = new Dictionary<BaseItemDataSo, OrderTypeAndCountUi>();
         private OrderTypeAndCountUi orderUi;
         private BaseOrder baseOrder;
-        
-        protected override void SubscribeEvent()
+
+        public override void SubscribeEvent()
         {
             base.SubscribeEvent();
             InventoryActionManager.onItemCountUpdated += OnItemCountUpdated;
             confirmOrderButton.onClicked += OnClickedConfirmOrderButton;
         }
-        protected override void UnsubscribeEvent()
+        public override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             InventoryActionManager.onItemCountUpdated -= OnItemCountUpdated;
@@ -73,7 +72,7 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
                 InventoryActionManager.useItem.Invoke(itemData,amount);
             }
             
-            TransformOfObj.parent = null;
+            TransformOfObj.SetParent(null);
             OrderActionManager.onOrderDelivered?.Invoke(baseOrder);
             gameObject.SetActive(false);
         }
@@ -86,7 +85,7 @@ namespace Scripts.GameScripts.UiManagement.OrderUi
 
             var ordersCompleted = AreAllOrdersCompleted();
             bg.color = ordersCompleted ? Color.green : Color.blue; // todo fix hard coded
-            confirmOrderButton.IsInteractable = ordersCompleted;
+            confirmOrderButton.isInteractable = ordersCompleted;
         }
         private bool AreAllOrdersCompleted()
         {

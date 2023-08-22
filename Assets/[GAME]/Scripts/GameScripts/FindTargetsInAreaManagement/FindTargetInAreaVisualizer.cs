@@ -1,4 +1,4 @@
-﻿using Scripts.BaseGameScripts.ComponentManager;
+﻿using Scripts.BaseGameScripts.ComponentManagement;
 using UnityEngine;
 
 namespace Scripts.GameScripts.FindTargetsInAreaManagement

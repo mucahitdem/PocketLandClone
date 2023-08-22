@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Scripts.BaseGameScripts.ComponentManager;
+using Scripts.BaseGameScripts.ComponentManagement;
 using Scripts.BaseGameScripts.Helper;
 using Scripts.GameScripts.OrderManagement;
 using Scripts.GameScripts.OrderManagement.Order;
@@ -20,12 +20,13 @@ namespace Scripts.GameScripts.UiManagement.UiGridManagement
 
         [Title("Temp Variables")]
         private int fullGridCount;
-        protected override void SubscribeEvent()
+
+        public override void SubscribeEvent()
         {
             base.SubscribeEvent();
             OrderActionManager.onOrderDelivered += OnOrderDelivered;
         }
-        protected override void UnsubscribeEvent()
+        public override void UnsubscribeEvent()
         {
             base.UnsubscribeEvent();
             OrderActionManager.onOrderDelivered -= OnOrderDelivered;
