@@ -4,29 +4,11 @@
     <e p="C:\Users\sefir\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
     <e p="C:\Users\sefir\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_PocketLandClone.742447603.00" t="ExcludeRecursive" />
     <e p="C:\Users\sefir\Documents\GitHub\PocketLandClone" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="[GAME]" t="Include">
-          <e p="Animations" t="Include" />
-          <e p="Datas" t="Include">
-            <e p="_Scenes" t="Include" />
-            <e p="Items" t="Include" />
-            <e p="PlayerStats" t="Include" />
-            <e p="Sources" t="Include" />
-          </e>
-          <e p="Fonts" t="Include" />
-          <e p="Materials" t="Include" />
-          <e p="Models" t="Include" />
-          <e p="Prefabs" t="Include">
-            <e p="Items" t="Include" />
-            <e p="UI" t="Include" />
-          </e>
-          <e p="Scenes" t="Include">
-            <e p="Level 1" t="Include" />
-          </e>
           <e p="Scripts" t="Include">
             <e p="BaseGameScripts" t="Include">
               <e p="Animator Control" t="Include">
@@ -286,13 +268,6 @@
               <e p="VirtualCameraManager.cs" t="Include" />
             </e>
           </e>
-          <e p="Textures" t="Include">
-            <e p="Icons" t="Include">
-              <e p="HumanFaces" t="Include" />
-              <e p="ItemIcons" t="Include" />
-            </e>
-            <e p="UI" t="Include" />
-          </e>
         </e>
         <e p="BayatGames" t="Include">
           <e p="SaveGameFree" t="Include">
@@ -324,7 +299,6 @@
                 <e p="ExampleSaveWeb.cs" t="Include" />
               </e>
               <e p="Shared" t="Include">
-                <e p="Prefabs" t="Include" />
                 <e p="Scripts" t="Include">
                   <e p="SerializerDropdown.cs" t="Include" />
                 </e>
@@ -333,7 +307,6 @@
             <e p="Plugins" t="Include">
               <e p="FullSerializer.xml" t="Include" />
             </e>
-            <e p="PressKit" t="Include" />
             <e p="Readme.txt" t="Include" />
             <e p="Scripts" t="Include">
               <e p="Encoders" t="Include">
@@ -359,7 +332,6 @@
                 <e p="Vector4Save.cs" t="Include" />
               </e>
             </e>
-            <e p="Web" t="Include" />
           </e>
         </e>
         <e p="BOXOPHOBIC" t="Include">
@@ -372,11 +344,6 @@
                 <e p="PolyverseSkiesShaderGUI.cs" t="Include" />
                 <e p="PolyverseSkiesWindows.cs" t="Include" />
               </e>
-              <e p="Functions" t="Include" />
-              <e p="Meshes" t="Include">
-                <e p="Materials" t="Include" />
-              </e>
-              <e p="Presets" t="Include" />
               <e p="Runtime" t="Include">
                 <e p="Boxophobic.PolyverseSkies.Runtime.asmdef" t="Include" />
                 <e p="PolyverseSkies.cs" t="Include" />
@@ -385,19 +352,8 @@
                 <e p="Simple.shader" t="Include" />
                 <e p="Standard.shader" t="Include" />
               </e>
-              <e p="Textures" t="Include">
-                <e p="Clouds" t="Include" />
-                <e p="Moons" t="Include" />
-                <e p="Noise" t="Include" />
-                <e p="Patterns" t="Include" />
-                <e p="Stars" t="Include" />
-                <e p="Suns" t="Include" />
-              </e>
             </e>
-            <e p="Demo" t="Include" />
             <e p="Generator" t="Include">
-              <e p="Materials" t="Include" />
-              <e p="Meshes" t="Include" />
               <e p="Scripts" t="Include">
                 <e p="Boxophobic.PolyverseSkies.Scripts.asmdef" t="Include" />
                 <e p="PolyverseSkiesGenerator.cs" t="Include" />
@@ -407,7 +363,6 @@
               </e>
             </e>
           </e>
-          <e p="User" t="Include" />
           <e p="Utils" t="Include">
             <e p="Editor" t="Include">
               <e p="Boxophobic.Utils.Editor.asmdef" t="Include" />
@@ -458,7 +413,6 @@
                 <e p="StyledScriptableObjectEditor.cs" t="Include" />
               </e>
             </e>
-            <e p="Resources" t="Include" />
             <e p="Scripts" t="Include">
               <e p="Boxophobic.Utils.Scripts.asmdef" t="Include" />
               <e p="SettingsUtils" t="Include">
@@ -485,34 +439,6 @@
             </e>
           </e>
         </e>
-        <e p="Confetti FX" t="Include">
-          <e p="Materials" t="Include">
-            <e p="3D Materials" t="Include" />
-          </e>
-          <e p="Models" t="Include">
-            <e p="Materials" t="Include" />
-          </e>
-          <e p="Prefabs" t="Include">
-            <e p="2D" t="Include">
-              <e p="Directional" t="Include" />
-            </e>
-            <e p="3D" t="Include">
-              <e p="DirectionalExplosion" t="Include" />
-            </e>
-          </e>
-          <e p="Textures" t="Include" />
-        </e>
-        <e p="Fruit Market" t="Include">
-          <e p="FBX" t="Include" />
-          <e p="Materials" t="Include" />
-          <e p="Prefabs" t="Include" />
-          <e p="Scenes" t="Include" />
-          <e p="Textures" t="Include">
-            <e p="1024 x 1024" t="Include" />
-            <e p="256 x 256" t="Include" />
-            <e p="512 x 512" t="Include" />
-          </e>
-        </e>
         <e p="Hierarchy 2" t="Include">
           <e p="Editor" t="Include">
             <e p="Hierarchy2.Editor.asmdef" t="Include" />
@@ -524,9 +450,6 @@
             <e p="SceneRenamePopup.cs" t="Include" />
             <e p="SelectionsRenamePopup.cs" t="Include" />
           </e>
-          <e p="Editor Resources" t="Include">
-            <e p="Icons" t="Include" />
-          </e>
           <e p="Runtime" t="Include">
             <e p="Hierarchy2.Runtime.asmdef" t="Include" />
             <e p="HierarchyFolder.cs" t="Include" />
@@ -537,21 +460,12 @@
         </e>
         <e p="JMO Assets" t="Include">
           <e p="Toony Colors Pro" t="Include">
-            <e p="Demo TCP2" t="Include">
-              <e p="SG Demo Assets" t="Include">
-                <e p="_Misc Assets" t="Include" />
-                <e p="Water" t="Include" />
-              </e>
-            </e>
             <e p="Shaders Generated" t="Include">
               <e p="Examples" t="Include">
                 <e p="Water" t="Include">
                   <e p="Water WindWaker.shader" t="Include" />
                 </e>
               </e>
-            </e>
-            <e p="Textures" t="Include">
-              <e p="Ramps" t="Include" />
             </e>
           </e>
         </e>
@@ -560,7 +474,6 @@
             <e p="JoystickPlayerExample.cs" t="Include" />
             <e p="JoystickSetterExample.cs" t="Include" />
           </e>
-          <e p="Prefabs" t="Include" />
           <e p="Scripts" t="Include">
             <e p="Base" t="Include">
               <e p="Joystick.cs" t="Include" />
@@ -577,12 +490,6 @@
               <e p="FloatingJoystick.cs" t="Include" />
               <e p="VariableJoystick.cs" t="Include" />
             </e>
-          </e>
-          <e p="Sprites" t="Include">
-            <e p="All Axis Backgrounds" t="Include" />
-            <e p="Handles" t="Include" />
-            <e p="Horizontal Backgrounds" t="Include" />
-            <e p="Vertical Backgrounds" t="Include" />
           </e>
         </e>
         <e p="KevinCastejon" t="Include">
@@ -685,7 +592,6 @@
             </e>
             <e p="Demos" t="Include">
               <e p="HeaderPlus" t="Include">
-                <e p="Icons" t="Include" />
                 <e p="TestHeaderPlusAttribute.cs" t="Include" />
               </e>
               <e p="HideOnPlay" t="Include">
@@ -695,7 +601,6 @@
                 <e p="TestHideOnPrefabAttribute.cs" t="Include" />
               </e>
               <e p="LabelPlus" t="Include">
-                <e p="Icons" t="Include" />
                 <e p="TestLabelPlusAttribute.cs" t="Include" />
               </e>
               <e p="Layer" t="Include">
@@ -717,38 +622,6 @@
                 <e p="TestTagAttribute.cs" t="Include" />
               </e>
             </e>
-            <e p="Documentation" t="Include">
-              <e p="HeaderPlus" t="Include">
-                <e p="img" t="Include" />
-              </e>
-              <e p="HideOnPlay" t="Include">
-                <e p="img" t="Include" />
-              </e>
-              <e p="HideOnPrefab" t="Include">
-                <e p="img" t="Include" />
-              </e>
-              <e p="LabelPlus" t="Include">
-                <e p="img" t="Include" />
-              </e>
-              <e p="Layer" t="Include">
-                <e p="img" t="Include" />
-              </e>
-              <e p="ReadOnly" t="Include">
-                <e p="img" t="Include" />
-              </e>
-              <e p="ReadOnlyOnPlay" t="Include">
-                <e p="img" t="Include" />
-              </e>
-              <e p="ReadOnlyOnPrefab" t="Include">
-                <e p="img" t="Include" />
-              </e>
-              <e p="Scene" t="Include">
-                <e p="img" t="Include" />
-              </e>
-              <e p="Tag" t="Include">
-                <e p="img" t="Include" />
-              </e>
-            </e>
           </e>
         </e>
         <e p="Others" t="Include">
@@ -760,20 +633,16 @@
               <e p="LICENSE.txt" t="Include" />
             </e>
           </e>
-          <e p="Sprites" t="Include" />
           <e p="TextMesh Pro" t="Include">
-            <e p="Documentation" t="Include" />
             <e p="Fonts" t="Include">
               <e p="LiberationSans - OFL.txt" t="Include" />
             </e>
             <e p="Resources" t="Include">
-              <e p="Fonts &amp; Materials" t="Include" />
               <e p="LineBreaking Following Characters.txt" t="Include" />
               <e p="LineBreaking Leading Characters.txt" t="Include" />
-              <e p="Sprite Assets" t="Include" />
-              <e p="Style Sheets" t="Include" />
             </e>
             <e p="Shaders" t="Include">
+              <e p="SDFFunctions.hlsl" t="Include" />
               <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
               <e p="TMP_Bitmap-Mobile.shader" t="Include" />
               <e p="TMP_Bitmap.shader" t="Include" />
@@ -782,6 +651,7 @@
               <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
               <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
               <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+              <e p="TMP_SDF-Mobile-2-Pass.shader" t="Include" />
               <e p="TMP_SDF-Mobile.shader" t="Include" />
               <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
               <e p="TMP_SDF-Surface.shader" t="Include" />
@@ -801,9 +671,6 @@
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
-              <e p="Editor" t="Include">
-                <e p="Imgs" t="Include" />
-              </e>
               <e p="Modules" t="Include">
                 <e p="DOTweenModuleAudio.cs" t="Include" />
                 <e p="DOTweenModuleEPOOutline.cs" t="Include" />
@@ -820,8 +687,6 @@
           <e p="Sirenix" t="Include">
             <e p="Assemblies" t="Include">
               <e p="link.xml" t="Include" />
-              <e p="NoEditor" t="Include" />
-              <e p="NoEmitAndNoEditor" t="Include" />
               <e p="Sirenix.OdinInspector.Attributes.xml" t="Include" />
               <e p="Sirenix.OdinInspector.Editor.xml" t="Include" />
               <e p="Sirenix.Serialization.Config.xml" t="Include" />
@@ -829,18 +694,14 @@
               <e p="Sirenix.Utilities.Editor.xml" t="Include" />
               <e p="Sirenix.Utilities.xml" t="Include" />
             </e>
-            <e p="Demos" t="Include" />
             <e p="Odin Inspector" t="Include">
-              <e p="Assets" t="Include">
-                <e p="Editor" t="Include" />
-              </e>
-              <e p="Config" t="Include">
-                <e p="Editor" t="Include" />
-                <e p="Resources" t="Include">
-                  <e p="Sirenix" t="Include" />
+              <e p="Modules" t="Include">
+                <e p="Unity.Mathematics" t="Include">
+                  <e p="manifest.txt" t="Include" />
+                  <e p="MathematicsDrawers.cs" t="Include" />
+                  <e p="Sirenix.OdinInspector.Modules.UnityMathematics.asmdef" t="Include" />
                 </e>
               </e>
-              <e p="Modules" t="Include" />
               <e p="Scripts" t="Include">
                 <e p="Editor" t="Include">
                   <e p="AssemblyImportSettingsAutomation.cs" t="Include" />
@@ -862,8 +723,6 @@
             <e p="Readme.txt" t="Include" />
           </e>
         </e>
-        <e p="Resources" t="Include" />
-        <e p="StreamingAssets" t="Include" />
       </e>
       <e p="Boxophobic.PolyverseSkies.Editor.csproj" t="IncludeRecursive" />
       <e p="Boxophobic.PolyverseSkies.Runtime.csproj" t="IncludeRecursive" />
@@ -879,6 +738,7 @@
       <e p="PocketLandClone.sln" t="IncludeFlat" />
       <e p="Sirenix.OdinInspector.CompatibilityLayer.csproj" t="IncludeRecursive" />
       <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />
+      <e p="Sirenix.OdinInspector.Modules.UnityMathematics.csproj" t="IncludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
     </e>
   </component>
